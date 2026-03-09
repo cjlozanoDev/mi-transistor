@@ -1,1 +1,4 @@
 /* app global css */
+body {
+  background-color: var(--q-dark-page);
+}
