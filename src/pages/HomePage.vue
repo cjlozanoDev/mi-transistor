@@ -4,6 +4,7 @@ import CardMiTransistor from 'src/components/CardMiTransistor.vue'
 
 <template>
   <q-page class="page-home">
+    <div class="text-h5 text-primary">¿Qué quieres hacer?</div>
     <div class="cards-grid">
       <CardMiTransistor
         variant="favorites"
