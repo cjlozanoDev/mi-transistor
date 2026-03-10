@@ -1,5 +1,8 @@
 <script setup>
 import CardMiTransistor from 'src/components/CardMiTransistor.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 </script>
 
 <template>
@@ -19,7 +22,7 @@ import CardMiTransistor from 'src/components/CardMiTransistor.vue'
         variant="stations"
         title="Todas las Radios"
         subtitle="Explora emisoras"
-        @click="() => {}"
+        @click="router.push({ name: 'stations-list' })"
       >
         <template #icon><span style="font-size: 28px">📡</span></template>
       </CardMiTransistor>
