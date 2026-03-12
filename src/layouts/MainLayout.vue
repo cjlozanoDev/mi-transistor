@@ -1,3 +1,14 @@
+<script setup>
+import { ref } from 'vue'
+import PlayerStation from 'src/components/PlayerStation.vue'
+
+const rightDrawerOpen = ref(false)
+
+const toggleRightDrawer = () => {
+  rightDrawerOpen.value = !rightDrawerOpen.value
+}
+</script>
+
 <template>
   <q-layout view="hHh lpR fFr">
     <q-header elevated class="bg-dark text-white">
@@ -22,24 +33,7 @@
     </q-page-container>
 
     <q-footer elevated class="bg-primary text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
-          <div>Title</div>
-        </q-toolbar-title>
-      </q-toolbar>
+      <PlayerStation />
     </q-footer>
   </q-layout>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const rightDrawerOpen = ref(false)
-
-const toggleRightDrawer = () => {
-  rightDrawerOpen.value = !rightDrawerOpen.value
-}
-</script>

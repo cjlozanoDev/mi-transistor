@@ -20,7 +20,7 @@ const router = useRouter()
 
       <CardMiTransistor
         variant="stations"
-        title="Todas las Radios"
+        title="Todas las emisoras"
         subtitle="Explora emisoras"
         @click="router.push({ name: 'stations-list' })"
       >

@@ -1,6 +1,7 @@
 <script setup>
 import { useStationsStore } from 'src/stores/useStationsStore'
 import { ref, computed } from 'vue'
+import SubHeader from 'src/components/SubHeader.vue'
 
 const stationsStore = useStationsStore()
 
@@ -20,6 +21,8 @@ const filteredStations = computed(() => {
 
 <template>
   <q-page class="bg-dark-page">
+    <SubHeader title-route="Todas las Radios" back-name-route="home" />
+
     <div class="q-px-md q-pt-md q-pb-sm">
       <q-input
         v-model="searchStation"
