@@ -1,12 +1,19 @@
 <script setup>
 import { useStationsStore } from 'src/stores/useStationsStore'
+import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { ref, computed } from 'vue'
 import SubHeader from 'src/components/SubHeader.vue'
 
 const stationsStore = useStationsStore()
+const playerStore = usePlayerStore()
 
 const searchStation = ref('')
 const failedLogos = ref(new Set())
+
+const onStationTap = (station) => {
+  const url = stationsStore.getStreamUrl(station)
+  if (url) playerStore.play(station, url)
+}
 
 const onImgError = (station) => {
   failedLogos.value = new Set([...failedLogos.value, station.name])
@@ -57,7 +64,7 @@ const filteredStations = computed(() => {
           v-for="station in filteredStations"
           :key="station.name"
           class="station-item"
-          @click="() => {}"
+          @click="onStationTap(station)"
         >
           <div class="station-logo-wrap">
             <img

@@ -5,6 +5,7 @@ export const useStationsStore = defineStore('stations', {
     listStations: [],
     stationsTimestamp: null,
     isLoading: false,
+    favorites: [],
   }),
   actions: {
     async loadStations() {
@@ -29,12 +30,22 @@ export const useStationsStore = defineStore('stations', {
         this.isLoading = false
       }
     },
+    toggleFavorite(station) {
+      const idx = this.favorites.findIndex((favorite) => favorite.epg_id === station.epg_id)
+      if (idx === -1) {
+        this.favorites.push(station)
+      } else {
+        this.favorites.splice(idx, 1)
+      }
+    },
   },
   getters: {
     getStreamUrl: () => (station) => {
       const mp3 = station.options?.find((o) => o.format === 'mp3')
       return (mp3 || station.options?.[0])?.url ?? null
     },
+
+    isFavorite: (state) => (epgId) => state.favorites.some((favorite) => favorite.epg_id === epgId),
   },
   persist: true,
 })
