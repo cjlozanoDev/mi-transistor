@@ -13,7 +13,7 @@ const router = useRouter()
         variant="favorites"
         title="Mis Favoritas"
         subtitle="Tus emisoras guardadas"
-        @click="() => {}"
+        @click="router.push({ name: 'favorites-stations' })"
       >
         <template #icon><span style="font-size: 28px">❤️</span></template>
       </CardMiTransistor>

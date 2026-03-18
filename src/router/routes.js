@@ -11,6 +11,17 @@ const routes = [
       { path: '', name: 'stations-list', component: () => import('pages/StationsPage.vue') },
     ],
   },
+  {
+    path: '/FavoritesStations',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'favorites-stations',
+        component: () => import('pages/FavoritesStationsPage.vue'),
+      },
+    ],
+  },
 
   // Always leave this as last one,
   // but you can also remove it
