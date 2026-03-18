@@ -13,14 +13,9 @@ const toggleRightDrawer = () => {
   <q-layout view="hHh lpR fFr">
     <q-header elevated class="bg-dark text-white">
       <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
-          Title
-        </q-toolbar-title>
+        <img src="~assets/mi_transistor_logo_header.svg" height="44" alt="Mi Transistor" />
 
-        <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
+        <q-btn v-if="false" dense flat round icon="menu" @click="toggleRightDrawer" />
       </q-toolbar>
     </q-header>
 

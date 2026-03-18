@@ -33,6 +33,17 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/AboutApp',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'about-app',
+        component: () => import('pages/AboutAppPage.vue'),
+      },
+    ],
+  },
 
   // Always leave this as last one,
   // but you can also remove it

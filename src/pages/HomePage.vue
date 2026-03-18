@@ -7,7 +7,10 @@ const router = useRouter()
 
 <template>
   <q-page class="page-home">
-    <div class="text-h5 text-primary">¿Qué quieres hacer?</div>
+    <div class="home-header q-px-lg q-pt-xl q-pb-md">
+      <div class="question-text">¿Qué quieres escuchar hoy?</div>
+    </div>
+
     <div class="cards-grid">
       <CardMiTransistor
         variant="favorites"
@@ -40,7 +43,7 @@ const router = useRouter()
         variant="about"
         title="Mi Transistor"
         subtitle="Acerca de la app"
-        @click="() => {}"
+        @click="router.push({ name: 'about-app' })"
       >
         <template #icon><span style="font-size: 28px">📻</span></template>
       </CardMiTransistor>
@@ -49,6 +52,23 @@ const router = useRouter()
 </template>
 
 <style scoped>
+.home-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.welcome-text {
+  font-size: 16px;
+  color: rgba(200, 146, 42, 0.8);
+  letter-spacing: 0.5px;
+}
+.question-text {
+  font-size: 26px;
+  font-weight: 700;
+  color: #f5ecd7;
+  line-height: 1.2;
+}
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
