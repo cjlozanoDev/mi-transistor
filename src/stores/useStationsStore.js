@@ -16,17 +16,26 @@ export const useStationsStore = defineStore('stations', {
         this.listStations.length > 0 &&
         Date.now() - this.stationsTimestamp < CACHE_DURATION
       ) {
+        console.log('Usando caché')
         return
       }
 
       this.isLoading = true
       try {
-        const response = await fetch('https://www.tdtchannels.com/lists/radio.json')
+        console.log('Fetching emisoras...')
+        const response = await fetch(
+          'https://corsproxy.io/?url=https://www.tdtchannels.com/lists/radio.json',
+        )
+        console.log('Response status:', response.status)
         const data = await response.json()
+        console.log('Emisoras encontradas:', data.countries?.length)
         this.listStations = data.countries
           .find((country) => country.name === 'Spain')
           .ambits.flatMap((a) => a.channels)
+        console.log('Emisoras cargadas:', this.listStations.length)
         this.stationsTimestamp = Date.now()
+      } catch (e) {
+        console.error('Error cargando emisoras:', e)
       } finally {
         this.isLoading = false
       }

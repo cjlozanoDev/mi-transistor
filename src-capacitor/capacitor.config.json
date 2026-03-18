@@ -1,0 +1,10 @@
+{
+  "appId": "com.mitransistor.app",
+  "appName": "Mi Transistor",
+  "webDir": "www",
+  "plugins": {
+    "EdgeToEdge": {
+      "backgroundColor": "#1A0F07"
+    }
+  }
+}
