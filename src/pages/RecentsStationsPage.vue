@@ -10,14 +10,14 @@ const router = useRouter()
 
 <template>
   <q-page class="bg-dark-page">
-    <SubHeader title-route="Mis Favoritas" back-name-route="home" />
+    <SubHeader title-route="Últimas Escuchadas" back-name-route="home" />
 
-    <!-- Sin favoritas -->
-    <div v-if="stationsStore.favorites.length === 0" class="empty-state">
-      <span class="empty-icon">📻</span>
-      <div class="empty-title">Aún no tienes favoritas</div>
+    <!-- Sin recientes -->
+    <div v-if="stationsStore.recentStations.length === 0" class="empty-state">
+      <span class="empty-icon">🕐</span>
+      <div class="empty-title">Aún no has escuchado nada</div>
       <div class="empty-message">
-        Entra en todas las emisoras, escucha la que quieras y guárdala con el corazón ❤️
+        Aquí aparecerán las últimas 10 emisoras que escuches, para volver a encontrarlas fácilmente
       </div>
       <q-btn
         label="Ver todas las emisoras"
@@ -30,8 +30,17 @@ const router = useRouter()
       />
     </div>
 
-    <!-- Con favoritas -->
-    <ListStations v-else :stations="stationsStore.favorites" />
+    <!-- Con recientes -->
+    <template v-else>
+      <div class="q-px-md q-pt-md q-pb-xs">
+        <div style="font-size: 15px; color: rgba(200, 146, 42, 0.75)">
+          Tus últimas {{ stationsStore.recentStations.length }} emisoras escuchadas (se guardarán
+          las últimas 10)
+        </div>
+        <q-separator dark class="q-mt-sm" />
+      </div>
+      <ListStations :stations="stationsStore.recentStations" />
+    </template>
   </q-page>
 </template>
 

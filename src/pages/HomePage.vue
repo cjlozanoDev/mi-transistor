@@ -31,7 +31,7 @@ const router = useRouter()
         variant="recent"
         title="Últimas Escuchadas"
         subtitle="Tu historial reciente"
-        @click="() => {}"
+        @click="router.push({ name: 'recents-stations' })"
       >
         <template #icon><span style="font-size: 28px">🕐</span></template>
       </CardMiTransistor>

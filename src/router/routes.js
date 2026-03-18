@@ -22,6 +22,17 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/RecentsStations',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'recents-stations',
+        component: () => import('pages/RecentsStationsPage.vue'),
+      },
+    ],
+  },
 
   // Always leave this as last one,
   // but you can also remove it

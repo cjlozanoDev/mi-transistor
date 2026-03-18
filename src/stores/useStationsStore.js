@@ -6,6 +6,7 @@ export const useStationsStore = defineStore('stations', {
     stationsTimestamp: null,
     isLoading: false,
     favorites: [],
+    recentStations: [],
   }),
   actions: {
     async loadStations() {
@@ -37,6 +38,10 @@ export const useStationsStore = defineStore('stations', {
       } else {
         this.favorites.splice(idx, 1)
       }
+    },
+    addToRecent(station) {
+      const filtered = this.recentStations.filter((s) => s.epg_id !== station.epg_id)
+      this.recentStations = [station, ...filtered].slice(0, 10)
     },
   },
   getters: {
