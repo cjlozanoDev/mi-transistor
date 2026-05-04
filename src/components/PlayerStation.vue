@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed, onMounted } from 'vue'
+import { ref, watch, computed, onMounted, onUnmounted } from 'vue'
 import { registerPlugin } from '@capacitor/core'
 import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { useStationsStore } from 'src/stores/useStationsStore'
@@ -15,6 +15,36 @@ const $q = useQuasar()
 
 const audioEl = ref(null)
 const logoFailed = ref(false)
+
+const MAX_RECONNECT_ATTEMPTS = 5
+const RECONNECT_DELAY_MS = 3000
+const isReconnecting = ref(false)
+const reconnectAttempts = ref(0)
+let reconnectTimer = null
+
+const cancelReconnect = () => {
+  if (reconnectTimer) {
+    clearTimeout(reconnectTimer)
+    reconnectTimer = null
+  }
+  isReconnecting.value = false
+  reconnectAttempts.value = 0
+}
+
+const attemptReconnect = () => {
+  reconnectAttempts.value += 1
+  isReconnecting.value = true
+
+  reconnectTimer = setTimeout(() => {
+    if (!audioEl.value || !playerStore.streamUrl || playerStore.stoppedByUser) {
+      cancelReconnect()
+      return
+    }
+    audioEl.value.src = playerStore.streamUrl
+    audioEl.value.load()
+    audioEl.value.play().catch(() => {})
+  }, RECONNECT_DELAY_MS)
+}
 
 const isStationFavorite = computed(() => {
   if (!playerStore.currentStation) return false
@@ -88,18 +118,36 @@ onMounted(() => {
   setupMediaSessionHandlers()
 })
 
+onUnmounted(() => {
+  cancelReconnect()
+})
+
 const onAudioError = () => {
-  playerStore.stop()
-  $q.notify({
-    message: 'No se puede conectar con esta emisora',
-    color: 'negative',
-    position: 'top',
-    timeout: 3000,
-  })
+  if (playerStore.stoppedByUser || !playerStore.streamUrl) return
+
+  if (reconnectAttempts.value >= MAX_RECONNECT_ATTEMPTS) {
+    cancelReconnect()
+    playerStore.stop()
+    $q.notify({
+      message: 'No se puede conectar con esta emisora',
+      color: 'negative',
+      position: 'top',
+      timeout: 3000,
+    })
+    return
+  }
+
+  attemptReconnect()
+}
+
+const onAudioPlaying = () => {
+  playerStore.setBuffering(false)
+  if (isReconnecting.value) cancelReconnect()
 }
 
 const togglePlay = () => {
   if (playerStore.isPlaying) {
+    cancelReconnect()
     playerStore.stop()
   } else {
     playerStore.isPlaying = true
@@ -135,7 +183,11 @@ const toggleFavorite = (station) => {
     <div class="player-info">
       <div class="player-name">{{ playerStore.currentStation?.name ?? 'Sin emisora' }}</div>
 
-      <div v-if="playerStore.isBuffering" class="player-status">
+      <div v-if="isReconnecting" class="player-status">
+        <q-spinner-dots color="secondary" size="16px" />
+        <span class="status-text">Reconectando ({{ reconnectAttempts }}/{{ MAX_RECONNECT_ATTEMPTS }})...</span>
+      </div>
+      <div v-else-if="playerStore.isBuffering" class="player-status">
         <q-spinner-dots color="secondary" size="16px" />
         <span class="status-text">Conectando...</span>
       </div>
@@ -171,7 +223,7 @@ const toggleFavorite = (station) => {
 
     <audio
       ref="audioEl"
-      @playing="playerStore.setBuffering(false)"
+      @playing="onAudioPlaying"
       @waiting="playerStore.setBuffering(true)"
       @error="onAudioError"
     />
