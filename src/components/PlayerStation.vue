@@ -1,6 +1,7 @@
 <script setup>
 import { ref, watch, computed, onMounted, onUnmounted } from 'vue'
 import { registerPlugin } from '@capacitor/core'
+import { MediaSession } from '@capgo/capacitor-media-session'
 import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { useStationsStore } from 'src/stores/useStationsStore'
 import { useQuasar } from 'quasar'
@@ -51,32 +52,29 @@ const isStationFavorite = computed(() => {
   return stationStore.isFavorite(playerStore.currentStation.epg_id)
 })
 
-const updateMediaSession = (station) => {
-  if (!('mediaSession' in navigator)) return
-  navigator.mediaSession.metadata = new MediaMetadata({
+const updateMediaSession = async (station) => {
+  await MediaSession.setMetadata({
     title: station?.name ?? 'Mi Transistor',
     artist: 'Radio en directo',
     album: 'Mi Transistor',
     artwork: station?.logo ? [{ src: station.logo, sizes: '512x512', type: 'image/jpeg' }] : [],
   })
-  navigator.mediaSession.playbackState = 'playing'
+  await MediaSession.setPlaybackState({ playbackState: 'playing' })
 }
 
-const clearMediaSession = () => {
-  if (!('mediaSession' in navigator)) return
-  navigator.mediaSession.playbackState = 'paused'
+const clearMediaSession = async () => {
+  await MediaSession.setPlaybackState({ playbackState: 'paused' })
 }
 
-const setupMediaSessionHandlers = () => {
-  if (!('mediaSession' in navigator)) return
-  navigator.mediaSession.setActionHandler('play', () => {
+const setupMediaSessionHandlers = async () => {
+  await MediaSession.setActionHandler({ action: 'play' }, () => {
     playerStore.isPlaying = true
     playerStore.isBuffering = true
   })
-  navigator.mediaSession.setActionHandler('pause', () => {
+  await MediaSession.setActionHandler({ action: 'pause' }, () => {
     playerStore.stop()
   })
-  navigator.mediaSession.setActionHandler('stop', () => {
+  await MediaSession.setActionHandler({ action: 'stop' }, () => {
     playerStore.stop()
   })
 }
