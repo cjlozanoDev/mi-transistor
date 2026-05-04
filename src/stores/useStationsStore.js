@@ -23,9 +23,7 @@ export const useStationsStore = defineStore('stations', {
       this.isLoading = true
       try {
         console.log('Fetching emisoras...')
-        const response = await fetch(
-          'https://corsproxy.io/?url=https://www.tdtchannels.com/lists/radio.json',
-        )
+        const response = await fetch('https://www.tdtchannels.com/lists/radio.json')
         console.log('Response status:', response.status)
         const data = await response.json()
         console.log('Emisoras encontradas:', data.countries?.length)

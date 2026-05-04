@@ -1,20 +1,11 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import PlayerStation from 'src/components/PlayerStation.vue'
 
 const rightDrawerOpen = ref(false)
 const toggleRightDrawer = () => {
   rightDrawerOpen.value = !rightDrawerOpen.value
 }
-
-onMounted(() => {
-  const el = document.createElement('div')
-  el.style.cssText = 'position:fixed;bottom:0;padding-bottom:env(safe-area-inset-bottom)'
-  document.body.appendChild(el)
-  const val = getComputedStyle(el).paddingBottom
-  document.getElementById('debug-inset').textContent = `inset-bottom: ${val}`
-  document.body.removeChild(el)
-})
 </script>
 
 <template>

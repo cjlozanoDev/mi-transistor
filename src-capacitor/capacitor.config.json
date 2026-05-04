@@ -5,6 +5,9 @@
   "plugins": {
     "EdgeToEdge": {
       "backgroundColor": "#1A0F07"
+    },
+    "CapacitorHttp": {
+      "enabled": true
     }
   }
 }

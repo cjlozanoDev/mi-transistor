@@ -1,21 +1,55 @@
 <script setup>
-import { ref, watch, computed } from 'vue'
+import { ref, watch, computed, onMounted } from 'vue'
+import { registerPlugin } from '@capacitor/core'
 import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { useStationsStore } from 'src/stores/useStationsStore'
 import { useQuasar } from 'quasar'
 
+const WakeLock = registerPlugin('WakeLock')
+const acquireWakeLock = async () => { try { await WakeLock.acquire() } catch { /* no-op on web */ } }
+const releaseWakeLock = async () => { try { await WakeLock.release() } catch { /* no-op on web */ } }
+
 const playerStore = usePlayerStore()
 const stationStore = useStationsStore()
+const $q = useQuasar()
 
 const audioEl = ref(null)
 const logoFailed = ref(false)
-const $q = useQuasar()
 
 const isStationFavorite = computed(() => {
   if (!playerStore.currentStation) return false
-
   return stationStore.isFavorite(playerStore.currentStation.epg_id)
 })
+
+const updateMediaSession = (station) => {
+  if (!('mediaSession' in navigator)) return
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: station?.name ?? 'Mi Transistor',
+    artist: 'Radio en directo',
+    album: 'Mi Transistor',
+    artwork: station?.logo ? [{ src: station.logo, sizes: '512x512', type: 'image/jpeg' }] : [],
+  })
+  navigator.mediaSession.playbackState = 'playing'
+}
+
+const clearMediaSession = () => {
+  if (!('mediaSession' in navigator)) return
+  navigator.mediaSession.playbackState = 'paused'
+}
+
+const setupMediaSessionHandlers = () => {
+  if (!('mediaSession' in navigator)) return
+  navigator.mediaSession.setActionHandler('play', () => {
+    playerStore.isPlaying = true
+    playerStore.isBuffering = true
+  })
+  navigator.mediaSession.setActionHandler('pause', () => {
+    playerStore.stop()
+  })
+  navigator.mediaSession.setActionHandler('stop', () => {
+    playerStore.stop()
+  })
+}
 
 watch(
   () => playerStore.currentStation,
@@ -40,11 +74,19 @@ watch(
     if (!audioEl.value) return
     if (playing) {
       audioEl.value.play().catch(() => {})
+      updateMediaSession(playerStore.currentStation)
+      acquireWakeLock()
     } else {
       audioEl.value.pause()
+      clearMediaSession()
+      releaseWakeLock()
     }
   },
 )
+
+onMounted(() => {
+  setupMediaSessionHandlers()
+})
 
 const onAudioError = () => {
   playerStore.stop()
@@ -126,6 +168,7 @@ const toggleFavorite = (station) => {
       class="player-btn player-btn--main"
       @click="togglePlay"
     />
+
     <audio
       ref="audioEl"
       @playing="playerStore.setBuffering(false)"
@@ -179,7 +222,6 @@ const toggleFavorite = (station) => {
   text-overflow: ellipsis;
 }
 
-/* ── Estados ── */
 .player-status {
   display: flex;
   align-items: center;
@@ -195,7 +237,6 @@ const toggleFavorite = (station) => {
   color: rgba(245, 236, 215, 0.35);
 }
 
-/* Punto verde pulsante */
 .live-dot {
   width: 7px;
   height: 7px;
@@ -217,7 +258,6 @@ const toggleFavorite = (station) => {
   }
 }
 
-/* ── Botones ── */
 .player-btn {
   flex-shrink: 0;
   color: #f5ecd7;
