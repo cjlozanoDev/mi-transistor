@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import fallbackRadios from '../data/radios.json'
 
 export const useStationsStore = defineStore('stations', {
   state: () => ({
@@ -9,6 +10,12 @@ export const useStationsStore = defineStore('stations', {
     recentStations: [],
   }),
   actions: {
+    _parseStations(data) {
+      this.listStations = data.countries
+        .find((country) => country.name === 'Spain')
+        .ambits.flatMap((a) => a.channels)
+      this.stationsTimestamp = Date.now()
+    },
     async loadStations() {
       const CACHE_DURATION = 24 * 60 * 60 * 1000
       if (
@@ -23,17 +30,14 @@ export const useStationsStore = defineStore('stations', {
       this.isLoading = true
       try {
         console.log('Fetching emisoras...')
-        const response = await fetch('https://www.tdtchannels.com/lists/radio.json')
-        console.log('Response status:', response.status)
+        const response = await fetch('https://www.tdtchannels.com/lists/radio.json', {
+          signal: AbortSignal.timeout(5000),
+        })
         const data = await response.json()
-        console.log('Emisoras encontradas:', data.countries?.length)
-        this.listStations = data.countries
-          .find((country) => country.name === 'Spain')
-          .ambits.flatMap((a) => a.channels)
-        console.log('Emisoras cargadas:', this.listStations.length)
-        this.stationsTimestamp = Date.now()
+        this._parseStations(data)
       } catch (e) {
-        console.error('Error cargando emisoras:', e)
+        console.error('Error cargando emisoras, usando fallback:', e)
+        this._parseStations(fallbackRadios)
       } finally {
         this.isLoading = false
       }
@@ -56,7 +60,6 @@ export const useStationsStore = defineStore('stations', {
       const mp3 = station.options?.find((o) => o.format === 'mp3')
       return (mp3 || station.options?.[0])?.url ?? null
     },
-
     isFavorite: (state) => (epgId) => state.favorites.some((favorite) => favorite.epg_id === epgId),
   },
   persist: true,
