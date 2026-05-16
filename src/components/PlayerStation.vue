@@ -7,8 +7,20 @@ import { useStationsStore } from 'src/stores/useStationsStore'
 import { useQuasar } from 'quasar'
 
 const WakeLock = registerPlugin('WakeLock')
-const acquireWakeLock = async () => { try { await WakeLock.acquire() } catch { /* no-op on web */ } }
-const releaseWakeLock = async () => { try { await WakeLock.release() } catch { /* no-op on web */ } }
+const acquireWakeLock = async () => {
+  try {
+    await WakeLock.acquire()
+  } catch {
+    /* no-op on web */
+  }
+}
+const releaseWakeLock = async () => {
+  try {
+    await WakeLock.release()
+  } catch {
+    /* no-op on web */
+  }
+}
 
 const playerStore = usePlayerStore()
 const stationStore = useStationsStore()
@@ -17,11 +29,11 @@ const $q = useQuasar()
 const audioEl = ref(null)
 const logoFailed = ref(false)
 
-const MAX_RECONNECT_ATTEMPTS = 5
 const RECONNECT_DELAY_MS = 3000
-const BUFFERING_TIMEOUT_MS = 8000
 const isReconnecting = ref(false)
 const reconnectAttempts = ref(0)
+const hasPlayedOnce = ref(false)
+
 let reconnectTimer = null
 let bufferingTimer = null
 
@@ -40,21 +52,6 @@ const cancelReconnect = () => {
   clearBufferingTimer()
   isReconnecting.value = false
   reconnectAttempts.value = 0
-}
-
-const attemptReconnect = () => {
-  reconnectAttempts.value += 1
-  isReconnecting.value = true
-
-  reconnectTimer = setTimeout(() => {
-    if (!audioEl.value || !playerStore.streamUrl || playerStore.stoppedByUser) {
-      cancelReconnect()
-      return
-    }
-    audioEl.value.src = playerStore.streamUrl
-    audioEl.value.load()
-    audioEl.value.play().catch(() => {})
-  }, RECONNECT_DELAY_MS)
 }
 
 const isStationFavorite = computed(() => {
@@ -93,6 +90,7 @@ watch(
   () => playerStore.currentStation,
   () => {
     logoFailed.value = false
+    hasPlayedOnce.value = false
   },
 )
 
@@ -138,36 +136,27 @@ onUnmounted(() => {
 const onAudioError = () => {
   if (playerStore.stoppedByUser || !playerStore.streamUrl) return
 
-  if (reconnectAttempts.value >= MAX_RECONNECT_ATTEMPTS) {
-    cancelReconnect()
-    playerStore.stop()
-    $q.notify({
-      message: 'No se puede conectar con esta emisora',
-      color: 'negative',
-      position: 'top',
-      timeout: 3000,
-    })
-    return
-  }
-
-  attemptReconnect()
+  isReconnecting.value = true
+  reconnectTimer = setTimeout(() => {
+    if (!playerStore.stoppedByUser && audioEl.value) {
+      audioEl.value.src = playerStore.streamUrl
+      audioEl.value.load()
+      audioEl.value.play().catch(() => {})
+    }
+  }, RECONNECT_DELAY_MS)
 }
 
 const onAudioWaiting = () => {
   playerStore.setBuffering(true)
-  clearBufferingTimer()
-  if (!playerStore.stoppedByUser && playerStore.streamUrl) {
-    bufferingTimer = setTimeout(() => {
-      bufferingTimer = null
-      onAudioError()
-    }, BUFFERING_TIMEOUT_MS)
+  if (!playerStore.stoppedByUser && hasPlayedOnce.value) {
+    isReconnecting.value = true
   }
 }
 
 const onAudioPlaying = () => {
   playerStore.setBuffering(false)
-  clearBufferingTimer()
-  if (isReconnecting.value) cancelReconnect()
+  isReconnecting.value = false
+  hasPlayedOnce.value = true
 }
 
 const togglePlay = () => {
@@ -175,6 +164,8 @@ const togglePlay = () => {
     cancelReconnect()
     playerStore.stop()
   } else {
+    cancelReconnect()
+    hasPlayedOnce.value = false
     playerStore.isPlaying = true
     playerStore.isBuffering = true
   }
@@ -210,8 +201,9 @@ const toggleFavorite = (station) => {
 
       <div v-if="isReconnecting" class="player-status">
         <q-spinner-dots color="secondary" size="16px" />
-        <span class="status-text">Reconectando ({{ reconnectAttempts }}/{{ MAX_RECONNECT_ATTEMPTS }})...</span>
+        <span class="status-text">Reconectando...</span>
       </div>
+
       <div v-else-if="playerStore.isBuffering" class="player-status">
         <q-spinner-dots color="secondary" size="16px" />
         <span class="status-text">Conectando...</span>
