@@ -19,15 +19,25 @@ const logoFailed = ref(false)
 
 const MAX_RECONNECT_ATTEMPTS = 5
 const RECONNECT_DELAY_MS = 3000
+const BUFFERING_TIMEOUT_MS = 8000
 const isReconnecting = ref(false)
 const reconnectAttempts = ref(0)
 let reconnectTimer = null
+let bufferingTimer = null
+
+const clearBufferingTimer = () => {
+  if (bufferingTimer) {
+    clearTimeout(bufferingTimer)
+    bufferingTimer = null
+  }
+}
 
 const cancelReconnect = () => {
   if (reconnectTimer) {
     clearTimeout(reconnectTimer)
     reconnectTimer = null
   }
+  clearBufferingTimer()
   isReconnecting.value = false
   reconnectAttempts.value = 0
 }
@@ -122,6 +132,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   cancelReconnect()
+  clearBufferingTimer()
 })
 
 const onAudioError = () => {
@@ -142,8 +153,20 @@ const onAudioError = () => {
   attemptReconnect()
 }
 
+const onAudioWaiting = () => {
+  playerStore.setBuffering(true)
+  clearBufferingTimer()
+  if (!playerStore.stoppedByUser && playerStore.streamUrl) {
+    bufferingTimer = setTimeout(() => {
+      bufferingTimer = null
+      onAudioError()
+    }, BUFFERING_TIMEOUT_MS)
+  }
+}
+
 const onAudioPlaying = () => {
   playerStore.setBuffering(false)
+  clearBufferingTimer()
   if (isReconnecting.value) cancelReconnect()
 }
 
@@ -226,7 +249,7 @@ const toggleFavorite = (station) => {
     <audio
       ref="audioEl"
       @playing="onAudioPlaying"
-      @waiting="playerStore.setBuffering(true)"
+      @waiting="onAudioWaiting"
       @error="onAudioError"
     />
   </div>

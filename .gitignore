@@ -31,3 +31,5 @@ yarn-error.log*
 
 # local .env files
 .env.local*
+
+.claude/worktrees/jovial-vaughan-809a26

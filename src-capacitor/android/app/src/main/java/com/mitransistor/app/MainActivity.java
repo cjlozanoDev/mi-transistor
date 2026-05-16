@@ -12,4 +12,13 @@ public class MainActivity extends BridgeActivity {
         registerPlugin(MediaSessionPlugin.class);
         super.onCreate(savedInstanceState);
     }
+
+    @Override
+    public void onBackPressed() {
+        if (bridge != null && bridge.getWebView() != null && bridge.getWebView().canGoBack()) {
+            bridge.getWebView().goBack();
+        } else {
+            moveTaskToBack(true);
+        }
+    }
 }
