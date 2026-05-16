@@ -9,6 +9,7 @@ export const usePlayerStore = defineStore('player', {
     isPlaying: false,
     isBuffering: false,
     stoppedByUser: false,
+    playTrigger: 0,
   }),
 
   actions: {
@@ -21,6 +22,7 @@ export const usePlayerStore = defineStore('player', {
       this.isPlaying = true
       this.isBuffering = true
       this.stoppedByUser = false
+      this.playTrigger += 1
     },
 
     stop() {

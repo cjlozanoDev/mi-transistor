@@ -87,10 +87,10 @@ watch(
 )
 
 watch(
-  () => playerStore.streamUrl,
-  (url) => {
-    if (!audioEl.value || !url) return
-    audioEl.value.src = url
+  () => playerStore.playTrigger,
+  () => {
+    if (!audioEl.value || !playerStore.streamUrl) return
+    audioEl.value.src = playerStore.streamUrl
     audioEl.value.load()
     audioEl.value.play().catch(() => {})
   },
@@ -101,6 +101,10 @@ watch(
   (playing) => {
     if (!audioEl.value) return
     if (playing) {
+      if (playerStore.streamUrl) {
+        audioEl.value.src = playerStore.streamUrl
+        audioEl.value.load()
+      }
       audioEl.value.play().catch(() => {})
       updateMediaSession(playerStore.currentStation)
       acquireWakeLock()
