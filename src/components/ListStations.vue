@@ -18,8 +18,15 @@ const failedLogos = ref(new Set())
 
 const filteredStations = computed(() => {
   if (!searchStation.value) return props.stations
-  const q = searchStation.value.toLowerCase()
-  return props.stations.filter((s) => s.name.toLowerCase().includes(q))
+  const words = searchStation.value
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((w) => w.length >= 3)
+  if (words.length === 0) return props.stations
+  return props.stations.filter((s) => {
+    const name = s.name.toLowerCase()
+    return words.some((w) => name.includes(w))
+  })
 })
 
 const onStationTap = (station) => {
