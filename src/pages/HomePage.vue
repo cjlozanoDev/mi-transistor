@@ -20,7 +20,7 @@ async function fetchHeadlines() {
     clearTimeout(timeout)
     const text = await res.text()
     const xml = new DOMParser().parseFromString(text, 'text/xml')
-    const items = Array.from(xml.querySelectorAll('item')).slice(0, 5)
+    const items = Array.from(xml.querySelectorAll('item')).slice(0, 7)
     if (items.length) {
       headlines.value = items.map((item) => item.querySelector('title')?.textContent ?? '')
       currentIndex.value = 0
@@ -43,7 +43,44 @@ function startRotation() {
       currentIndex.value = (currentIndex.value + 1) % headlines.value.length
       visible.value = true
     }, 400)
-  }, 15000)
+  }, 7000)
+}
+
+function resetRotation() {
+  clearInterval(rotateTimer)
+  startRotation()
+}
+
+function goNext() {
+  if (!headlines.value.length) return
+  visible.value = false
+  setTimeout(() => {
+    currentIndex.value = (currentIndex.value + 1) % headlines.value.length
+    visible.value = true
+  }, 400)
+  resetRotation()
+}
+
+function goPrev() {
+  if (!headlines.value.length) return
+  visible.value = false
+  setTimeout(() => {
+    currentIndex.value = (currentIndex.value - 1 + headlines.value.length) % headlines.value.length
+    visible.value = true
+  }, 400)
+  resetRotation()
+}
+
+let touchStartX = 0
+
+function onTouchStart(e) {
+  touchStartX = e.touches[0].clientX
+}
+
+function onTouchEnd(e) {
+  const delta = touchStartX - e.changedTouches[0].clientX
+  if (Math.abs(delta) < 50) return
+  delta > 0 ? goNext() : goPrev()
 }
 
 onMounted(() => {
@@ -120,17 +157,39 @@ onUnmounted(() => {
       </div>
 
       <template v-else-if="headlines.length">
-        <Transition name="fade">
-          <div v-if="visible" :key="currentIndex" class="news-headline">
-            {{ headlines[currentIndex] }}
+        <div class="news-swipe-area" @touchstart="onTouchStart" @touchend="onTouchEnd">
+          <Transition name="fade">
+            <div v-if="visible" :key="currentIndex" class="news-headline">
+              {{ headlines[currentIndex] }}
+            </div>
+          </Transition>
+        </div>
+        <div class="news-controls">
+          <q-btn
+            flat
+            round
+            dense
+            icon="chevron_left"
+            size="xs"
+            class="news-arrow"
+            @click="goPrev"
+          />
+          <div class="news-dots">
+            <span
+              v-for="(_, i) in headlines"
+              :key="i"
+              class="dot"
+              :class="{ active: i === currentIndex }"
+            />
           </div>
-        </Transition>
-        <div class="news-dots">
-          <span
-            v-for="(_, i) in headlines"
-            :key="i"
-            class="dot"
-            :class="{ active: i === currentIndex }"
+          <q-btn
+            flat
+            round
+            dense
+            icon="chevron_right"
+            size="xs"
+            class="news-arrow"
+            @click="goNext"
           />
         </div>
       </template>
@@ -185,6 +244,10 @@ onUnmounted(() => {
   font-style: italic;
 }
 
+.news-swipe-area {
+  min-height: 42px;
+}
+
 .news-headline {
   font-size: 15px;
   font-weight: 600;
@@ -193,10 +256,27 @@ onUnmounted(() => {
   min-height: 42px;
 }
 
+.news-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.news-arrow {
+  color: rgba(200, 146, 42, 0.6);
+  flex-shrink: 0;
+}
+
+.news-arrow:hover {
+  color: rgba(200, 146, 42, 1);
+}
+
 .news-dots {
   display: flex;
   gap: 6px;
-  margin-top: 10px;
+  flex: 1;
+  justify-content: center;
 }
 
 .dot {
