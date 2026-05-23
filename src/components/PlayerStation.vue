@@ -1,173 +1,122 @@
 <script setup>
 import { ref, watch, computed, onMounted, onUnmounted } from 'vue'
 import { registerPlugin } from '@capacitor/core'
-import { MediaSession } from '@capgo/capacitor-media-session'
 import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { useStationsStore } from 'src/stores/useStationsStore'
 import { useQuasar } from 'quasar'
 
-const WakeLock = registerPlugin('WakeLock')
-const acquireWakeLock = async () => {
-  try {
-    await WakeLock.acquire()
-  } catch {
-    /* no-op on web */
-  }
-}
-const releaseWakeLock = async () => {
-  try {
-    await WakeLock.release()
-  } catch {
-    /* no-op on web */
-  }
-}
+const AudioPlayer = registerPlugin('AudioPlayer')
 
 const playerStore = usePlayerStore()
 const stationStore = useStationsStore()
 const $q = useQuasar()
 
-const audioEl = ref(null)
 const logoFailed = ref(false)
-
-const RECONNECT_DELAY_MS = 3000
-const isReconnecting = ref(false)
-const reconnectAttempts = ref(0)
+const isBuffering = ref(false)
 const hasPlayedOnce = ref(false)
 
-let reconnectTimer = null
-let bufferingTimer = null
+let stateHandle = null
+let errorHandle = null
 
-const clearBufferingTimer = () => {
-  if (bufferingTimer) {
-    clearTimeout(bufferingTimer)
-    bufferingTimer = null
-  }
-}
-
-const cancelReconnect = () => {
-  if (reconnectTimer) {
-    clearTimeout(reconnectTimer)
-    reconnectTimer = null
-  }
-  clearBufferingTimer()
-  isReconnecting.value = false
-  reconnectAttempts.value = 0
-}
+const isReconnecting = computed(
+  () => isBuffering.value && hasPlayedOnce.value && playerStore.isPlaying,
+)
+const isConnecting = computed(
+  () => isBuffering.value && !hasPlayedOnce.value && playerStore.isPlaying,
+)
 
 const isStationFavorite = computed(() => {
   if (!playerStore.currentStation) return false
   return stationStore.isFavorite(playerStore.currentStation.epg_id)
 })
 
-const updateMediaSession = async (station) => {
-  await MediaSession.setMetadata({
-    title: station?.name ?? 'Mi Transistor',
-    artist: 'Radio en directo',
-    album: 'Mi Transistor',
-    artwork: station?.logo ? [{ src: station.logo, sizes: '512x512', type: 'image/jpeg' }] : [],
-  })
-  await MediaSession.setPlaybackState({ playbackState: 'playing' })
+const callPlay = async () => {
+  const st = playerStore.currentStation
+  if (!st || !playerStore.streamUrl) return
+  hasPlayedOnce.value = false
+  isBuffering.value = true
+  try {
+    await AudioPlayer.play({
+      url: playerStore.streamUrl,
+      title: st.name ?? 'Mi Transistor',
+      artist: 'Radio en directo',
+      artwork: st.logo ?? '',
+    })
+  } catch {
+    /* no-op on web */
+  }
 }
 
-const clearMediaSession = async () => {
-  await MediaSession.setPlaybackState({ playbackState: 'paused' })
+const callStop = async () => {
+  isBuffering.value = false
+  hasPlayedOnce.value = false
+  try {
+    await AudioPlayer.stop()
+  } catch {
+    /* no-op on web */
+  }
 }
 
-const setupMediaSessionHandlers = async () => {
-  await MediaSession.setActionHandler({ action: 'play' }, () => {
-    playerStore.isPlaying = true
-    playerStore.isBuffering = true
-  })
-  await MediaSession.setActionHandler({ action: 'pause' }, () => {
-    playerStore.stop()
-  })
-  await MediaSession.setActionHandler({ action: 'stop' }, () => {
-    playerStore.stop()
-  })
+const callUpdateMetadata = async () => {
+  const st = playerStore.currentStation
+  if (!st) return
+  try {
+    await AudioPlayer.updateMetadata({
+      title: st.name ?? 'Mi Transistor',
+      artist: 'Radio en directo',
+      artwork: st.logo ?? '',
+    })
+  } catch {
+    /* no-op on web */
+  }
 }
 
 watch(
   () => playerStore.currentStation,
   () => {
     logoFailed.value = false
-    hasPlayedOnce.value = false
+    if (playerStore.isPlaying) callUpdateMetadata()
   },
 )
 
 watch(
   () => playerStore.playTrigger,
-  () => {
-    if (!audioEl.value || !playerStore.streamUrl) return
-    audioEl.value.src = playerStore.streamUrl
-    audioEl.value.load()
-    audioEl.value.play().catch(() => {})
-  },
+  () => callPlay(),
 )
 
 watch(
   () => playerStore.isPlaying,
   (playing) => {
-    if (!audioEl.value) return
-    if (playing) {
-      if (playerStore.streamUrl) {
-        audioEl.value.src = playerStore.streamUrl
-        audioEl.value.load()
-      }
-      audioEl.value.play().catch(() => {})
-      updateMediaSession(playerStore.currentStation)
-      acquireWakeLock()
-    } else {
-      audioEl.value.pause()
-      clearMediaSession()
-      releaseWakeLock()
-    }
+    if (playing) callPlay()
+    else callStop()
   },
 )
 
-onMounted(() => {
-  setupMediaSessionHandlers()
+onMounted(async () => {
+  try {
+    stateHandle = await AudioPlayer.addListener('state', (s) => {
+      const buffering = !!s.isBuffering
+      isBuffering.value = buffering
+      if (s.isPlaying && !buffering) hasPlayedOnce.value = true
+    })
+    errorHandle = await AudioPlayer.addListener('error', () => {
+      if (playerStore.isPlaying) isBuffering.value = true
+    })
+  } catch {
+    /* no-op on web */
+  }
 })
 
 onUnmounted(() => {
-  cancelReconnect()
-  clearBufferingTimer()
+  if (stateHandle) stateHandle.remove()
+  if (errorHandle) errorHandle.remove()
 })
-
-const onAudioError = () => {
-  if (playerStore.stoppedByUser || !playerStore.streamUrl) return
-
-  isReconnecting.value = true
-  reconnectTimer = setTimeout(() => {
-    if (!playerStore.stoppedByUser && audioEl.value) {
-      audioEl.value.src = playerStore.streamUrl
-      audioEl.value.load()
-      audioEl.value.play().catch(() => {})
-    }
-  }, RECONNECT_DELAY_MS)
-}
-
-const onAudioWaiting = () => {
-  playerStore.setBuffering(true)
-  if (!playerStore.stoppedByUser && hasPlayedOnce.value) {
-    isReconnecting.value = true
-  }
-}
-
-const onAudioPlaying = () => {
-  playerStore.setBuffering(false)
-  isReconnecting.value = false
-  hasPlayedOnce.value = true
-}
 
 const togglePlay = () => {
   if (playerStore.isPlaying) {
-    cancelReconnect()
     playerStore.stop()
   } else {
-    cancelReconnect()
-    hasPlayedOnce.value = false
     playerStore.isPlaying = true
-    playerStore.isBuffering = true
   }
 }
 
@@ -204,7 +153,7 @@ const toggleFavorite = (station) => {
         <span class="status-text">Reconectando...</span>
       </div>
 
-      <div v-else-if="playerStore.isBuffering" class="player-status">
+      <div v-else-if="isConnecting" class="player-status">
         <q-spinner-dots color="secondary" size="16px" />
         <span class="status-text">Conectando...</span>
       </div>
@@ -238,12 +187,6 @@ const toggleFavorite = (station) => {
       @click="togglePlay"
     />
 
-    <audio
-      ref="audioEl"
-      @playing="onAudioPlaying"
-      @waiting="onAudioWaiting"
-      @error="onAudioError"
-    />
   </div>
 </template>
 
