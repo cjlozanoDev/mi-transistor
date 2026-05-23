@@ -12,7 +12,6 @@ const stationStore = useStationsStore()
 const $q = useQuasar()
 
 const logoFailed = ref(false)
-const isBuffering = ref(false)
 const isActuallyPlaying = ref(false)
 const hasPlayedOnce = ref(false)
 const isReconnecting = ref(false)
@@ -40,12 +39,22 @@ const scheduleReconnect = () => {
   }, RECONNECT_DELAY_MS)
 }
 
+// We intend to play but audio isn't actually live yet. First-ever attempt for
+// this playback is "connecting"; any later stall (network drop, native retry)
+// once it has played is "reconnecting".
 const isConnecting = computed(
   () =>
-    isBuffering.value &&
-    !hasPlayedOnce.value &&
     playerStore.isPlaying &&
+    !isActuallyPlaying.value &&
+    !hasPlayedOnce.value &&
     !isReconnecting.value,
+)
+
+const showReconnecting = computed(
+  () =>
+    playerStore.isPlaying &&
+    !isActuallyPlaying.value &&
+    (hasPlayedOnce.value || isReconnecting.value),
 )
 
 const isStationFavorite = computed(() => {
@@ -58,7 +67,6 @@ const callPlay = async () => {
   if (!st || !playerStore.streamUrl) return
   hasPlayedOnce.value = false
   isActuallyPlaying.value = false
-  isBuffering.value = true
   try {
     await AudioPlayer.play({
       url: playerStore.streamUrl,
@@ -73,7 +81,6 @@ const callPlay = async () => {
 
 const callStop = async () => {
   cancelReconnect()
-  isBuffering.value = false
   isActuallyPlaying.value = false
   hasPlayedOnce.value = false
   try {
@@ -141,7 +148,6 @@ onMounted(async () => {
     stateHandle = await AudioPlayer.addListener('state', (s) => {
       const buffering = !!s.isBuffering
       const playing = !!s.isPlaying && !buffering
-      isBuffering.value = buffering
       isActuallyPlaying.value = playing
       if (playing) {
         hasPlayedOnce.value = true
@@ -155,7 +161,6 @@ onMounted(async () => {
 
     const s = await AudioPlayer.getState()
     const buffering = !!s.isBuffering
-    isBuffering.value = buffering
     isActuallyPlaying.value = !!s.isPlaying && !buffering
     if (isActuallyPlaying.value) hasPlayedOnce.value = true
     reconcilePlaying(!!s.isPlaying)
@@ -207,7 +212,7 @@ const toggleFavorite = (station) => {
     <div class="player-info">
       <div class="player-name">{{ playerStore.currentStation?.name ?? 'Sin emisora' }}</div>
 
-      <div v-if="isReconnecting" class="player-status">
+      <div v-if="showReconnecting" class="player-status">
         <q-spinner-dots color="secondary" size="16px" />
         <span class="status-text">Reconectando...</span>
       </div>
