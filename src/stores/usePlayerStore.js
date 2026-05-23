@@ -35,4 +35,8 @@ export const usePlayerStore = defineStore('player', {
       this.isBuffering = val
     },
   },
+
+  persist: {
+    pick: ['currentStation', 'streamUrl'],
+  },
 })

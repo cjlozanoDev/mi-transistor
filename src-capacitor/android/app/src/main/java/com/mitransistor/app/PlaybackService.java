@@ -74,9 +74,11 @@ public class PlaybackService extends MediaSessionService {
 
     @Override
     public void onTaskRemoved(Intent rootIntent) {
-        if (player != null && !player.getPlayWhenReady()) {
-            stopSelf();
+        if (player != null) {
+            player.stop();
+            player.clearMediaItems();
         }
+        stopSelf();
     }
 
     @Override

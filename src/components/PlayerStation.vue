@@ -13,16 +13,39 @@ const $q = useQuasar()
 
 const logoFailed = ref(false)
 const isBuffering = ref(false)
+const isActuallyPlaying = ref(false)
 const hasPlayedOnce = ref(false)
+const isReconnecting = ref(false)
 
+const RECONNECT_DELAY_MS = 3000
+let reconnectTimer = null
 let stateHandle = null
 let errorHandle = null
 
-const isReconnecting = computed(
-  () => isBuffering.value && hasPlayedOnce.value && playerStore.isPlaying,
-)
+const cancelReconnect = () => {
+  if (reconnectTimer) {
+    clearTimeout(reconnectTimer)
+    reconnectTimer = null
+  }
+  isReconnecting.value = false
+}
+
+const scheduleReconnect = () => {
+  isReconnecting.value = true
+  isActuallyPlaying.value = false
+  if (reconnectTimer) return
+  reconnectTimer = setTimeout(() => {
+    reconnectTimer = null
+    if (playerStore.isPlaying) callPlay()
+  }, RECONNECT_DELAY_MS)
+}
+
 const isConnecting = computed(
-  () => isBuffering.value && !hasPlayedOnce.value && playerStore.isPlaying,
+  () =>
+    isBuffering.value &&
+    !hasPlayedOnce.value &&
+    playerStore.isPlaying &&
+    !isReconnecting.value,
 )
 
 const isStationFavorite = computed(() => {
@@ -34,6 +57,7 @@ const callPlay = async () => {
   const st = playerStore.currentStation
   if (!st || !playerStore.streamUrl) return
   hasPlayedOnce.value = false
+  isActuallyPlaying.value = false
   isBuffering.value = true
   try {
     await AudioPlayer.play({
@@ -48,7 +72,9 @@ const callPlay = async () => {
 }
 
 const callStop = async () => {
+  cancelReconnect()
   isBuffering.value = false
+  isActuallyPlaying.value = false
   hasPlayedOnce.value = false
   try {
     await AudioPlayer.stop()
@@ -79,41 +105,74 @@ watch(
   },
 )
 
+const userPlay = () => {
+  cancelReconnect()
+  callPlay()
+}
+
+// Reconcile UI/store with the real native player state. Only syncs the
+// "is active" direction so an error-driven IDLE never cancels a reconnect.
+let suppressPlayWatch = false
+const reconcilePlaying = (nativeActive) => {
+  if (nativeActive && !playerStore.isPlaying) {
+    suppressPlayWatch = true
+    playerStore.isPlaying = true
+    suppressPlayWatch = false
+  }
+}
+
 watch(
   () => playerStore.playTrigger,
-  () => callPlay(),
+  () => userPlay(),
 )
 
 watch(
   () => playerStore.isPlaying,
   (playing) => {
-    if (playing) callPlay()
+    if (suppressPlayWatch) return
+    if (playing) userPlay()
     else callStop()
   },
+  { flush: 'sync' },
 )
 
 onMounted(async () => {
   try {
     stateHandle = await AudioPlayer.addListener('state', (s) => {
       const buffering = !!s.isBuffering
+      const playing = !!s.isPlaying && !buffering
       isBuffering.value = buffering
-      if (s.isPlaying && !buffering) hasPlayedOnce.value = true
+      isActuallyPlaying.value = playing
+      if (playing) {
+        hasPlayedOnce.value = true
+        cancelReconnect()
+      }
+      reconcilePlaying(!!s.isPlaying)
     })
     errorHandle = await AudioPlayer.addListener('error', () => {
-      if (playerStore.isPlaying) isBuffering.value = true
+      if (playerStore.isPlaying) scheduleReconnect()
     })
+
+    const s = await AudioPlayer.getState()
+    const buffering = !!s.isBuffering
+    isBuffering.value = buffering
+    isActuallyPlaying.value = !!s.isPlaying && !buffering
+    if (isActuallyPlaying.value) hasPlayedOnce.value = true
+    reconcilePlaying(!!s.isPlaying)
   } catch {
     /* no-op on web */
   }
 })
 
 onUnmounted(() => {
+  cancelReconnect()
   if (stateHandle) stateHandle.remove()
   if (errorHandle) errorHandle.remove()
 })
 
 const togglePlay = () => {
   if (playerStore.isPlaying) {
+    cancelReconnect()
     playerStore.stop()
   } else {
     playerStore.isPlaying = true
@@ -157,7 +216,7 @@ const toggleFavorite = (station) => {
         <q-spinner-dots color="secondary" size="16px" />
         <span class="status-text">Conectando...</span>
       </div>
-      <div v-else-if="playerStore.isPlaying" class="player-status">
+      <div v-else-if="isActuallyPlaying" class="player-status">
         <span class="live-dot" />
         <span class="status-text">En antena</span>
       </div>

@@ -7,8 +7,8 @@ android {
         applicationId "com.mitransistor.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 6
-        versionName "1.0.6"
+        versionCode 8
+        versionName "1.0.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -36,6 +36,7 @@ dependencies {
     implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
     implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
     implementation "androidx.media3:media3-exoplayer:1.4.1"
+    implementation "androidx.media3:media3-exoplayer-hls:1.4.1"
     implementation "androidx.media3:media3-session:1.4.1"
     implementation project(':capacitor-android')
     testImplementation "junit:junit:$junitVersion"
