@@ -25,9 +25,11 @@ defineProps({
 <style scoped>
 .card-mi-transistor {
   border-radius: 20px !important;
-  height: 140px;
+  min-height: 140px;
   cursor: pointer;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-mi-transistor > div {
@@ -57,12 +59,14 @@ defineProps({
   color: #f5ecd7;
 }
 .icon-wrap {
-  width: 44px;
-  height: 44px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  padding: 8px;
   border-radius: 12px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  line-height: 1;
   margin: 12px 0 0 12px;
   position: relative;
   z-index: 1;
