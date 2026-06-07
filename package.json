@@ -17,6 +17,7 @@
   "dependencies": {
     "@capacitor/share": "^7.0.4",
     "@capacitor/status-bar": "^7.0.5",
+    "@capawesome/capacitor-app-update": "^7.0.0",
     "@capgo/capacitor-media-session": "^7.3.0",
     "@quasar/extras": "^1.16.4",
     "pinia": "^3.0.1",

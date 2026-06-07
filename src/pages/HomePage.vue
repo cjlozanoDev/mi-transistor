@@ -2,8 +2,56 @@
 import CardMiTransistor from 'src/components/CardMiTransistor.vue'
 import { useRouter } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useQuasar } from 'quasar'
+import { Capacitor, registerPlugin } from '@capacitor/core'
+import { AppUpdate, AppUpdateAvailability } from '@capawesome/capacitor-app-update'
 
 const router = useRouter()
+const $q = useQuasar()
+
+// Plugin nativo propio: abre Google Play directamente, sin selector de apps
+const StoreOpener = registerPlugin('StoreOpener')
+const PACKAGE_NAME = 'com.mitransistor.app'
+
+function openPlayStore() {
+  // Forzamos Google Play con nuestro plugin; si fallara, usamos el del sistema
+  StoreOpener.openPlayStore({ packageName: PACKAGE_NAME }).catch(() => {
+    AppUpdate.openAppStore()
+  })
+}
+
+async function checkForUpdate() {
+  // La comprobación solo funciona en el dispositivo (Android/iOS), no en el navegador
+  if (!Capacitor.isNativePlatform()) return
+  try {
+    const info = await AppUpdate.getAppUpdateInfo()
+    if (info.updateAvailability !== AppUpdateAvailability.UPDATE_AVAILABLE) return
+
+    $q.dialog({
+      title: '📻 Nueva versión disponible',
+      message:
+        'Hay una versión más reciente de Mi Transistor.<br><br>' +
+        'Pulse <b>Actualizar</b> y se abrirá <b>Google Play</b>. ' +
+        'Allí solo tiene que pulsar el botón <b>Actualizar</b> para tener la última versión.',
+      html: true,
+      persistent: true,
+      ok: {
+        label: 'Actualizar',
+        color: 'primary',
+        unelevated: true,
+      },
+      cancel: {
+        label: 'Ahora no',
+        flat: true,
+        color: 'grey-7',
+      },
+    }).onOk(() => {
+      openPlayStore()
+    })
+  } catch {
+    // Si la comprobación falla (sin conexión, no instalada desde Play, etc.) no molestamos al usuario
+  }
+}
 
 const headlines = ref([])
 const currentIndex = ref(0)
@@ -84,6 +132,7 @@ function onTouchEnd(e) {
 }
 
 onMounted(() => {
+  checkForUpdate()
   fetchHeadlines().then(() => {
     if (headlines.value.length) startRotation()
   })
