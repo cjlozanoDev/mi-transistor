@@ -12,6 +12,7 @@ export const useStationsStore = defineStore('stations', {
     listStationsLatinoamerica: [],
     stationsLatinoamericaTimestamp: null,
     isLoading: false,
+    isLoadingLatinoamerica: false,
     favorites: [],
     recentStations: [],
   }),
@@ -58,6 +59,7 @@ export const useStationsStore = defineStore('stations', {
       if (this._isCacheValid(this.stationsLatinoamericaTimestamp, this.listStationsLatinoamerica))
         return
 
+      this.isLoadingLatinoamerica = true
       try {
         const requests = COUNTRIES_LATINOAMERICA.map((code) =>
           fetch(
@@ -73,6 +75,8 @@ export const useStationsStore = defineStore('stations', {
         // El fallback ya está en el formato de la app, no necesita parseo
         this.listStationsLatinoamerica = fallbackRadiosLatinoamerica
         this.stationsLatinoamericaTimestamp = Date.now()
+      } finally {
+        this.isLoadingLatinoamerica = false
       }
     },
     toggleFavorite(station) {

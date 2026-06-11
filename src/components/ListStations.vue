@@ -26,10 +26,16 @@ const countryOptions = [
   { label: 'Latinoamérica', value: 'Latinoamérica' },
 ]
 
+const showingLatinoamerica = computed(
+  () => props.showCountryFilter && selectedCountry.value === 'Latinoamérica',
+)
+
+const isLoadingList = computed(() =>
+  showingLatinoamerica.value ? stationsStore.isLoadingLatinoamerica : stationsStore.isLoading,
+)
+
 const baseStations = computed(() =>
-  props.showCountryFilter && selectedCountry.value === 'Latinoamérica'
-    ? stationsStore.listStationsLatinoamerica
-    : props.stations,
+  showingLatinoamerica.value ? stationsStore.listStationsLatinoamerica : props.stations,
 )
 
 const filteredStations = computed(() => {
@@ -84,7 +90,7 @@ const onImgError = (station) => {
       />
     </div>
 
-    <template v-if="stationsStore.isLoading && selectedCountry === 'España'">
+    <template v-if="isLoadingList">
       <div class="stations-list q-px-md q-pt-sm">
         <div v-for="n in 8" :key="n" class="station-skeleton-row">
           <q-skeleton type="QAvatar" size="52px" dark />
