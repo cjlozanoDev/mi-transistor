@@ -8,6 +8,10 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  showCountryFilter: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const stationsStore = useStationsStore()
@@ -15,15 +19,27 @@ const playerStore = usePlayerStore()
 
 const searchStation = ref('')
 const failedLogos = ref(new Set())
+const selectedCountry = ref('España')
+
+const countryOptions = [
+  { label: 'España', value: 'España' },
+  { label: 'Latinoamérica', value: 'Latinoamérica' },
+]
+
+const baseStations = computed(() =>
+  props.showCountryFilter && selectedCountry.value === 'Latinoamérica'
+    ? stationsStore.listStationsLatinoamerica
+    : props.stations,
+)
 
 const filteredStations = computed(() => {
-  if (!searchStation.value) return props.stations
+  if (!searchStation.value) return baseStations.value
   const words = searchStation.value
     .toLowerCase()
     .split(/\s+/)
     .filter((w) => w.length >= 3)
-  if (words.length === 0) return props.stations
-  return props.stations.filter((s) => {
+  if (words.length === 0) return baseStations.value
+  return baseStations.value.filter((s) => {
     const name = s.name.toLowerCase()
     return words.some((w) => name.includes(w))
   })
@@ -57,7 +73,18 @@ const onImgError = (station) => {
       </q-input>
     </div>
 
-    <template v-if="stationsStore.isLoading">
+    <div v-if="showCountryFilter" class="q-px-md q-pb-sm text-white">
+      <q-option-group
+        v-model="selectedCountry"
+        :options="countryOptions"
+        type="radio"
+        color="secondary"
+        inline
+        dark
+      />
+    </div>
+
+    <template v-if="stationsStore.isLoading && selectedCountry === 'España'">
       <div class="stations-list q-px-md q-pt-sm">
         <div v-for="n in 8" :key="n" class="station-skeleton-row">
           <q-skeleton type="QAvatar" size="52px" dark />

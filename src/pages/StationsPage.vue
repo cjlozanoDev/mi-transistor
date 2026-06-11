@@ -9,6 +9,6 @@ const stationsStore = useStationsStore()
 <template>
   <q-page class="bg-dark-page">
     <SubHeader title-route="Todas las Radios" back-name-route="home" />
-    <ListStations :stations="stationsStore.listStations" />
+    <ListStations :stations="stationsStore.listStations" show-country-filter />
   </q-page>
 </template>

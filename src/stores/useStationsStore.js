@@ -1,10 +1,16 @@
 import { defineStore } from 'pinia'
 import fallbackRadios from '../data/radios.json'
+import fallbackRadiosLatinoamerica from '../data/radios-latinoamerica.json'
+
+const CACHE_DURATION = 24 * 60 * 60 * 1000
+const COUNTRIES_LATINOAMERICA = ['PE', 'MX', 'AR', 'CO', 'CL', 'VE', 'UY', 'BO', 'EC', 'PY']
 
 export const useStationsStore = defineStore('stations', {
   state: () => ({
     listStations: [],
     stationsTimestamp: null,
+    listStationsLatinoamerica: [],
+    stationsLatinoamericaTimestamp: null,
     isLoading: false,
     favorites: [],
     recentStations: [],
@@ -16,20 +22,26 @@ export const useStationsStore = defineStore('stations', {
         .ambits.flatMap((a) => a.channels)
       this.stationsTimestamp = Date.now()
     },
+    _parseStationsLatinoamerica(data) {
+      this.listStationsLatinoamerica = data.map((s) => ({
+        name: s.name,
+        logo: s.favicon,
+        epg_id: s.stationuuid,
+        options: [{ format: 'mp3', url: s.url_resolved || s.url }],
+      }))
+      this.stationsLatinoamericaTimestamp = Date.now()
+    },
+    _isCacheValid(timestamp, list) {
+      return timestamp && list.length > 0 && Date.now() - timestamp < CACHE_DURATION
+    },
     async loadStations() {
-      const CACHE_DURATION = 24 * 60 * 60 * 1000
-      if (
-        this.stationsTimestamp &&
-        this.listStations.length > 0 &&
-        Date.now() - this.stationsTimestamp < CACHE_DURATION
-      ) {
-        console.log('Usando caché')
-        return
-      }
+      // Las latinoamericanas se cargan en segundo plano, sin bloquear el spinner
+      this.loadStationsLatinoamerica()
+
+      if (this._isCacheValid(this.stationsTimestamp, this.listStations)) return
 
       this.isLoading = true
       try {
-        console.log('Fetching emisoras...')
         const response = await fetch('https://www.tdtchannels.com/lists/radio.json', {
           signal: AbortSignal.timeout(5000),
         })
@@ -40,6 +52,27 @@ export const useStationsStore = defineStore('stations', {
         this._parseStations(fallbackRadios)
       } finally {
         this.isLoading = false
+      }
+    },
+    async loadStationsLatinoamerica() {
+      if (this._isCacheValid(this.stationsLatinoamericaTimestamp, this.listStationsLatinoamerica))
+        return
+
+      try {
+        const requests = COUNTRIES_LATINOAMERICA.map((code) =>
+          fetch(
+            `https://de1.api.radio-browser.info/json/stations/bycountrycodeexact/${code}?limit=50&hidebroken=true&order=clickcount&reverse=true`,
+            { signal: AbortSignal.timeout(5000) },
+          ),
+        )
+        const responses = await Promise.all(requests)
+        const parsed = await Promise.all(responses.map((r) => r.json()))
+        this._parseStationsLatinoamerica(parsed.flat())
+      } catch (e) {
+        console.error('Error cargando emisoras de Latinoamérica, usando fallback:', e)
+        // El fallback ya está en el formato de la app, no necesita parseo
+        this.listStationsLatinoamerica = fallbackRadiosLatinoamerica
+        this.stationsLatinoamericaTimestamp = Date.now()
       }
     },
     toggleFavorite(station) {
