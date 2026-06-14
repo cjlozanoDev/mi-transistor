@@ -105,8 +105,8 @@ const onImgError = (station) => {
     <template v-else>
       <div class="stations-grid">
         <div
-          v-for="station in filteredStations"
-          :key="station.name"
+          v-for="(station, index) in filteredStations"
+          :key="`${index}-${station.name}`"
           class="station-item"
           @click="onStationTap(station)"
         >
