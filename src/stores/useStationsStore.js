@@ -3,7 +3,22 @@ import fallbackRadios from '../data/radios.json'
 import fallbackRadiosLatinoamerica from '../data/radios-latinoamerica.json'
 
 const CACHE_DURATION = 24 * 60 * 60 * 1000
-const COUNTRIES_LATINOAMERICA = ['PE', 'MX', 'AR', 'CO', 'CL', 'VE', 'UY', 'BO', 'EC', 'PY']
+const COUNTRIES_LATINOAMERICA = ['PE', 'MX', 'AR', 'CO', 'CL', 'VE', 'UY', 'BO', 'EC', 'PY', 'PR']
+
+// Nombres que devuelve la API (en inglés) -> etiqueta bonita en español
+const COUNTRY_LABELS = {
+  Argentina: 'Argentina',
+  'Bolivarian Republic Of Venezuela': 'Venezuela',
+  Bolivia: 'Bolivia',
+  Chile: 'Chile',
+  Colombia: 'Colombia',
+  Ecuador: 'Ecuador',
+  Mexico: 'México',
+  Paraguay: 'Paraguay',
+  Peru: 'Perú',
+  'Puerto Rico': 'Puerto Rico',
+  Uruguay: 'Uruguay',
+}
 
 export const useStationsStore = defineStore('stations', {
   state: () => ({
@@ -28,8 +43,10 @@ export const useStationsStore = defineStore('stations', {
         name: s.name,
         logo: s.favicon,
         epg_id: s.stationuuid,
+        country: s.country,
         options: [{ format: 'mp3', url: s.url_resolved || s.url }],
       }))
+
       this.stationsLatinoamericaTimestamp = Date.now()
     },
     _isCacheValid(timestamp, list) {
@@ -98,6 +115,18 @@ export const useStationsStore = defineStore('stations', {
       return (mp3 || station.options?.[0])?.url ?? null
     },
     isFavorite: (state) => (epgId) => state.favorites.some((favorite) => favorite.epg_id === epgId),
+    latinoamericaCountries: (state) => {
+      const countries = new Set(
+        state.listStationsLatinoamerica.map((s) => s.country).filter(Boolean),
+      )
+      return [...countries]
+        .map((c) => ({ label: COUNTRY_LABELS[c] ?? c, value: c }))
+        .sort((a, b) => a.label.localeCompare(b.label))
+    },
   },
-  persist: true,
+  persist: {
+    // Subir la versión cuando cambie el formato de los datos guardados,
+    // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
+    key: 'stations-v2',
+  },
 })
