@@ -21,7 +21,8 @@ const searchStation = ref('')
 const failedLogos = ref(new Set())
 const selectedCountry = ref('España')
 const selectedLatamCountry = ref(null)
-const showCountrySheet = ref(false)
+const selectedComunidad = ref(null)
+const showFilterSheet = ref(false)
 
 const COUNTRY_FLAGS = {
   Argentina: '🇦🇷',
@@ -46,25 +47,52 @@ const showingLatinoamerica = computed(
   () => props.showCountryFilter && selectedCountry.value === 'Latinoamérica',
 )
 
-const selectedCountryLabel = computed(() => {
-  if (!selectedLatamCountry.value) return 'Todos los países'
-  const found = stationsStore.latinoamericaCountries.find(
-    (c) => c.value === selectedLatamCountry.value,
-  )
-  return found ? found.label : 'Todos los países'
+// Opciones del bottom sheet según el modo activo: países de LATAM o comunidades de España
+const filterOptions = computed(() => {
+  if (showingLatinoamerica.value) {
+    return [
+      { label: 'Todos los países', value: null, icon: '🌍' },
+      ...stationsStore.latinoamericaCountries.map((c) => ({
+        ...c,
+        icon: COUNTRY_FLAGS[c.label] ?? '🏳️',
+      })),
+    ]
+  }
+  return [
+    { label: 'Todas las comunidades', value: null, icon: '🇪🇸' },
+    ...stationsStore.comunidadesAutonomas.map((c) => ({ ...c, icon: '📍' })),
+  ]
 })
 
-const selectedCountryFlag = computed(() => COUNTRY_FLAGS[selectedCountryLabel.value] ?? '🌍')
+const sheetTitle = computed(() =>
+  showingLatinoamerica.value ? 'Selecciona un país' : 'Selecciona una comunidad',
+)
+
+// Valor del filtro activo (país LATAM o comunidad) con get/set sobre el ref correspondiente
+const selectedFilter = computed({
+  get: () => (showingLatinoamerica.value ? selectedLatamCountry.value : selectedComunidad.value),
+  set: (value) => {
+    if (showingLatinoamerica.value) selectedLatamCountry.value = value
+    else selectedComunidad.value = value
+  },
+})
+
+const selectedOption = computed(
+  () => filterOptions.value.find((o) => o.value === selectedFilter.value) ?? filterOptions.value[0],
+)
 
 const isLoadingList = computed(() =>
   showingLatinoamerica.value ? stationsStore.isLoadingLatinoamerica : stationsStore.isLoading,
 )
 
 const baseStations = computed(() => {
-  if (!showingLatinoamerica.value) return props.stations
-  const all = stationsStore.listStationsLatinoamerica
-  if (!selectedLatamCountry.value) return all
-  return all.filter((s) => s.country === selectedLatamCountry.value)
+  if (showingLatinoamerica.value) {
+    const all = stationsStore.listStationsLatinoamerica
+    if (!selectedLatamCountry.value) return all
+    return all.filter((s) => s.country === selectedLatamCountry.value)
+  }
+  if (!selectedComunidad.value) return props.stations
+  return props.stations.filter((s) => s.comunidadAutonoma === selectedComunidad.value)
 })
 
 const filteredStations = computed(() => {
@@ -119,55 +147,36 @@ const onImgError = (station) => {
       />
     </div>
 
-    <div v-if="showingLatinoamerica" class="q-px-md q-pb-sm">
-      <q-btn flat rounded no-caps class="country-btn full-width" @click="showCountrySheet = true">
-        <span class="country-btn__flag">{{ selectedCountryFlag }}</span>
-        <span class="country-btn__label">{{ selectedCountryLabel }}</span>
+    <div v-if="showCountryFilter" class="q-px-md q-pb-sm">
+      <q-btn flat rounded no-caps class="country-btn full-width" @click="showFilterSheet = true">
+        <span class="country-btn__flag">{{ selectedOption.icon }}</span>
+        <span class="country-btn__label">{{ selectedOption.label }}</span>
         <q-icon name="keyboard_arrow_down" color="secondary" size="20px" class="q-ml-auto" />
       </q-btn>
     </div>
 
-    <q-dialog v-model="showCountrySheet" position="bottom">
+    <q-dialog v-model="showFilterSheet" position="bottom">
       <q-card dark class="country-sheet">
         <q-card-section class="row items-center q-pb-sm">
-          <span class="text-subtitle1 text-white text-weight-medium">Selecciona un país</span>
+          <span class="text-subtitle1 text-white text-weight-medium">{{ sheetTitle }}</span>
           <q-space />
           <q-btn icon="close" flat round dense color="white" v-close-popup />
         </q-card-section>
         <q-separator dark />
         <q-list dark padding>
           <q-item
+            v-for="option in filterOptions"
+            :key="option.value ?? 'all'"
             clickable
             v-close-popup
-            @click="selectedLatamCountry = null"
-            :active="!selectedLatamCountry"
+            @click="selectedFilter = option.value"
+            :active="selectedFilter === option.value"
             active-class="text-secondary"
           >
-            <q-item-section class="country-sheet__flag">🌍</q-item-section>
-            <q-item-section>Todos los países</q-item-section>
+            <q-item-section class="country-sheet__flag">{{ option.icon }}</q-item-section>
+            <q-item-section>{{ option.label }}</q-item-section>
             <q-item-section side>
-              <q-icon v-if="!selectedLatamCountry" name="check" color="secondary" />
-            </q-item-section>
-          </q-item>
-          <q-item
-            v-for="country in stationsStore.latinoamericaCountries"
-            :key="country.value"
-            clickable
-            v-close-popup
-            @click="selectedLatamCountry = country.value"
-            :active="selectedLatamCountry === country.value"
-            active-class="text-secondary"
-          >
-            <q-item-section class="country-sheet__flag">
-              {{ COUNTRY_FLAGS[country.label] ?? '🏳️' }}
-            </q-item-section>
-            <q-item-section>{{ country.label }}</q-item-section>
-            <q-item-section side>
-              <q-icon
-                v-if="selectedLatamCountry === country.value"
-                name="check"
-                color="secondary"
-              />
+              <q-icon v-if="selectedFilter === option.value" name="check" color="secondary" />
             </q-item-section>
           </q-item>
         </q-list>

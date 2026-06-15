@@ -739,8 +739,8 @@
               "epg_id": "TeleTaxi.Radio",
               "options": [
                 {
-                  "format": "mp3",
-                  "url": "https://radiott-web.streaming-pro.com:6103/radiott.mp3",
+                  "format": "m3u8",
+                  "url": "https://mdstrm.com/audio/697382c0662b3e30d30e12a4/live.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -1299,13 +1299,13 @@
             },
             {
               "name": "Sevilla FC Radio",
-              "web": "https://live.sevillafc.es",
+              "web": "https://sevillafc.es/radio",
               "logo": "https://graph.facebook.com/sevillafc/picture?width=200&height=200",
               "epg_id": null,
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://open.http.mp.streamamg.com/p/3001314/sp/300131400/playManifest/entryId/0_ye0b8tc0/format/applehttp/protocol/https/uiConfId/30026292/a.m3u8",
+                  "url": "https://livesg.sevillafc.hiway.media/restreamer/sevillafc_client/gpu-f-c1-7/restreamer/outgest/1be21788-4718-4554-8e1c-9a0ae4af9551/audio_manifest.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2269,7 +2269,7 @@
             },
             {
               "name": "COPE Axarqu\u00eda",
-              "web": "https://www.copeaxarquia.es/",
+              "web": "https://www.copeaxarquia.es",
               "logo": "https://graph.facebook.com/COPE/picture?width=200&height=200",
               "epg_id": null,
               "options": [
@@ -2515,7 +2515,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/algeciras/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ALGECIRASAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2531,7 +2531,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/almeria/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ALMERIAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2547,7 +2547,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/baza/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_BAZAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2563,7 +2563,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/cadiz/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CADIZAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2579,7 +2579,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/cordoba/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CORDOBAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2595,7 +2595,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/elejido/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_EL_EJIDOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2611,7 +2611,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/granada/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_GRANADAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2627,7 +2627,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/huelva/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_HUELVAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2643,7 +2643,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/jaen/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_JAENAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2659,7 +2659,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/jerez/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_JEREZAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2675,7 +2675,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/marbella/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MARBELLAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2691,7 +2691,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/motril/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MOTRILAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2707,7 +2707,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/malaga/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MALAGAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2723,7 +2723,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/sevilla/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_SEVILLAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2963,7 +2963,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.europafm.com/live/delegaciones/efm/huelva/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/EFM_HUELVAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -2979,7 +2979,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.europafm.com/live/delegaciones/efm/sevilla/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/EFM_SEVILLAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -3207,8 +3207,8 @@
               "epg_id": null,
               "options": [
                 {
-                  "format": "mp3",
-                  "url": "https://uk3freenew.listen2myradio.com/live.mp3",
+                  "format": "stream",
+                  "url": "https://uk3freenew.listen2myradio.com/live.mp3?typeportmount=s1_19223_stream_430480497",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -3525,8 +3525,8 @@
               "epg_id": null,
               "options": [
                 {
-                  "format": "mp3",
-                  "url": "https://comcast01-h-cloud.flumotion.com/canalmalaga/live.mp3",
+                  "format": "m3u8",
+                  "url": "https://canalmalaga-radio-live-hls.flumotion.com/playlist.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -4226,7 +4226,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/aso_monzon/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CINCAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -4242,7 +4242,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/huesca/master.m3u8",
+                  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/OC_HUESCAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -4258,7 +4258,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/teruel/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_TERUELAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -4274,7 +4274,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/zaragoza/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ZARAGOZAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -4514,14 +4514,14 @@
               "options": [
                 {
                   "format": "stream",
-                  "url": "http://radio.indaloweb.es:8001/live",
+                  "url": "https://www.radiomai.com/online/stream.php?ch=1",
                   "geo2": null,
                   "res": null,
                   "lang": null
                 },
                 {
                   "format": "stream",
-                  "url": "http://radiomai.duckdns.org:8020/live",
+                  "url": "https://www.radiomai.com/online/stream.php?ch=2",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -4750,7 +4750,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/canarias/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_LAS_PALMASAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -4895,6 +4895,22 @@
                 {
                   "format": "stream",
                   "url": "https://streaming.elitecomunicacion.cloud:8334/stream",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                }
+              ],
+              "extra_info": []
+            },
+            {
+              "name": "Atl\u00e1ntico Radio",
+              "web": "https://www.atlanticoradio.com",
+              "logo": "https://pbs.twimg.com/profile_images/1672239769626066947/UNKgVm5I_200x200.png",
+              "epg_id": null,
+              "options": [
+                {
+                  "format": "stream",
+                  "url": "https://streaming.atlanticoradio.es/atlanticoradio",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5235,7 +5251,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/santander/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_SANTANDERAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5432,7 +5448,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://cdnapisec.kaltura.com/p/2288691/sp/228869100/playManifest/entryId/1_qilzwlkz/format/applehttp/.m3u8",
+                  "url": "https://cdnapisec.kaltura.com/p/2288691/sp/228869100/playManifest/entryId/1_fmx3e3sd/protocol/https/format/applehttp/a.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5752,7 +5768,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/albacete/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ALBACETEAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5768,7 +5784,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/alcazar/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ALCAZARAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5784,7 +5800,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/ciudadreal/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CIUDAD_REALAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5800,7 +5816,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/cuenca/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CUENCAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5816,7 +5832,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/guadalajara/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_GUADALAJARAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5848,7 +5864,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/talavera/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_TALAVERAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5864,7 +5880,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/toledo/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_TOLEDOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5880,7 +5896,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/valdepenas/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_VALDEPENASAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -5897,6 +5913,22 @@
                 {
                   "format": "mp3",
                   "url": "https://servercloudim3dia.im3dia.com:8001/esradioalbacete.mp3",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                }
+              ],
+              "extra_info": []
+            },
+            {
+              "name": "LOS40 Cuenca",
+              "web": "https://los40.com/tag/provincia_cuenca/a/",
+              "logo": "https://graph.facebook.com/los40/picture?width=200&height=200",
+              "epg_id": null,
+              "options": [
+                {
+                  "format": "mp3",
+                  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_ASO_CUENCA.mp3",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -6557,7 +6589,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/burgos/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_BURGOSAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -6573,7 +6605,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/leon/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_LEONAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -6605,7 +6637,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/palencia/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_PALENCIAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -6621,7 +6653,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/salamanca/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_SALAMANCAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -6637,7 +6669,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/segovia/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_SEGOVIAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -6653,7 +6685,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/valladolid/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_VALLADOLIDAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -6669,7 +6701,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/zamora/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ZAMORAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -7401,7 +7433,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/barcelona/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_BARCELONAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -7417,7 +7449,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/barcelona/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_BARCELONAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -7433,7 +7465,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/lleida/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_LLEIDAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -7449,7 +7481,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/tarragona/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_TARRAGONAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -7465,7 +7497,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/vilanova/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_VILANOVAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -7962,7 +7994,7 @@
               "options": [
                 {
                   "format": "stream",
-                  "url": "https://s4.radio.co/sc1cb45a9f/listen",
+                  "url": "https://hello.citrus3.com:8706/stream",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -8559,7 +8591,7 @@
             {
               "name": "amb2FM",
               "web": "https://www.amb2fm.cat",
-              "logo": "https://pbs.twimg.com/profile_images/1245054974628892673/tjBDH_-q_200x200.jpg",
+              "logo": "https://pbs.twimg.com/profile_images/2062102000699924480/jHFW71PU_200x200.jpg",
               "epg_id": null,
               "options": [
                 {
@@ -8597,6 +8629,22 @@
                 {
                   "format": "stream",
                   "url": "https://streams1.mdtradio.com:8443/MdtBarcelonaEstudio",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                }
+              ],
+              "extra_info": []
+            },
+            {
+              "name": "Paranoia Metal Figueres",
+              "web": "https://paranoiashow.wordpress.com/radio-online/",
+              "logo": "https://graph.facebook.com/pmetalshow/picture?width=200&height=200",
+              "epg_id": null,
+              "options": [
+                {
+                  "format": "mp3",
+                  "url": "https://giss.tv:666/paranoiashow.mp3",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -8681,7 +8729,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/ceuta/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CEUTAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -8894,7 +8942,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/alcala/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ALCALAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -8910,7 +8958,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/ondacero/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OCAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -8942,7 +8990,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/aso_sierra/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MADRIDSIERRAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -9731,7 +9779,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/pamplona/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_PAMPLONAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -9786,7 +9834,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.europafm.com/live/delegaciones/efm/pamplona/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/EFM_PAMPLONAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -10056,6 +10104,22 @@
               "extra_info": []
             },
             {
+              "name": "SER Radio Benidorm",
+              "web": "https://cadenaser.com/radio-benidorm/",
+              "logo": "https://graph.facebook.com/cadenaser/picture?width=200&height=200",
+              "epg_id": null,
+              "options": [
+                {
+                  "format": "mp3",
+                  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_BENIDORM.mp3",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                }
+              ],
+              "extra_info": []
+            },
+            {
               "name": "SER Gandia",
               "web": "https://cadenaser.com/radio-gandia/",
               "logo": "https://graph.facebook.com/cadenaser/picture?width=200&height=200",
@@ -10303,7 +10367,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/alicante/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ALICANTEAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -10319,7 +10383,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/alzira/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ALZIRAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -10335,7 +10399,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/castellon/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CASTELLONAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -10351,7 +10415,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/elche/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_ELCHEAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -10383,7 +10447,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/villajoyosa/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_VILLAJOYOSAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -10399,7 +10463,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/sagunto/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_SAGUNTOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -10415,7 +10479,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/valencia/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_VALENCIAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -10431,7 +10495,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/torrevieja/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_TORREVIEJAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -11797,7 +11861,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/badajoz/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_BADAJOZAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -11813,7 +11877,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/caceres/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CACERESAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -11829,7 +11893,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/merida/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MERIDAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12378,7 +12442,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/acoruna/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_A_CORUNAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12394,7 +12458,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/lugo/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_LUGOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12410,7 +12474,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/monforte/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MONFORTEAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12426,7 +12490,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/ourense/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_OURENSEAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12442,7 +12506,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/pontevedra/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_PONTEVEDRAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12458,7 +12522,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/santiago/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_SANTIAGOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12474,7 +12538,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/vigo/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_VIGOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12697,8 +12761,8 @@
               "epg_id": null,
               "options": [
                 {
-                  "format": "mp3",
-                  "url": "https://mediastreamm.com/8216/;.mp3",
+                  "format": "stream",
+                  "url": "https://metrofm01.arsenet.com/stream",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12729,13 +12793,29 @@
           "channels": [
             {
               "name": "IB3 R\u00e0dio",
-              "web": "https://ib3.org/directe?c=radio",
+              "web": "https://totib3.org/play/radio",
               "logo": "https://graph.facebook.com/IB3org/picture?width=200&height=200",
               "epg_id": null,
               "options": [
                 {
                   "format": "mp3",
                   "url": "https://icecast.ib3radio.com/ib3radio.mp3",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                }
+              ],
+              "extra_info": []
+            },
+            {
+              "name": "IB3 M\u00fasica",
+              "web": "https://totib3.org/play/radio",
+              "logo": "https://pbs.twimg.com/profile_images/1920138003608940544/NnmOFGb8_200x200.jpg",
+              "epg_id": null,
+              "options": [
+                {
+                  "format": "stream",
+                  "url": "https://icecast.ib3radio.com/ib3musica.mp3",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12895,7 +12975,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/ibiza/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_IBIZAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12911,7 +12991,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/mallorca/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MALLORCAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -12927,7 +13007,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/menorca/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MENORCAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -13002,7 +13082,7 @@
             {
               "name": "Radio OneMallorca",
               "web": "https://www.radioonemallorca.com",
-              "logo": "https://graph.facebook.com/RadioOneMallorca/picture?width=200&height=200",
+              "logo": "https://pbs.twimg.com/profile_images/1899900966595387392/Ei6Sil3n_200x200.png",
               "epg_id": null,
               "options": [
                 {
@@ -13316,14 +13396,14 @@
               "extra_info": []
             },
             {
-              "name": "Onda Cero Rioja - Logro\u00f1o",
+              "name": "Onda Cero Logro\u00f1o",
               "web": "https://www.ondacero.es/emisoras/rioja/rioja/directo/",
               "logo": "https://graph.facebook.com/ondacero/picture?width=200&height=200",
               "epg_id": "OC_Logrono.Radio",
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/logrono/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_LOGRONOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -13339,7 +13419,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.europafm.com/live/delegaciones/efm/logrono/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/EFM_LOGRONOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -13749,7 +13829,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/bilbao/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_BILBAOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -13765,7 +13845,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/sansebastian/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_SSEBASTIANAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -13781,7 +13861,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/vitoria/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_VITORIAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -14376,7 +14456,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/gijon/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_GIJONAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -14392,7 +14472,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/infiesto/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_INFIESTOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -14408,7 +14488,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/luarca/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_LUARCAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -14424,7 +14504,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/oviedo/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_OVIEDOAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -14456,7 +14536,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.europafm.com/live/delegaciones/efm/gijon/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/EFM_ASTURIASAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -14900,7 +14980,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/cartagena/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_CARTAGENAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -14916,7 +14996,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/murcia/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_MURCIAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -14932,7 +15012,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.ondacero.es/live/delegaciones/oc/yecla/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/OC_YECLAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -15012,7 +15092,7 @@
               "options": [
                 {
                   "format": "m3u8",
-                  "url": "https://atres-live.europafm.com/live/delegaciones/efm/murcia/master.m3u8",
+                  "url": "https://radio-atres-live.ondacero.es/api/livestream-redirect/EFM_MURCIAAAC.m3u8",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -15022,7 +15102,7 @@
             },
             {
               "name": "Frecuencia Murcia Intereconom\u00eda",
-              "web": "https://www.frecuenciamurcia.es/",
+              "web": "https://www.frecuenciamurcia.es",
               "logo": "https://pbs.twimg.com/profile_images/1709232156000636928/EqMZDB9e_200x200.jpg",
               "epg_id": null,
               "options": [
@@ -15295,22 +15375,6 @@
                 {
                   "format": "stream",
                   "url": "https://mars.streamerr.co/8022/stream",
-                  "geo2": null,
-                  "res": null,
-                  "lang": null
-                }
-              ],
-              "extra_info": []
-            },
-            {
-              "name": "Paranoia Metal Andorra",
-              "web": "https://paranoiashow.wordpress.com/radio-online/",
-              "logo": "https://graph.facebook.com/pmetalshow/picture?width=200&height=200",
-              "epg_id": null,
-              "options": [
-                {
-                  "format": "mp3",
-                  "url": "https://giss.tv:666/paranoiashow.mp3",
                   "geo2": null,
                   "res": null,
                   "lang": null
@@ -15790,6 +15854,22 @@
               "extra_info": []
             },
             {
+              "name": "Exitosa Radio Per\u00fa",
+              "web": "https://player.radioexitosa.pe/",
+              "logo": "https://pbs.twimg.com/profile_images/1951269649280040961/RrU47Hlk_200x200.jpg",
+              "epg_id": null,
+              "options": [
+                {
+                  "format": "stream",
+                  "url": "https://neptuno-2-audio.mediaserver.digital/79525baf-b0f5-4013-a8bd-3c5c293c6561",
+                  "geo2": null,
+                  "res": null,
+                  "lang": null
+                }
+              ],
+              "extra_info": []
+            },
+            {
               "name": "DelSol Uruguay",
               "web": "https://delsol.uy/envivo",
               "logo": "https://graph.facebook.com/DelSolUy/picture?width=200&height=200",
@@ -16002,5 +16082,5 @@
       ]
     }
   ],
-  "updated": 1778191205
+  "updated": 1781453023
 }

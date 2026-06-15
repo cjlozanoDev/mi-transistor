@@ -5,6 +5,30 @@ import fallbackRadiosLatinoamerica from '../data/radios-latinoamerica.json'
 const CACHE_DURATION = 24 * 60 * 60 * 1000
 const COUNTRIES_LATINOAMERICA = ['PE', 'MX', 'AR', 'CO', 'CL', 'VE', 'UY', 'BO', 'EC', 'PY', 'PR']
 
+// Ámbitos de la API que son comunidades/ciudades autónomas (el resto son
+// categorías como "Populares", "Musicales", etc., que se ignoran para el filtro).
+const COMUNIDADES_AUTONOMAS = new Set([
+  'Andalucía',
+  'Aragón',
+  'Canarias',
+  'Cantabria',
+  'Castilla-La Mancha',
+  'Castilla y León',
+  'Cataluña',
+  'Ceuta',
+  'C. de Madrid',
+  'C. Foral de Navarra',
+  'C. Valenciana',
+  'Extremadura',
+  'Galicia',
+  'Illes Balears',
+  'La Rioja',
+  'Melilla',
+  'País Vasco',
+  'P. de Asturias',
+  'R. de Murcia',
+])
+
 // Nombres que devuelve la API (en inglés) -> etiqueta bonita en español
 const COUNTRY_LABELS = {
   Argentina: 'Argentina',
@@ -35,7 +59,11 @@ export const useStationsStore = defineStore('stations', {
     _parseStations(data) {
       this.listStations = data.countries
         .find((country) => country.name === 'Spain')
-        .ambits.flatMap((a) => a.channels)
+        .ambits.flatMap((a) =>
+          COMUNIDADES_AUTONOMAS.has(a.name)
+            ? a.channels.map((channel) => ({ ...channel, comunidadAutonoma: a.name }))
+            : a.channels,
+        )
       this.stationsTimestamp = Date.now()
     },
     _parseStationsLatinoamerica(data) {
@@ -90,7 +118,8 @@ export const useStationsStore = defineStore('stations', {
       } catch (e) {
         console.error('Error cargando emisoras de Latinoamérica, usando fallback:', e)
         // El fallback ya está en el formato de la app, no necesita parseo
-        this.listStationsLatinoamerica = fallbackRadiosLatinoamerica
+        // (.flat() por si el JSON viniera anidado, así nunca queda sin países)
+        this.listStationsLatinoamerica = fallbackRadiosLatinoamerica.flat()
         this.stationsLatinoamericaTimestamp = Date.now()
       } finally {
         this.isLoadingLatinoamerica = false
@@ -123,10 +152,18 @@ export const useStationsStore = defineStore('stations', {
         .map((c) => ({ label: COUNTRY_LABELS[c] ?? c, value: c }))
         .sort((a, b) => a.label.localeCompare(b.label))
     },
+    comunidadesAutonomas: (state) => {
+      const comunidades = new Set(
+        state.listStations.map((s) => s.comunidadAutonoma).filter(Boolean),
+      )
+      return [...comunidades]
+        .map((c) => ({ label: c, value: c }))
+        .sort((a, b) => a.label.localeCompare(b.label))
+    },
   },
   persist: {
     // Subir la versión cuando cambie el formato de los datos guardados,
     // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
-    key: 'stations-v2',
+    key: 'stations-v3',
   },
 })
