@@ -3,7 +3,7 @@ import fallbackRadios from '../data/radios.json'
 import fallbackRadiosLatinoamerica from '../data/radios-latinoamerica.json'
 
 const CACHE_DURATION = 24 * 60 * 60 * 1000
-const COUNTRIES_LATINOAMERICA = ['PE', 'MX', 'AR', 'CO', 'CL', 'VE', 'UY', 'BO', 'EC', 'PY', 'PR']
+const COUNTRIES_LATINOAMERICA = ['PE', 'MX', 'AR', 'CO', 'CL', 'VE', 'UY', 'BO', 'EC', 'PY', 'PR', 'CR']
 
 // Ámbitos de la API que son comunidades/ciudades autónomas (el resto son
 // categorías como "Populares", "Musicales", etc., que se ignoran para el filtro).
@@ -36,6 +36,7 @@ const COUNTRY_LABELS = {
   Bolivia: 'Bolivia',
   Chile: 'Chile',
   Colombia: 'Colombia',
+  'Costa Rica': 'Costa Rica',
   Ecuador: 'Ecuador',
   Mexico: 'México',
   Paraguay: 'Paraguay',
