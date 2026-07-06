@@ -3,7 +3,20 @@ import fallbackRadios from '../data/radios.json'
 import fallbackRadiosLatinoamerica from '../data/radios-latinoamerica.json'
 
 const CACHE_DURATION = 24 * 60 * 60 * 1000
-const COUNTRIES_LATINOAMERICA = ['PE', 'MX', 'AR', 'CO', 'CL', 'VE', 'UY', 'BO', 'EC', 'PY', 'PR', 'CR']
+const COUNTRIES_LATINOAMERICA = [
+  'PE',
+  'MX',
+  'AR',
+  'CO',
+  'CL',
+  'VE',
+  'UY',
+  'BO',
+  'EC',
+  'PY',
+  'PR',
+  'CR',
+]
 
 // Ámbitos de la API que son comunidades/ciudades autónomas (el resto son
 // categorías como "Populares", "Musicales", etc., que se ignoran para el filtro).
@@ -165,6 +178,6 @@ export const useStationsStore = defineStore('stations', {
   persist: {
     // Subir la versión cuando cambie el formato de los datos guardados,
     // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
-    key: 'stations-v3',
+    key: 'stations-v4',
   },
 })
