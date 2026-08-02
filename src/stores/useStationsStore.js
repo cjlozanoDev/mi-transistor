@@ -79,6 +79,7 @@ export const useStationsStore = defineStore('stations', {
             : a.channels,
         )
       this.stationsTimestamp = Date.now()
+      this._syncFavoritesWith(this.listStations)
     },
     _parseStationsLatinoamerica(data) {
       this.listStationsLatinoamerica = data.map((s) => ({
@@ -90,6 +91,24 @@ export const useStationsStore = defineStore('stations', {
       }))
 
       this.stationsLatinoamericaTimestamp = Date.now()
+      this._syncFavoritesWith(this.listStationsLatinoamerica)
+    },
+    // Las favoritas guardan una copia de la emisora (con su URL) en el momento
+    // de marcarla. Si la fuente actualiza esa URL, la copia guardada queda
+    // obsoleta y falla al reproducir. Al refrescar las listas, se sustituye
+    // cada favorita por su versión actual buscándola por epg_id.
+    _syncFavoritesWith(freshList) {
+      if (freshList.length === 0) return
+
+      const freshById = new Map(freshList.map((s) => [s.epg_id, s]))
+      if (this.favorites.length > 0) {
+        this.favorites = this.favorites.map((favorite) => freshById.get(favorite.epg_id) ?? favorite)
+      }
+      if (this.recentStations.length > 0) {
+        this.recentStations = this.recentStations.map(
+          (recent) => freshById.get(recent.epg_id) ?? recent,
+        )
+      }
     },
     _isCacheValid(timestamp, list) {
       return timestamp && list.length > 0 && Date.now() - timestamp < CACHE_DURATION
@@ -135,6 +154,7 @@ export const useStationsStore = defineStore('stations', {
         // (.flat() por si el JSON viniera anidado, así nunca queda sin países)
         this.listStationsLatinoamerica = fallbackRadiosLatinoamerica.flat()
         this.stationsLatinoamericaTimestamp = Date.now()
+        this._syncFavoritesWith(this.listStationsLatinoamerica)
       } finally {
         this.isLoadingLatinoamerica = false
       }
