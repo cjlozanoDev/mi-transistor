@@ -16,6 +16,7 @@ const COUNTRIES_LATINOAMERICA = [
   'PY',
   'PR',
   'CR',
+  'BR',
 ]
 
 // Ámbitos de la API que son comunidades/ciudades autónomas (el resto son
@@ -47,6 +48,7 @@ const COUNTRY_LABELS = {
   Argentina: 'Argentina',
   'Bolivarian Republic Of Venezuela': 'Venezuela',
   Bolivia: 'Bolivia',
+  Brazil: 'Brasil',
   Chile: 'Chile',
   Colombia: 'Colombia',
   'Costa Rica': 'Costa Rica',
@@ -198,6 +200,6 @@ export const useStationsStore = defineStore('stations', {
   persist: {
     // Subir la versión cuando cambie el formato de los datos guardados,
     // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
-    key: 'stations-v4',
+    key: 'stations-v5',
   },
 })

@@ -28,6 +28,7 @@ const COUNTRY_FLAGS = {
   Argentina: '🇦🇷',
   Venezuela: '🇻🇪',
   Bolivia: '🇧🇴',
+  Brasil: '🇧🇷',
   Chile: '🇨🇱',
   Colombia: '🇨🇴',
   'Costa Rica': '🇨🇷',

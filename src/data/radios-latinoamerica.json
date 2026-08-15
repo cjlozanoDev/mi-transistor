@@ -7138,5 +7138,605 @@
         "url": "http://s1.voscast.com:11392/stream"
       }
     ]
+  },
+  {
+    "name": "Rádio Antena 1 94.7 FM",
+    "logo": "https://img.radios.com.br/radio/lg/radio9505_1574106966.jpg",
+    "epg_id": "570cc99a-9159-4d91-9a8f-96ddb5b30797",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://antenaone.crossradio.com.br/stream/1;"
+      }
+    ]
+  },
+  {
+    "name": "Bossa Jazz Brasil",
+    "logo": "https://bossajazzbrasil.com/wp-content/uploads/2020/12/cropped-bjs-app-180x180.png",
+    "epg_id": "7ada8a81-5ae1-418c-8f18-51d2f38d86a4",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://centova5.transmissaodigital.com:20104/live"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Mix 106.3 FM",
+    "logo": "https://img.radios.com.br/radio/lg/radio13955_1720711597.png",
+    "epg_id": "901c92bd-a757-449a-b8ce-652b079fd38a",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_SAOPAULOAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1 São Paulo, SP (ZYD823 94,7 MHz FM) [aac]",
+    "logo": "",
+    "epg_id": "963fa65f-0601-11e8-ae97-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://antena1.newradio.it/stream?ext=.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Saudade FM 99.7",
+    "logo": "https://img.radios.com.br/radio/lg/radio8_1626274312.png",
+    "epg_id": "5dcbb03d-423a-4f97-8af5-b95981094c69",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SAUDADE_FMAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Alpha FM 101.7 MHz (São Paulo - SP)",
+    "logo": "https://cdn-profiles.tunein.com/s8129/images/logod.jpg",
+    "epg_id": "447a1a5f-aee6-4b21-b85f-10ceb1896ad3",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALPHAFM_ADP.aac"
+      }
+    ]
+  },
+  {
+    "name": "bandnews fm sp",
+    "logo": "https://img.radios.com.br/radio/lg/radio24477_1579261235.jpg",
+    "epg_id": "4a17b7fa-42a0-4c32-bdc6-dc1c59066c96",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1 FM 94.7 São Paulo",
+    "logo": "https://www.antena1.com.br/apple-touch-icon.png",
+    "epg_id": "531fced7-b22b-11e8-afe1-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://antena1.newradio.it/stream"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Flashback Fm",
+    "logo": "",
+    "epg_id": "9061e051-2cc3-11e9-a35e-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://hd.matutos.com.br:8008/;stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Bossa Nova Brazil",
+    "logo": "http://www.vip-radios.fm/favicon.ico",
+    "epg_id": "3c1d95a5-b477-11e8-afe1-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://54.38.43.201:8009/stream-128kmp3-BossaNovaBrazil"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Band FM 96.1 FM",
+    "logo": "https://img.radios.com.br/radio/lg/radio10358_1526480428.jpg",
+    "epg_id": "c8cfc213-6a39-4b45-b925-3c6acb3f8b68",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDFM_SPAAC"
+      }
+    ]
+  },
+  {
+    "name": "Tropical Smooth Jazz",
+    "logo": "https://public-rf-upload.minhawebradio.net/47137/favicon/6c0b5a4fbc04adeb8117f49ccabeb70b.jpg",
+    "epg_id": "c7d6315c-3bcd-40f6-a1b5-4bc1c8efecee",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://servidor32-3.brlogic.com:8230/live"
+      }
+    ]
+  },
+  {
+    "name": "89 A Radio Rock",
+    "logo": "",
+    "epg_id": "65908a60-3a4c-4d8c-b66c-d8eb96faefc6",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_89FM_ADP.aac?dist=site-89fm"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Itatiaia 95.7 FM",
+    "logo": "https://img.radios.com.br/radio/lg/radio14_1646746883.jpeg",
+    "epg_id": "f66f08c3-1616-4dd6-a54f-75aa29aa8249",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://8903.brasilstream.com.br/stream"
+      }
+    ]
+  },
+  {
+    "name": "FM O DIA 100.5",
+    "logo": "",
+    "epg_id": "b443a768-fca4-42cb-8b4a-6a3437399c27",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streaming.livespanel.com:20000/live"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Jovem Pan 100.9 FM",
+    "logo": "https://img.radios.com.br/radio/lg/radio8829_1708517690.png",
+    "epg_id": "8e9b5ba4-dcc1-4dad-8ddf-e7cc04c33a00",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.zeno.fm/c45wbq2us3buv"
+      }
+    ]
+  },
+  {
+    "name": "Super Radio Tupi 96.5 ",
+    "logo": "",
+    "epg_id": "84a51775-4137-48c8-b72b-85f4b5edc7e5",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://8923.brasilstream.com.br/stream"
+      }
+    ]
+  },
+  {
+    "name": "Bons Tempos FM",
+    "logo": "https://static.radios.com.br/img/apple-touch-icon.png",
+    "epg_id": "345cc08c-a5e3-43d9-9543-0626f2081177",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://server02.ouvir.radio.br:8050/stream?1609720768800"
+      }
+    ]
+  },
+  {
+    "name": "Smooth Jazz Lounge",
+    "logo": "https://www.vip-radios.fm/favicon.ico",
+    "epg_id": "ef07dbb2-1176-4b09-bb87-9e841300c3cf",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radio4.vip-radios.fm:18060/stream-128kmp3-SmoothJazzLounge"
+      }
+    ]
+  },
+  {
+    "name": "Groove Wave Lounge",
+    "logo": "https://www.groovewave.com/favicon.ico",
+    "epg_id": "9f0466be-b6b0-4f7c-baff-f64555494804",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stm1.srvif.com:7576/;"
+      }
+    ]
+  },
+  {
+    "name": "Gaúcha",
+    "logo": "https://gauchazh.clicrbs.com.br/static/icons/mstile-70x70.png",
+    "epg_id": "46d02cdb-49a6-11e9-a4d7-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://1132747t.ha.azioncdn.net/primary/gaucha_rbs.sdp/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "JB FM",
+    "logo": "",
+    "epg_id": "8cf1083b-a326-11e8-abb8-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://26663.live.streamtheworld.com:3690/JBFMAAC_SC"
+      }
+    ]
+  },
+  {
+    "name": "Fita Cassete",
+    "logo": "https://img.radios.com.br/radio/lg/radio162745_1603505533.jpg",
+    "epg_id": "2ca712c4-2d5f-4dbd-a2e3-1961136eec4e",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://server01.ouvir.radio.br:8018/stream"
+      }
+    ]
+  },
+  {
+    "name": "CBN São Paulo",
+    "logo": "",
+    "epg_id": "52994d67-31ea-448f-b6bc-7eaeb6a3504b",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/CBN_SPAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Máquina do Tempo (MPB Brasil)",
+    "logo": "https://cdn-profiles.tunein.com/s121927/images/logoq.jpg?t=636255",
+    "epg_id": "a6980be7-3b55-11e8-b74d-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://servidor28.brlogic.com:8032/live"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1 FM 103.7 Rio de Janeiro",
+    "logo": "",
+    "epg_id": "4534dd5f-b22a-11e8-afe1-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://a1rj.streams.com.br:7801/stream"
+      }
+    ]
+  },
+  {
+    "name": "Kiss FM São Paulo",
+    "logo": "",
+    "epg_id": "d12439b1-0bfe-4caa-9dec-6f19af01db3a",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_KISSFMAAC.aac?1655609055880"
+      }
+    ]
+  },
+  {
+    "name": "Sertaneja 106.7",
+    "logo": "https://assets.clubefm.com.br/uploads/site/logo/2/106-sertaneja-4fff3e1f118ab621432fa4d74136e042e86b6eedbabf561ded0dfd61123d980e.png",
+    "epg_id": "00bc4f1d-050c-49ae-bc42-a8aaa5d0ff5b",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://sc4s.cdn.upx.com:8067/stream"
+      }
+    ]
+  },
+  {
+    "name": "JB FM",
+    "logo": "https://jb.fm/static-images/logo-jb.png",
+    "epg_id": "f0ef5702-7eae-4751-8049-484ff571a4df",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/JBFMAAC1.aac"
+      }
+    ]
+  },
+  {
+    "name": "Máquina do Tempo (Internacional)",
+    "logo": "",
+    "epg_id": "2a92a4fd-3b56-11e8-b74d-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://servidor28.brlogic.com:8212/live"
+      }
+    ]
+  },
+  {
+    "name": "CBN Rio de Janeiro 92.5 FM",
+    "logo": "",
+    "epg_id": "8c2922b9-b375-4a3d-97dd-7f8fa8d09512",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/CBN_RJ_ADP.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Disco Funk BR",
+    "logo": "",
+    "epg_id": "96385b07-0601-11e8-ae97-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streaming12.hstbr.net:8084/live"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Anos 80",
+    "logo": "",
+    "epg_id": "c7654109-7d20-4e41-b3e2-afcfdb988be2",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://live2.livemus.com.br:27400/live"
+      }
+    ]
+  },
+  {
+    "name": "GOLD INSTRUMENTAL ",
+    "logo": "https://static.wixstatic.com/ficons/688516_5438a05ca6d2407493112faa1c5ccdd2%7emv2.ico",
+    "epg_id": "39f1f009-2ec7-4d81-b28e-b8298885bb1b",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://centova.svdns.com.br:19373/stream1"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1  - Porto Alegre",
+    "logo": "https://www.antena1.com.br/apple-touch-icon.png",
+    "epg_id": "b8999692-0fba-4660-8934-c74167efc9e0",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://antenaone.crossradio.com.br/stream/1"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Bandeirantes - São Paulo",
+    "logo": "",
+    "epg_id": "ad039169-2969-4a7a-be83-86f079f4a55e",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RadioBandeirantesAAC.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Radio Jovem Pan 99.1 FM Belo Horizonte",
+    "logo": "https://s.jpimg.com.br/wp-content/themes/jovempan/assets/build/images/favicons/favicon-32x32.png",
+    "epg_id": "2eb41659-1b7c-43e5-9b98-36634086a73c",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://8062.brasilstream.com.br//stream?origem=jovem_pan_site"
+      }
+    ]
+  },
+  {
+    "name": "Radio Energia 97 FM",
+    "logo": "",
+    "epg_id": "247e4d32-39b8-48d7-a86a-ec6effea7723",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming.inweb.com.br/energia"
+      }
+    ]
+  },
+  {
+    "name": "Jovem Pan FM - Florianópolis - SC",
+    "logo": "https://jpimg.com.br/uploads/2024/02/avatar-florianopolis-rgb-500x500.png",
+    "epg_id": "bf64595a-eed4-49de-94e5-87c1bb813a74",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live.paineldj.com.br/proxy/jfloripa?mp=/stream"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Studio Flashback",
+    "logo": "https://pbs.twimg.com/media/GE7jNgZWQAEcxNb?format=png&name=240x240",
+    "epg_id": "c064c241-a2c2-4dd9-b889-b292535397fe",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-163.zeno.fm/6gv76f1xruquv?zs=SvdWy-tsTtCXPZ9IZC0ASA"
+      }
+    ]
+  },
+  {
+    "name": "Alvorada FM 94,9 Mhz ZYC708 (Belo Horizonte - MG)",
+    "logo": "https://i.postimg.cc/Bnyrs1H3/04008017950.png",
+    "epg_id": "bae11a44-8257-4896-9a0f-7077ff899d23",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALVORADAAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "RÁDIO LIGA SAMBA",
+    "logo": "https://www.radio-ao-vivo.com/favicon.ico",
+    "epg_id": "b746312d-1fd9-44c5-9db2-de69a8db009f",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://srv1.braudio.com.br:7308/;stream.nsv"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Cidade - Rio de Janeiro - 102.9 FM - ZYD462",
+    "logo": "",
+    "epg_id": "06da0d92-28c2-11e9-a80b-52543be04c81",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOCIDADEAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "CLUBE FM BRASILIA",
+    "logo": "https://painel.clube.fm/wp-content/uploads/2022/05/Logo-Clube-105_5-min.png",
+    "epg_id": "07b05c0b-a80b-4654-8e60-a6f8128a613d",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://8157.brasilstream.com.br/stream"
+      }
+    ]
+  },
+  {
+    "name": "89 FM A Rádio Rock Goiânia",
+    "logo": "https://89goiania.com.br/wp-content/uploads/2024/07/icone_89.png",
+    "epg_id": "11a88d11-8a29-4976-b455-1d9bf709e599",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ice.fabricahost.com.br/89aradiorockgo"
+      }
+    ]
+  },
+  {
+    "name": "BR - The Classic Rock",
+    "logo": "https://cdn.onlineradiobox.com/img/l/5/94775.v6.png",
+    "epg_id": "195f2990-e0d3-4b34-8aab-5b173ddb6c6e",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.zeno.fm/nbq1aq62gd0uv"
+      }
+    ]
+  },
+  {
+    "name": "Adoro Flashback",
+    "logo": "https://img.radios.com.br/radio/lg/radio151308_1593879965.jpg",
+    "epg_id": "c69b53f2-0b2b-4f9f-9e68-5b84b499f06a",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://server01.ouvir.radio.br:8018/stream?1771866095421"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Gaúcha 93.7 FM",
+    "logo": "https://img.radios.com.br/radio/lg/radio13176_1628168105.png",
+    "epg_id": "02fb63e7-410d-4dcb-a85f-1665cbd67a83",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://liverdgaupoa.rbsdirect.com.br/primary/gaucha_rbs.sdp/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Transamérica 100.1 FM",
+    "logo": "https://img.radios.com.br/radio/lg/radio8803_1578516680.png",
+    "epg_id": "6da066a5-eddf-4640-8bfb-25070c52858d",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_SPAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Jovem Pan FM Campinas - 89.9",
+    "logo": "",
+    "epg_id": "3dcc5ceb-7bb4-4bf4-9270-4a6ee5c18a79",
+    "country": "Brazil",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://paineldj5.com.br:20028/stream"
+      }
+    ]
   }
 ]
