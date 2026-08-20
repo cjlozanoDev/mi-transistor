@@ -59,7 +59,7 @@ const showReconnecting = computed(
 
 const isStationFavorite = computed(() => {
   if (!playerStore.currentStation) return false
-  return stationStore.isFavorite(playerStore.currentStation.epg_id)
+  return stationStore.isFavorite(playerStore.currentStation.id)
 })
 
 const callPlay = async () => {
@@ -186,7 +186,7 @@ const togglePlay = () => {
 
 const toggleFavorite = (station) => {
   stationStore.toggleFavorite(station)
-  const added = stationStore.isFavorite(station.epg_id)
+  const added = stationStore.isFavorite(station.id)
   $q.notify({
     message: added ? 'Emisora añadida a favoritas' : 'Emisora eliminada de favoritas',
     color: added ? 'positive' : 'grey-7',

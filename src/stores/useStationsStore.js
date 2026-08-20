@@ -60,6 +60,18 @@ const COUNTRY_LABELS = {
   Uruguay: 'Uruguay',
 }
 
+// Normaliza un valor para usarlo como parte de un id: quita acentos, espacios
+// sobrantes y diferencias de mayúsculas, para que pequeños cambios de formato
+// en la fuente (espacios extra, tildes, mayúsculas) no rompan la identidad
+// de la emisora entre refrescos.
+function normalizeIdPart(value) {
+  return String(value ?? '')
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .trim()
+    .toLowerCase()
+}
+
 export const useStationsStore = defineStore('stations', {
   state: () => ({
     listStations: [],
@@ -73,12 +85,22 @@ export const useStationsStore = defineStore('stations', {
   }),
   actions: {
     _parseStations(data) {
+      // `epg_id` es un id de guía de programación, NO un identificador único de
+      // emisora: muchas desconexiones regionales comparten el mismo epg_id (p.ej.
+      // "RNE.Radio") y la mayoría directamente lo tienen a null. Ni `name` ni
+      // `epg_id` están garantizados como únicos por separado ni son estables a
+      // largo plazo, así que el id se genera combinando ambos normalizados.
+      const buildId = (channel) => `${normalizeIdPart(channel.name)}::${normalizeIdPart(channel.epg_id)}`
       this.listStations = data.countries
         .find((country) => country.name === 'Spain')
         .ambits.flatMap((a) =>
           COMUNIDADES_AUTONOMAS.has(a.name)
-            ? a.channels.map((channel) => ({ ...channel, comunidadAutonoma: a.name }))
-            : a.channels,
+            ? a.channels.map((channel) => ({
+                ...channel,
+                id: buildId(channel),
+                comunidadAutonoma: a.name,
+              }))
+            : a.channels.map((channel) => ({ ...channel, id: buildId(channel) })),
         )
       this.stationsTimestamp = Date.now()
       this._syncFavoritesWith(this.listStations)
@@ -87,6 +109,7 @@ export const useStationsStore = defineStore('stations', {
       this.listStationsLatinoamerica = data.map((s) => ({
         name: s.name,
         logo: s.favicon,
+        id: normalizeIdPart(s.stationuuid),
         epg_id: s.stationuuid,
         country: s.country,
         options: [{ format: 'mp3', url: s.url_resolved || s.url }],
@@ -98,17 +121,17 @@ export const useStationsStore = defineStore('stations', {
     // Las favoritas guardan una copia de la emisora (con su URL) en el momento
     // de marcarla. Si la fuente actualiza esa URL, la copia guardada queda
     // obsoleta y falla al reproducir. Al refrescar las listas, se sustituye
-    // cada favorita por su versión actual buscándola por epg_id.
+    // cada favorita por su versión actual buscándola por id.
     _syncFavoritesWith(freshList) {
       if (freshList.length === 0) return
 
-      const freshById = new Map(freshList.map((s) => [s.epg_id, s]))
+      const freshById = new Map(freshList.map((s) => [s.id, s]))
       if (this.favorites.length > 0) {
-        this.favorites = this.favorites.map((favorite) => freshById.get(favorite.epg_id) ?? favorite)
+        this.favorites = this.favorites.map((favorite) => freshById.get(favorite.id) ?? favorite)
       }
       if (this.recentStations.length > 0) {
         this.recentStations = this.recentStations.map(
-          (recent) => freshById.get(recent.epg_id) ?? recent,
+          (recent) => freshById.get(recent.id) ?? recent,
         )
       }
     },
@@ -162,7 +185,7 @@ export const useStationsStore = defineStore('stations', {
       }
     },
     toggleFavorite(station) {
-      const idx = this.favorites.findIndex((favorite) => favorite.epg_id === station.epg_id)
+      const idx = this.favorites.findIndex((favorite) => favorite.id === station.id)
       if (idx === -1) {
         this.favorites.push(station)
       } else {
@@ -170,7 +193,7 @@ export const useStationsStore = defineStore('stations', {
       }
     },
     addToRecent(station) {
-      const filtered = this.recentStations.filter((s) => s.epg_id !== station.epg_id)
+      const filtered = this.recentStations.filter((s) => s.id !== station.id)
       this.recentStations = [station, ...filtered].slice(0, 10)
     },
   },
@@ -179,7 +202,7 @@ export const useStationsStore = defineStore('stations', {
       const mp3 = station.options?.find((o) => o.format === 'mp3')
       return (mp3 || station.options?.[0])?.url ?? null
     },
-    isFavorite: (state) => (epgId) => state.favorites.some((favorite) => favorite.epg_id === epgId),
+    isFavorite: (state) => (id) => state.favorites.some((favorite) => favorite.id === id),
     latinoamericaCountries: (state) => {
       const countries = new Set(
         state.listStationsLatinoamerica.map((s) => s.country).filter(Boolean),
@@ -200,6 +223,6 @@ export const useStationsStore = defineStore('stations', {
   persist: {
     // Subir la versión cuando cambie el formato de los datos guardados,
     // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
-    key: 'stations-v5',
+    key: 'stations-v6',
   },
 })
