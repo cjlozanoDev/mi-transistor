@@ -33,9 +33,28 @@ function migrateFavoritesToStableKey() {
   }
 }
 
+// El popup de "novedades" de useChangelogStore no debe salir en una
+// instalación nueva de verdad, pero SÍ la primera vez que corre este código
+// en un dispositivo que ya tenía la app (aunque para él "changelog-v1"
+// tampoco exista todavía, porque el store es nuevo). Se decide aquí, antes
+// de crear Pinia, que es el único momento en que localStorage refleja el
+// estado real del dispositivo sin que ningún store haya escrito nada aún.
+function seedChangelogForExistingInstalls() {
+  const KEY = 'changelog-v1'
+  if (localStorage.getItem(KEY)) return
+
+  const hasExistingAppData = Object.keys(localStorage).some((key) => key !== KEY)
+  if (hasExistingAppData) {
+    // '' nunca coincide con una versión real del changelog, así que la
+    // primera comprobación en HomePage la verá como "hay una sin ver".
+    localStorage.setItem(KEY, JSON.stringify({ lastSeenVersion: '' }))
+  }
+}
+
 // "async" is optional;
 // more info on params: https://v2.quasar.dev/quasar-cli/boot-files
 export default boot(async ({ app } /* { app, router, ... } */) => {
+  seedChangelogForExistingInstalls()
   migrateFavoritesToStableKey()
 
   const pinia = createPinia()

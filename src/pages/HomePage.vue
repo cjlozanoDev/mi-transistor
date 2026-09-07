@@ -1,13 +1,37 @@
 <script setup>
 import CardMiTransistor from 'src/components/CardMiTransistor.vue'
+import ChangelogDialog from 'src/components/ChangelogDialog.vue'
 import { useRouter } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useQuasar } from 'quasar'
 import { Capacitor, registerPlugin } from '@capacitor/core'
 import { AppUpdate, AppUpdateAvailability } from '@capawesome/capacitor-app-update'
+import { useChangelogStore } from 'src/stores/useChangelogStore'
+import { CHANGELOG } from 'src/data/changelog'
 
 const router = useRouter()
 const $q = useQuasar()
+const changelogStore = useChangelogStore()
+
+const showChangelog = ref(false)
+const latestChangelogEntry = CHANGELOG[0]
+
+function checkChangelog() {
+  const latestVersion = latestChangelogEntry.version
+
+  // lastSeenVersion === null solo puede pasar en una instalación realmente
+  // nueva (boot/pinia.js siembra '' para quien ya tenía la app instalada):
+  // no vivió ninguna novedad anterior, así que no se le muestra nada.
+  if (changelogStore.lastSeenVersion === null) {
+    changelogStore.markSeen(latestVersion)
+    return
+  }
+
+  if (changelogStore.hasUnseenVersion(latestVersion)) {
+    showChangelog.value = true
+    changelogStore.markSeen(latestVersion)
+  }
+}
 
 // Plugin nativo propio: abre Google Play directamente, sin selector de apps
 const StoreOpener = registerPlugin('StoreOpener')
@@ -133,6 +157,7 @@ function onTouchEnd(e) {
 
 onMounted(() => {
   checkForUpdate()
+  checkChangelog()
   fetchHeadlines().then(() => {
     if (headlines.value.length) startRotation()
   })
@@ -243,6 +268,8 @@ onUnmounted(() => {
         </div>
       </template>
     </div>
+
+    <ChangelogDialog v-model="showChangelog" :entry="latestChangelogEntry" />
   </q-page>
 </template>
 
