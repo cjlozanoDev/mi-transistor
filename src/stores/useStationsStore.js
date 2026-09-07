@@ -220,9 +220,24 @@ export const useStationsStore = defineStore('stations', {
         .sort((a, b) => a.label.localeCompare(b.label))
     },
   },
-  persist: {
-    // Subir la versión cuando cambie el formato de los datos guardados,
-    // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
-    key: 'stations-v6',
-  },
+  persist: [
+    // Favoritas y recientes viven en una key estable y separada de la caché
+    // de listados: así, subir la versión de la caché (abajo) para invalidar
+    // datos con formato antiguo NUNCA borra lo que el usuario ha guardado.
+    {
+      key: 'stations-favorites',
+      paths: ['favorites', 'recentStations'],
+    },
+    {
+      // Subir la versión cuando cambie el formato de los datos cacheados,
+      // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
+      key: 'stations-v6',
+      paths: [
+        'listStations',
+        'stationsTimestamp',
+        'listStationsLatinoamerica',
+        'stationsLatinoamericaTimestamp',
+      ],
+    },
+  ],
 })
