@@ -11,7 +11,7 @@ export const CHANGELOG = [
     items: [
       {
         icon: '📻🌐',
-        text: 'Ya puedes tener tu app de Mi Transistor disponible en cualquier navegador, además podrás instalarla en tu ordenador: [PENDIENTE: pega aquí la URL de Netlify tras el primer deploy]',
+        text: 'Ya puedes acceder a Mi Transistor desde cualquier navegador, además podrás instalarla en tu ordenador: https://mitransistor.com',
       },
     ],
   },
