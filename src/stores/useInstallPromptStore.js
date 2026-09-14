@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-const SNOOZE_DAYS = 7
+const SNOOZE_DAYS = 1
 const SNOOZE_MS = SNOOZE_DAYS * 24 * 60 * 60 * 1000
 const STORAGE_KEY = 'install-prompt-v1'
 
