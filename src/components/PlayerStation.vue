@@ -5,7 +5,9 @@ import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { useStationsStore } from 'src/stores/useStationsStore'
 import { useQuasar } from 'quasar'
 
-const AudioPlayer = registerPlugin('AudioPlayer')
+const AudioPlayer = registerPlugin('AudioPlayer', {
+  web: () => import('src/services/audioPlayerWeb').then((m) => new m.AudioPlayerWeb()),
+})
 
 const playerStore = usePlayerStore()
 const stationStore = useStationsStore()
