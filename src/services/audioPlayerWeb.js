@@ -1,4 +1,5 @@
 import { WebPlugin } from '@capacitor/core'
+import Hls from 'hls.js'
 
 // Implementación web del plugin nativo AudioPlayer (ver
 // src-capacitor/android/app/src/main/java/com/mitransistor/app/AudioPlayerPlugin.java).
@@ -7,6 +8,7 @@ import { WebPlugin } from '@capacitor/core'
 // plataforma corre.
 export class AudioPlayerWeb extends WebPlugin {
   audio = null
+  hls = null
 
   getAudio() {
     if (this.audio) return this.audio
@@ -46,11 +48,38 @@ export class AudioPlayerWeb extends WebPlugin {
     })
   }
 
+  destroyHls() {
+    if (this.hls) {
+      this.hls.destroy()
+      this.hls = null
+    }
+  }
+
+  // Safari sabe reproducir HLS de forma nativa con solo poner el .m3u8 como
+  // src; Chrome/Firefox no, así que ahí hace falta hls.js para desmuxarlo.
+  isNativeHlsSupported(audio) {
+    return audio.canPlayType('application/vnd.apple.mpegurl') !== ''
+  }
+
   async play({ url, title, artist, artwork }) {
     if (!url) throw this.unavailable('url required')
 
     const audio = this.getAudio()
-    audio.src = url
+    this.destroyHls()
+
+    if (/\.m3u8(\?|$)/i.test(url) && !this.isNativeHlsSupported(audio) && Hls.isSupported()) {
+      this.hls = new Hls()
+      this.hls.on(Hls.Events.ERROR, (_event, data) => {
+        if (!data.fatal) return
+        this.notifyListeners('error', { code: -1, message: 'Error de reproducción' })
+        this.destroyHls()
+      })
+      this.hls.loadSource(url)
+      this.hls.attachMedia(audio)
+    } else {
+      audio.src = url
+    }
+
     this.setMediaSessionMetadata({ title, artist, artwork })
 
     if ('mediaSession' in navigator) {
@@ -64,6 +93,7 @@ export class AudioPlayerWeb extends WebPlugin {
 
   async stop() {
     const audio = this.audio
+    this.destroyHls()
     if (audio) {
       audio.pause()
       audio.removeAttribute('src')
