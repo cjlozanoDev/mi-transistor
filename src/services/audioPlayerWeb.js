@@ -68,7 +68,13 @@ export class AudioPlayerWeb extends WebPlugin {
     this.destroyHls()
 
     if (/\.m3u8(\?|$)/i.test(url) && !this.isNativeHlsSupported(audio) && Hls.isSupported()) {
-      this.hls = new Hls()
+      this.hls = new Hls({
+        // Algunos CDNs de emisoras (ej. 3catdirectes.cat) responden mal a las
+        // peticiones condicionales/Range que el navegador añade al revalidar
+        // caché (devuelven gzip mal calculado sobre un rango parcial, lo que
+        // Chrome no puede decodificar). 'no-store' evita esa revalidación.
+        fetchSetup: (context, initParams) => new Request(context.url, { ...initParams, cache: 'no-store' }),
+      })
       this.hls.on(Hls.Events.ERROR, (_event, data) => {
         if (!data.fatal) return
         this.notifyListeners('error', { code: -1, message: 'Error de reproducción' })
