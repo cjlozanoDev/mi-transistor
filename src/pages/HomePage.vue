@@ -82,7 +82,10 @@ const currentIndex = ref(0)
 const visible = ref(true)
 const fetchError = ref(false)
 
-const RSS_URL = 'https://www.20minutos.es/rss/'
+// 20minutos no manda cabeceras CORS: en la app nativa CapacitorHttp se salta
+// esa restricción, pero en la versión web hace falta pasar por nuestra propia
+// función de Netlify que hace la petición desde el servidor (ver netlify/functions/news.js).
+const RSS_URL = Capacitor.isNativePlatform() ? 'https://www.20minutos.es/rss/' : '/.netlify/functions/news'
 
 async function fetchHeadlines() {
   try {

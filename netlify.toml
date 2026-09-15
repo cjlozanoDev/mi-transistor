@@ -1,6 +1,7 @@
 [build]
   command = "quasar build -m pwa"
   publish = "dist/pwa"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"

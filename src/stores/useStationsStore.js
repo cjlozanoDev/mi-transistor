@@ -1,6 +1,14 @@
 import { defineStore } from 'pinia'
+import { Capacitor } from '@capacitor/core'
 import fallbackRadios from '../data/radios.json'
 import fallbackRadiosLatinoamerica from '../data/radios-latinoamerica.json'
+
+// tdtchannels.com no manda cabeceras CORS: en la app nativa CapacitorHttp se
+// salta esa restricción, pero en la versión web hace falta pasar por nuestra
+// propia función de Netlify (ver netlify/functions/stations.js).
+const STATIONS_URL = Capacitor.isNativePlatform()
+  ? 'https://www.tdtchannels.com/lists/radio.json'
+  : '/.netlify/functions/stations'
 
 const CACHE_DURATION = 24 * 60 * 60 * 1000
 const COUNTRIES_LATINOAMERICA = [
@@ -146,7 +154,7 @@ export const useStationsStore = defineStore('stations', {
 
       this.isLoading = true
       try {
-        const response = await fetch('https://www.tdtchannels.com/lists/radio.json', {
+        const response = await fetch(STATIONS_URL, {
           signal: AbortSignal.timeout(5000),
         })
         const data = await response.json()
