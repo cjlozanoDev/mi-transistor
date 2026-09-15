@@ -61,6 +61,29 @@ export class AudioPlayerWeb extends WebPlugin {
     return audio.canPlayType('application/vnd.apple.mpegurl') !== ''
   }
 
+  // Muchas emisoras exponen un "master.m3u8" multivariante que solo apunta a
+  // una única sub-lista real (con los segmentos). Algunos CDNs (ej.
+  // 3catdirectes.cat) responden ese master de forma intermitente (503), pero
+  // la sub-lista real va perfectamente: resolvemos el master una sola vez y
+  // le damos a hls.js la sub-lista directa, evitando reintentos contra el
+  // endpoint problemático en cada refresco de playlist en directo.
+  async resolveMediaPlaylistUrl(masterUrl) {
+    try {
+      const res = await fetch(masterUrl, { cache: 'no-store' })
+      const text = await res.text()
+      // Solo tiene sentido "saltar" el master si es un multivariante
+      // (EXT-X-STREAM-INF): si ya es la lista de segmentos, la primera línea
+      // sin '#' sería un .ts, no otra sub-lista.
+      if (!text.includes('#EXT-X-STREAM-INF')) return masterUrl
+      const lines = text.split('\n').map((l) => l.trim())
+      const variantLine = lines.find((l) => l && !l.startsWith('#'))
+      if (!variantLine) return masterUrl
+      return new URL(variantLine, masterUrl).toString()
+    } catch {
+      return masterUrl
+    }
+  }
+
   async play({ url, title, artist, artwork }) {
     if (!url) throw this.unavailable('url required')
 
@@ -68,6 +91,7 @@ export class AudioPlayerWeb extends WebPlugin {
     this.destroyHls()
 
     if (/\.m3u8(\?|$)/i.test(url) && !this.isNativeHlsSupported(audio) && Hls.isSupported()) {
+      const playlistUrl = await this.resolveMediaPlaylistUrl(url)
       this.hls = new Hls({
         // Algunos CDNs de emisoras (ej. 3catdirectes.cat) responden mal a las
         // peticiones condicionales/Range que el navegador añade al revalidar
@@ -80,7 +104,7 @@ export class AudioPlayerWeb extends WebPlugin {
         this.notifyListeners('error', { code: -1, message: 'Error de reproducción' })
         this.destroyHls()
       })
-      this.hls.loadSource(url)
+      this.hls.loadSource(playlistUrl)
       this.hls.attachMedia(audio)
     } else {
       audio.src = url
