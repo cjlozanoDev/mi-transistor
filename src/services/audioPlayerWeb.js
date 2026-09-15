@@ -55,12 +55,6 @@ export class AudioPlayerWeb extends WebPlugin {
     }
   }
 
-  // Safari sabe reproducir HLS de forma nativa con solo poner el .m3u8 como
-  // src; Chrome/Firefox no, así que ahí hace falta hls.js para desmuxarlo.
-  isNativeHlsSupported(audio) {
-    return audio.canPlayType('application/vnd.apple.mpegurl') !== ''
-  }
-
   // Muchas emisoras exponen un "master.m3u8" multivariante que solo apunta a
   // una única sub-lista real (con los segmentos). Algunos CDNs (ej.
   // 3catdirectes.cat) responden ese master de forma intermitente (503), pero
@@ -90,7 +84,12 @@ export class AudioPlayerWeb extends WebPlugin {
     const audio = this.getAudio()
     this.destroyHls()
 
-    if (/\.m3u8(\?|$)/i.test(url) && !this.isNativeHlsSupported(audio) && Hls.isSupported()) {
+    // audio.canPlayType('application/vnd.apple.mpegurl') no es fiable: Chrome
+    // devuelve "maybe" aunque en realidad no sepa desmuxar HLS. Por eso
+    // preferimos hls.js siempre que esté soportado (MSE), tal y como
+    // recomienda la propia librería, y solo caemos al <audio> nativo cuando
+    // hls.js no puede funcionar en absoluto.
+    if (/\.m3u8(\?|$)/i.test(url) && Hls.isSupported()) {
       const playlistUrl = await this.resolveMediaPlaylistUrl(url)
       this.hls = new Hls({
         // Algunos CDNs de emisoras (ej. 3catdirectes.cat) responden mal a las
