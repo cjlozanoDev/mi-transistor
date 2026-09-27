@@ -6,6 +6,16 @@
 // con versionName de Android, es solo un identificador de esta lista).
 export const CHANGELOG = [
   {
+    version: '3',
+    title: 'Novedades',
+    items: [
+      {
+        icon: '🇪🇺📻',
+        text: 'Ya puedes escuchar emisoras de Europa: Alemania, Francia, Italia, Reino Unido, Portugal y muchos países más. Elige "Europa" en el listado de emisoras.',
+      },
+    ],
+  },
+  {
     version: '2',
     title: 'Novedades',
     items: [

@@ -21,6 +21,7 @@ const searchStation = ref('')
 const failedLogos = ref(new Set())
 const selectedCountry = ref('España')
 const selectedLatamCountry = ref(null)
+const selectedEuropaCountry = ref(null)
 const selectedComunidad = ref(null)
 const showFilterSheet = ref(false)
 
@@ -38,23 +39,54 @@ const COUNTRY_FLAGS = {
   Perú: '🇵🇪',
   'Puerto Rico': '🇵🇷',
   Uruguay: '🇺🇾',
+  Alemania: '🇩🇪',
+  Austria: '🇦🇹',
+  Bélgica: '🇧🇪',
+  Francia: '🇫🇷',
+  Italia: '🇮🇹',
+  'Países Bajos': '🇳🇱',
+  Polonia: '🇵🇱',
+  Portugal: '🇵🇹',
+  'Reino Unido': '🇬🇧',
+  Suiza: '🇨🇭',
 }
 
 const countryOptions = [
   { label: 'España', value: 'España' },
   { label: 'Latinoamérica', value: 'Latinoamérica' },
+  { label: 'Europa', value: 'Europa' },
 ]
 
-const showingLatinoamerica = computed(
-  () => props.showCountryFilter && selectedCountry.value === 'Latinoamérica',
+// Regiones internacionales (radio-browser): lista de emisoras, países disponibles,
+// estado de carga y país seleccionado de cada una
+const REGIONS = {
+  Latinoamérica: {
+    stations: () => stationsStore.listStationsLatinoamerica,
+    countries: () => stationsStore.latinoamericaCountries,
+    isLoading: () => stationsStore.isLoadingLatinoamerica,
+    selected: selectedLatamCountry,
+    allIcon: '🌎',
+  },
+  Europa: {
+    stations: () => stationsStore.listStationsEuropa,
+    countries: () => stationsStore.europaCountries,
+    isLoading: () => stationsStore.isLoadingEuropa,
+    selected: selectedEuropaCountry,
+    allIcon: '🇪🇺',
+  },
+}
+
+// Región internacional activa, o null si se está mostrando España
+const activeRegion = computed(() =>
+  props.showCountryFilter ? (REGIONS[selectedCountry.value] ?? null) : null,
 )
 
-// Opciones del bottom sheet según el modo activo: países de LATAM o comunidades de España
+// Opciones del bottom sheet según el modo activo: países de la región o comunidades de España
 const filterOptions = computed(() => {
-  if (showingLatinoamerica.value) {
+  if (activeRegion.value) {
     return [
-      { label: 'Todos los países', value: null, icon: '🌍' },
-      ...stationsStore.latinoamericaCountries.map((c) => ({
+      { label: 'Todos los países', value: null, icon: activeRegion.value.allIcon },
+      ...activeRegion.value.countries().map((c) => ({
         ...c,
         icon: COUNTRY_FLAGS[c.label] ?? '🏳️',
       })),
@@ -67,14 +99,14 @@ const filterOptions = computed(() => {
 })
 
 const sheetTitle = computed(() =>
-  showingLatinoamerica.value ? 'Selecciona un país' : 'Selecciona una comunidad',
+  activeRegion.value ? 'Selecciona un país' : 'Selecciona una comunidad',
 )
 
-// Valor del filtro activo (país LATAM o comunidad) con get/set sobre el ref correspondiente
+// Valor del filtro activo (país de la región o comunidad) con get/set sobre el ref correspondiente
 const selectedFilter = computed({
-  get: () => (showingLatinoamerica.value ? selectedLatamCountry.value : selectedComunidad.value),
+  get: () => (activeRegion.value ? activeRegion.value.selected.value : selectedComunidad.value),
   set: (value) => {
-    if (showingLatinoamerica.value) selectedLatamCountry.value = value
+    if (activeRegion.value) activeRegion.value.selected.value = value
     else selectedComunidad.value = value
   },
 })
@@ -84,14 +116,15 @@ const selectedOption = computed(
 )
 
 const isLoadingList = computed(() =>
-  showingLatinoamerica.value ? stationsStore.isLoadingLatinoamerica : stationsStore.isLoading,
+  activeRegion.value ? activeRegion.value.isLoading() : stationsStore.isLoading,
 )
 
 const baseStations = computed(() => {
-  if (showingLatinoamerica.value) {
-    const all = stationsStore.listStationsLatinoamerica
-    if (!selectedLatamCountry.value) return all
-    return all.filter((s) => s.country === selectedLatamCountry.value)
+  if (activeRegion.value) {
+    const all = activeRegion.value.stations()
+    const country = activeRegion.value.selected.value
+    if (!country) return all
+    return all.filter((s) => s.country === country)
   }
   if (!selectedComunidad.value) return props.stations
   return props.stations.filter((s) => s.comunidadAutonoma === selectedComunidad.value)
@@ -267,11 +300,15 @@ const onImgError = (station) => {
   color: var(--q-secondary);
   text-align: center;
   line-height: 1.2;
-  /* recorta nombres muy largos */
+  width: 100%;
+  /* recorta nombres muy largos a 2 líneas con "…" */
   display: -webkit-box;
-
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  /* parte palabras sin espacios (p.ej. "RADIOHITS24HORAS") para que no invadan la de al lado */
+  overflow-wrap: anywhere;
 }
 
 .country-btn {

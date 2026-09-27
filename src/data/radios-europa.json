@@ -1,0 +1,6002 @@
+[
+  {
+    "name": "MANGORADIO",
+    "logo": "https://mangoradio.de/wp-content/uploads/cropped-Logo-192x192.webp",
+    "epg_id": "78012206-1aa1-11e9-a80b-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://mangoradio.stream.laut.fm/mangoradio"
+      }
+    ]
+  },
+  {
+    "name": "Deutschlandfunk | DLF | MP3 128k",
+    "logo": "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png",
+    "epg_id": "1c3e8be2-5b14-4933-bad3-87cbc227cba4",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3?aggregator=web"
+      }
+    ]
+  },
+  {
+    "name": "SWR3",
+    "logo": "https://swr3.de/assets/swr3/icons/apple-touch-icon.png",
+    "epg_id": "240d28b9-7858-48d2-a816-9cf8e1875fe8",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://liveradio.swr.de/sw282p3/swr3/play.mp3"
+      }
+    ]
+  },
+  {
+    "name": "80s80s Radio",
+    "logo": "https://upload.80s80s.de/production/static/1697296555757/icons/icon_512.ewwAEi8A30w.png",
+    "epg_id": "1b762b21-2ec6-412a-a231-fa34a96f4f99",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://regiocast.streamabc.net/regc-80s80smweb2517500-mp3-192-1672667?sABC=6no6sn7s%230%23r30o443r1929r059s085628511796n57%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1790376575"
+      }
+    ]
+  },
+  {
+    "name": "1LIVE",
+    "logo": "https://www1.wdr.de/radio/1live/resources/img/favicon/apple-touch-icon.png",
+    "epg_id": "9606f727-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wdr-1live-live.icecast.wdr.de/wdr/1live/live/mp3/128/stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Bayern 3",
+    "logo": "https://api.ardmediathek.de/image-service/images/urn:ard:image:52fd25fc45de7c6a?w=512",
+    "epg_id": "0de82079-04e7-407b-b616-e0726eba5244",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://dispatcher.rndfnk.com/br/br3/live/mp3/mid"
+      }
+    ]
+  },
+  {
+    "name": "# TOP 100 CLUB CHARTS - DANCE & DJ MIX RADIO - 24 HOURS NON-STOP MUSIC @ TikTok Hits, Ibiza House, Sunset Lounge, Melodic Music, EDM, Deep House, Dance Music, Techno & Hypertechno, Rave Charts, Top 40 Charts, Latin, Reggaeton Music, Moombahton, Urban Hits, HipHop, Party & Clubbing Radio, Trending Chartmusic, R&B, Urban, Mixtape - & LIVE DJ SET ",
+    "logo": "https://i.ibb.co/T1gH75m/rb-top100clubcharts.png",
+    "epg_id": "dd98c499-a0c4-4019-a35e-99caa6940407",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://breakz-2012-high.rautemusik.fm/?ref=radiobrowser-top100-clubcharts"
+      }
+    ]
+  },
+  {
+    "name": "WDR 5",
+    "logo": "https://www1.wdr.de/resources-v5.134.1/img/favicon/apple-touch-icon.png",
+    "epg_id": "9605edb3-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wdr-wdr5-live.icecast.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Rock Antenne",
+    "logo": "http://www.rockantenne.de/logos/rock-antenne/apple-touch-icon.png",
+    "epg_id": "960594a6-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://mp3channels.webradio.rockantenne.de/rockantenne"
+      }
+    ]
+  },
+  {
+    "name": "Deutschlandfunk | DLF | AAC 192k",
+    "logo": "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png",
+    "epg_id": "717e3749-b9e8-4497-bd6a-61ccec935922",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://st01.sslstream.dlf.de/dlf/01/high/aac/stream.aac?aggregator=web"
+      }
+    ]
+  },
+  {
+    "name": "BR24",
+    "logo": "https://api.ardmediathek.de/image-service/images/urn:ard:image:c3ab9296f3b282bf?w=512",
+    "epg_id": "787eda99-1532-4ee0-b14e-fdb88ec71530",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://dispatcher.rndfnk.com/br/br24/live/mp3/mid"
+      }
+    ]
+  },
+  {
+    "name": "Radio Eins",
+    "logo": "http://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-128.png",
+    "epg_id": "960553a5-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://d141.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3JqvFdyLKbFDJk7agOf1nAfAjqV&token=rEfLlkgRupVHL8DFGZxcGULXXXzuV4-23zdMjoFy8Wc&tvf=-v1nqibc2BhkMTQxLnJuZGZuay5jb20"
+      }
+    ]
+  },
+  {
+    "name": " - DJ & CLUB CHARTS ---> Club Classics, Festival-Hits, Remixes, Single Charts, Mashups, DJ Sets, Club Edits, Dancefloor, Underground, Nightlife, Party Anthems, Ibiza, Miami, Clubbing, Festival, Remix, Mashup, DJ, EDM,  RAVE, Dance, Urban, Latin, Beachclub, Lounge",
+    "logo": "https://i.ibb.co/P7QHpGB/DJ-CLUB-CHARTS-LOGO.png",
+    "epg_id": "3d9dcff7-8fd2-4eda-9d77-cfe259c62a70",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://breakz-2012-high.rautemusik.fm/?ref=rb-djclubcharts"
+      }
+    ]
+  },
+  {
+    "name": "90s90s HipHop & Rap",
+    "logo": "http://aggregatorservice.loverad.io/wp-content/uploads/2018/10/90s90s_hiphoprap_600x600.png",
+    "epg_id": "85c799b3-d91f-4f60-b91a-723e4a04acf5",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streams.90s90s.de/hiphop/mp3-192/streams.90s90s.de/"
+      }
+    ]
+  },
+  {
+    "name": "WDR4",
+    "logo": "https://www1.wdr.de/radio/wdr4/wdrvier_logo104~_v-ARDAustauschformat.jpg",
+    "epg_id": "44ee797f-b7c4-4f94-8853-ce9a9c8731ed",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://wdr-wdr4-live.icecastssl.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "# TOP 100 DJ CHARTS - DJ REMIX & CHARTS RADIO @ TikTok Charts, Electronic Music, EDM, House, Deep House, Dance Music, Techno & Hypertechno, Top40, Latin Charts, Reggaeton, Urban, HipHop, Club & Party Radio - & LIVE DJ SETS ",
+    "logo": "https://i.ibb.co/jMmvLjz/TOP100-DJ-CHARTS-RADIO.png",
+    "epg_id": "5bc44bcd-7481-40e1-b503-bb92b936f4cf",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://breakz-high.rautemusik.fm/?ref=radiobrowser-top100-djcharts"
+      }
+    ]
+  },
+  {
+    "name": "Deutschlandfunk Kultur | DLF | MP3 128k",
+    "logo": "https://www.deutschlandfunkkultur.de/static/img/deutschlandfunk_kultur/icons/apple-touch-icon-128x128.png",
+    "epg_id": "10f16cf6-bc45-4b67-8f17-9758f249a61a",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3?aggregator=web"
+      }
+    ]
+  },
+  {
+    "name": "80s80s",
+    "logo": "",
+    "epg_id": "962dc110-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streams.80s80s.de/web/mp3-192/streams.80s80s.de/"
+      }
+    ]
+  },
+  {
+    "name": "bigFM Deutschland",
+    "logo": "https://image.atsw.de/atsw/production/2024-12/600x600_px.jpg",
+    "epg_id": "4e948485-984b-4ec3-9983-16e5d83c4b85",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.bigfm.de/deutschland/mp3-128/radio-browser"
+      }
+    ]
+  },
+  {
+    "name": " \tROCKANTENNE Alternative (mp3)",
+    "logo": "https://www.rockantenne.de/logos/station-rock-antenne/apple-touch-icon.png",
+    "epg_id": "d608bb74-0740-47e3-a1e2-c11edfeec91f",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.rockantenne.de/alternative/stream/mp3"
+      }
+    ]
+  },
+  {
+    "name": "OLDIE ANTENNE",
+    "logo": "https://www.oldie-antenne.de/logos/oldie-antenne/apple-touch-icon.png",
+    "epg_id": "87906f1e-5f82-4b86-9865-69e8eab8a69a",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://s1-webradio.oldie-antenne.de/oldie-antenne?aw_0_1st.playerid=OldieAntenneWebPlayer"
+      }
+    ]
+  },
+  {
+    "name": "-- # TOP 100 CHARTS --- DJ MIXES -- Pop, Rock, Dance, House, Techno, Trance, Electro, Hip-Hop, Rap, RnB, Reggaeton, Latin, Jazz, Blues, Soul, Funk, Metal, Indie, Alternative, Chillout, Lounge, Ambient, Classical, Acoustic, Party, Hits, Charts, Oldies, 80s, 90s, EDM, Club, Deep House, Tropical, Mood, Love Songs, Workout, Relax",
+    "logo": "https://i.ibb.co/m5695X1x/T100-BRR-CH.png",
+    "epg_id": "d06dd5cb-97f4-48f6-8146-ec89e7b94cc0",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://breakz-high.rautemusik.fm/?ref=rb-djclubcharts0326"
+      }
+    ]
+  },
+  {
+    "name": "90s90s Hits",
+    "logo": "",
+    "epg_id": "9637a1b2-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streams.90s90s.de/pop/mp3-192/streams.90s90s.de/"
+      }
+    ]
+  },
+  {
+    "name": "Deutschlandfunk | DLF | OPUS 24k",
+    "logo": "https://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png",
+    "epg_id": "5a6946a2-f02f-4fd1-a16b-558c90150041",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://st01.sslstream.dlf.de/dlf/01/low/opus/stream.opus?aggregator=web"
+      }
+    ]
+  },
+  {
+    "name": "Inforadio",
+    "logo": "http://www.inforadio.de/content/dam/rbb/rbb/logos/touch/inf-128.png",
+    "epg_id": "960b77af-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://dispatcher.rndfnk.com/rbb/inforadio/live/mp3/mid"
+      }
+    ]
+  },
+  {
+    "name": "Bayern 1 Oberbayern",
+    "logo": "https://api.ardmediathek.de/image-service/images/urn:ard:image:b366004f6196d70c?w=512",
+    "epg_id": "7a49c017-1391-4e18-a4d8-a9bab58516e6",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://dispatcher.rndfnk.com/br/br1/obb/mp3/mid"
+      }
+    ]
+  },
+  {
+    "name": "1LIVE",
+    "logo": "https://www1.wdr.de/radio/1live/resources/img/favicon/apple-touch-icon.png",
+    "epg_id": "b2cbd1fd-275d-432a-8b20-37dcb3572315",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "__TECHNO__ by rautemusik.fm",
+    "logo": "https://rm.fm/favicon.ico",
+    "epg_id": "18ab1514-a53b-4f44-936e-f8583a68b5aa",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streams.rautemusik.fm/techno/mp3-192/?ref=radiobrowser"
+      }
+    ]
+  },
+  {
+    "name": "Rock Antenne - Heavy Metal",
+    "logo": "http://www.rockantenne.de/logos/station-rock-antenne/favicon.ico",
+    "epg_id": "960cca40-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://mp3channels.webradio.rockantenne.de/heavy-metal"
+      }
+    ]
+  },
+  {
+    "name": "Absolut Relax",
+    "logo": "https://absolutradio.de/images/stations/229_relax.png",
+    "epg_id": "ae209b3a-d20a-48f2-b303-22d68e385bf4",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://absolut-relax.live-sm.absolutradio.de/absolut-relax?__cb=130270101023249"
+      }
+    ]
+  },
+  {
+    "name": "WDR 2 Rheinland",
+    "logo": "https://www1.wdr.de/resources-v5.139.1/img/favicon/apple-touch-icon.png",
+    "epg_id": "9605ec6a-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wdr-wdr2-rheinland.icecast.wdr.de/wdr/wdr2/rheinland/mp3/128/stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Bollerwagen",
+    "logo": "https://www.radio.de/images/broadcasts/80/eb/100349/3/c300.png",
+    "epg_id": "a3a695be-35ba-4a1a-b8e7-d90815f4b942",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ffn-stream19.radiohost.de/radiobollerwagen_mp3-192?ref=radioplayer&listenerid=31363233323633323031-323030333a64653a343731363a3730313a623731343a346664383a313761363a39386165-3537373636-4d6f7a696c6c612f352e3020285831313b205562"
+      }
+    ]
+  },
+  {
+    "name": "Hit Radio FFH",
+    "logo": "https://www.ffh.de/android-icon.png",
+    "epg_id": "96056147-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://mp3.ffh.de/radioffh/hqlivestream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "_DEEJAY REMIXE_ Your Radio for finest House, EDM, Electro, Dance, Mashup, Hypertechno, Techno, Bootleg, Charts, Top40, Chillout, Lounge, HipHop, Urban & Latin Party DJ Remixes!",
+    "logo": "https://i.ibb.co/sP4q4Wh/breakz-fm-logo-fav.png ",
+    "epg_id": "be26f3f5-1ee1-4661-a3de-4544fc29e833",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://breakz-high.rautemusik.fm/?ref=radiobrowser-deejay-remixes-radio"
+      }
+    ]
+  },
+  {
+    "name": "Bayern 2",
+    "logo": "https://api.ardmediathek.de/image-service/images/urn:ard:image:5d72d15e88d309ec?w=512",
+    "epg_id": "1f3700b5-4875-4bdf-986d-1dcaa4e8dfbe",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://dispatcher.rndfnk.com/br/br2/live/mp3/mid"
+      }
+    ]
+  },
+  {
+    "name": "Antenne Bayern",
+    "logo": "",
+    "epg_id": "9605739a-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://mp3channels.webradio.antenne.de/antenne"
+      }
+    ]
+  },
+  {
+    "name": "Radio BOB!",
+    "logo": "",
+    "epg_id": "92556f58-20d3-44ae-8faa-322ce5f256c0",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streams.radiobob.de/bob-national/mp3-192/mediaplayer"
+      }
+    ]
+  },
+  {
+    "name": "NDR 2",
+    "logo": "https://www.ndr.de//apple-touch-icon-57x57.png",
+    "epg_id": "9e3b0f8e-95d3-11e9-a605-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast.ndr.de/ndr/ndr2/niedersachsen/mp3/128/stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "IBIZA CHILLOUT LOUNGE - Ambient, Deep House, Balearic, Smooth Jazz, Acoustic, Chill House, Lo-Fi, Chillwave, Dream Pop, Electro, Tropical House, Sunset Chill, Café del Mar, Soft Electronica, Slow House, Ambient, Relax, Easy Listening, Beach Vibes, Summer",
+    "logo": "https://i.ibb.co/jPkfdprq/rb-Ibiza.png",
+    "epg_id": "d271b4e8-a298-4862-9f4b-025c110cedd9",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://0nlineradio.radioho.st/lounge-ibiza-chillout-lounge?ref=rb26"
+      }
+    ]
+  },
+  {
+    "name": "Sunshine Live",
+    "logo": "",
+    "epg_id": "960d063e-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.sunshine-live.de/live/mp3-192/stream.sunshine-live.de/"
+      }
+    ]
+  },
+  {
+    "name": "Klassik Radio - Live",
+    "logo": "https://klassikradio.de/img/ms-mediumtile.png",
+    "epg_id": "ffd351fe-219e-4c6e-b14f-9c2e02fbe45e",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live.streams.klassikradio.de/klassikradio-deutschland/stream/mp3"
+      }
+    ]
+  },
+  {
+    "name": "NDR Info (Niedersachsen)",
+    "logo": "https://www.ndr.de/apple-touch-icon-120x120.png",
+    "epg_id": "9639c07d-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.ndr.de/ndr/ndrinfo/live/mp3/128/stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "SWR1 BW",
+    "logo": "https://www.radio.at/images/broadcasts/07/41/2273/2/c300.png",
+    "epg_id": "36a6d57a-4d8a-45e3-aad9-7931c6e43c56",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://liveradio.swr.de/sw282p3/swr1bw/play.mp3"
+      }
+    ]
+  },
+  {
+    "name": "0R - MUSIC FOR SLEEP || Sleep, Relax, Calm, Meditation, Nature, Ambient, Soft Music, Piano, Deep Sleep, Peaceful, Chill, Background, Slow, Gentle, Instrumental",
+    "logo": "https://i.ibb.co/whsdTsct/MUSIC-FOR-SLEEP.png",
+    "epg_id": "3f4be720-c996-439f-be3b-cce594ea2852",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://0nlineradio.radioho.st/classical-classical-music-for-sleep?ref=radio-browser26"
+      }
+    ]
+  },
+  {
+    "name": "Technolovers EDM",
+    "logo": "https://i.ibb.co/TmRLJsp/EDM-TL.jpg",
+    "epg_id": "5ea0c406-cc3e-4a36-9a32-37ed4d5a180e",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.technolovers.fm/edm?ref=radiobrowser"
+      }
+    ]
+  },
+  {
+    "name": "Sunshine Live - Techno",
+    "logo": "",
+    "epg_id": "9627c2e6-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.sunshine-live.de/techno/mp3-192/stream.sunshine-live.de/"
+      }
+    ]
+  },
+  {
+    "name": "\tBlasmusikradio mit Bernd",
+    "logo": "https://assets.laut.fm/b22749b7fdb382b8912269e3d8054380?t=_120x120",
+    "epg_id": "ffc0d701-f43b-4232-8be6-f7ff72add8ef",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.laut.fm/blasmusikradio_mit_bernd"
+      }
+    ]
+  },
+  {
+    "name": "Schwarzwaldradio",
+    "logo": "https://schwarzwaldradio.com/apple-touch-icon.png",
+    "epg_id": "65f5549e-a554-4386-9249-7f9651fd40f6",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://edge18.streamonkey.net/fho-schwarzwaldradiolive/stream/mp3?aggregator=smk-m3u-mp3"
+      }
+    ]
+  },
+  {
+    "name": "WDR 2 Rhein und Ruhr",
+    "logo": "https://www1.wdr.de/resources-v5.139.1/img/favicon/apple-touch-icon.png",
+    "epg_id": "960b6a9d-0601-11e8-ae97-52543be04c81",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wdr-wdr2-rheinruhr.icecast.wdr.de/wdr/wdr2/rheinruhr/mp3/128/stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "# Aktuelle HITS - 24H NON-STOP MUSIC - DANCE & DJ MIX RADIO @ TikTok Hits, Ibiza House, Sunset Lounge, Melodic Music, EDM, Deep House, Dance Music, Techno & Hypertechno, Rave Charts, Top 40 Charts, Latin, Reggaeton Music, Moombahton, Urban Hits, HipHop, Party & Clubbing Radio, Trending Chartmusic, R&B, Urban, Mixtape - & LIVE DJ SET",
+    "logo": "https://i.ibb.co/3mtCKLC/aktHits.jpg",
+    "epg_id": "e94afa1a-0f96-4a57-8b97-112bb5cd348d",
+    "country": "Germany",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://breakz-2012-high.rautemusik.fm/?ref=radiobrowser-akthits"
+      }
+    ]
+  },
+  {
+    "name": "RTL",
+    "logo": "https://duckduckgo.com/i/035a5e15d396c67a.png",
+    "epg_id": "042d3140-227c-4fac-9387-4903b692d5f2",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live.m6radio.quortex.io/webM89Hc99XApzgfhXNX8ASN5/grouprtl/national/short/audio-64000/index.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "France Info",
+    "logo": "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-5487caf3.png",
+    "epg_id": "1cfb151d-a341-11e9-a787-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://direct.franceinfo.fr/live/franceinfo-midfi.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Europe 1",
+    "logo": "https://www.europe1.fr/build/e1/images/favicon-120x120.png",
+    "epg_id": "dfcef843-6bf9-40f6-b3fe-2b224df86e48",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.europe1.fr/europe1.aac"
+      }
+    ]
+  },
+  {
+    "name": "Nostalgie HQ",
+    "logo": "https://img.nrj.fr/J6jlakQsQ2siRzCzCI_2IDCQj1E=/80x80/https%3A%2F%2Fplayers.nrjaudio.fm%2Flive-metadata%2Fplayer%2Fimg%2Fplayer-files%2Fnosta%2Flogos%2F640x640%2FP_Nostalgie_Premium_Logo_2023.png",
+    "epg_id": "d39ab442-6c34-4097-afd0-e298ac21e50c",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming.nrjaudio.fm/oua8a3w2dqao?origine=playernostalgie&aw_0_req.userConsentV2=&aw_0_1st.station="
+      }
+    ]
+  },
+  {
+    "name": "RMC FR",
+    "logo": "https://i1.wp.com/www.mediasportif.fr/wp-content/uploads/2014/05/Radio-RMC.jpg",
+    "epg_id": "7a3a3989-8f26-44f7-9ae5-fa91e5cf4f9d",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://audio.bfmtv.com/rmcradio_128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "France Inter",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/France_Inter_logo_2021.svg/1200px-France_Inter_logo_2021.svg.png",
+    "epg_id": "33960c43-0464-44b4-abfa-73591ebf647f",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.radiofrance.fr/franceinter/franceinter_hifi.m3u8?id=radiofrance"
+      }
+    ]
+  },
+  {
+    "name": "Nrj Hits",
+    "logo": "https://img.nrj.fr/8loJFyDgG_Gm_fgnk1fhkYIewhI=/medias%2F2021%2F06%2Flogo-nrj_60db2627d4729.svg",
+    "epg_id": "36eba167-5c51-4421-98f0-d2cda24be928",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming.nrjaudio.fm/ou7xugf3s5gi?origine=playernrj&aw_0_req.userConsentV2=&aw_0_1st.station=NRJ-Hits"
+      }
+    ]
+  },
+  {
+    "name": "RFM",
+    "logo": "http://cdn-rfm.lanmedia.fr/apple-touch-icon-120x120.png",
+    "epg_id": "2dffb353-5341-4438-b67b-83de8c3efbab",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.rfm.fr/rfm.mp3"
+      }
+    ]
+  },
+  {
+    "name": "FUN Radio",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Logo_Fun_Radio_%282021%29.svg/langfr-1280px-Logo_Fun_Radio_%282021%29.svg.png",
+    "epg_id": "9f756e2d-8e9b-45f5-8fc1-61573e23036b",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.funradio.fr/fun-1-44-128"
+      }
+    ]
+  },
+  {
+    "name": "Skyrock",
+    "logo": "https://play-lh.googleusercontent.com/dPiQ01OUKZVfRZUbbb-EVK5g9miS_K-xrxHgmBbynGG-GQ53yt3GzFKr0zUTnb-xswQ=s200-rw",
+    "epg_id": "01b61e49-18bd-486d-b0e1-cb51cbaf9a6d",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.skyrock.net/s/natio_mp3_128k"
+      }
+    ]
+  },
+  {
+    "name": "Chérie FM",
+    "logo": "https://media.info/l/o/6/6812.1503485369.png",
+    "epg_id": "f9ed1fa4-63d7-45a4-bdd6-48c5567f0f6b",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://cdnradio.streamakaci.com/cheriefm1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "France Culture",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c9/France_Culture_-_2008.svg/1024px-France_Culture_-_2008.svg.png",
+    "epg_id": "6a1440b2-e6f0-11e9-a96c-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.radiofrance.fr/franceculture-hifi.aac"
+      }
+    ]
+  },
+  {
+    "name": "FIP",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/d5/FIP_logo_2005.svg/1024px-FIP_logo_2005.svg.png",
+    "epg_id": "932eb148-e6f6-11e9-a96c-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.radiofrance.fr/fip-hifi.aac"
+      }
+    ]
+  },
+  {
+    "name": "Jazz Radio Blues",
+    "logo": "https://www.jazzradio.fr/apple-touch-icon-120x120.png",
+    "epg_id": "96102c22-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://jazzblues.ice.infomaniak.ch/jazzblues-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "France Info",
+    "logo": "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-0cfbd6d4.png",
+    "epg_id": "31074f8a-e6f4-11e9-a96c-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.radiofrance.fr/franceinfo-hifi.aac"
+      }
+    ]
+  },
+  {
+    "name": "Radio Nova",
+    "logo": "https://www.nova.fr/wp-content/uploads/sites/2/2021/02/cropped-favicon.png?fit=180%2c180&#038;quality=75",
+    "epg_id": "963fb390-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://novazz.ice.infomaniak.ch/novazz-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Jazz Radio",
+    "logo": "http://www.jazzradio.fr/apple-touch-icon-120x120.png",
+    "epg_id": "96136fe5-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RFI Afrique",
+    "logo": "http://www.rfi.fr/apple-touch-icon.png",
+    "epg_id": "960c2914-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://live02.rfi.fr/rfiafrique-64.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Rire et Chansons",
+    "logo": "https://img.nrj.fr/OImjPWH1tkT1NaUMPlxsY49g9BI=/medias%2F2024%2F03%2Fvvscnx9i3yteabtkx8nlpdusmqj6uo8hshh9iphoit8_65fbfe026c3a5.png",
+    "epg_id": "a70cdc64-9a33-4432-91a1-957beb5ac6e7",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming.nrjaudio.fm/ou8o8xgk7oiu?origine=fluxradios"
+      }
+    ]
+  },
+  {
+    "name": "EuroDance 90 radio",
+    "logo": "https://eurodance90.fr/favicon.ico",
+    "epg_id": "60ceaabd-4efd-4f47-b961-0dab6f475731",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-eurodance90.fr/radio/8000/128.mp3?1627933323"
+      }
+    ]
+  },
+  {
+    "name": "Europe 2",
+    "logo": "https://www.europe2.fr/wp-content/themes/melty/europeradio/assets/images/favicons/favicon128.png",
+    "epg_id": "be1e97e2-064a-4710-9ce9-d792d8beb1ca",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://europe2.lmn.fm/europe2.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RFI-Chinese",
+    "logo": "",
+    "epg_id": "a781a6da-a41f-498d-92f5-aede46952d54",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://rfienchinois64k.ice.infomaniak.ch/rfienchinois-64.mp3"
+      }
+    ]
+  },
+  {
+    "name": "100% Radio 80",
+    "logo": "https://bocir-prod-bucket.s3.amazonaws.com/radios/centpourcent/images/favicon.ico",
+    "epg_id": "9614204b-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://100radio-80.ice.infomaniak.ch/100radio-80-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RMC",
+    "logo": "https://yt3.ggpht.com/-56JILsUfbls/AAAAAAAAAAI/AAAAAAAAAAA/47vJXr02s6k/s900-c-k-no-mo-rj-c0xffffff/photo.jpg",
+    "epg_id": "da5f481e-f7d6-49b3-b213-514027740d39",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://hls-rmc.nextradiotv.com/no_ssai/128k/media.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Radio Classique",
+    "logo": "http://favicons.teamtailor-cdn.com/icon?size=80..120..200&url=https%3a%2f%2fwww.radioclassique.fr%2f",
+    "epg_id": "d1aa02d7-e611-4208-b38b-da21bc236cd8",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://str0.creacast.com/classique1"
+      }
+    ]
+  },
+  {
+    "name": "RFI Monde",
+    "logo": "http://www.rfi.fr/apple-touch-icon.png",
+    "epg_id": "960c68f8-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://live02.rfi.fr/rfimonde-64.mp3"
+      }
+    ]
+  },
+  {
+    "name": "France Inter",
+    "logo": "https://www.franceinter.fr/favicon.ico",
+    "epg_id": "d2bbffaf-5d67-4a65-9772-097d8c0269d3",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://direct.franceinter.fr/live/franceinter-hifi.aac"
+      }
+    ]
+  },
+  {
+    "name": "Chante France 80's",
+    "logo": "https://bocir-prod-bucket.s3.eu-west-1.amazonaws.com/radios/chante-france/images/favicon.x-icon",
+    "epg_id": "96147fcb-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream1.chantefrance.com/cf-80"
+      }
+    ]
+  },
+  {
+    "name": "法国国际广播电台",
+    "logo": "",
+    "epg_id": "21ef0997-adba-46c7-a2e1-03e3130bd5ad",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://rfienchinois64k.ice.infomaniak.ch/rfienchinois-64.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Rire et Chansons Sketches",
+    "logo": "",
+    "epg_id": "64179b77-7c6f-4e74-af5b-4bf3b5a1265a",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming.nrjaudio.fm/ou8oqegk7oiu?aw_0_1st.station=Rire-Chansons-SKETCHES&origine=mytuner"
+      }
+    ]
+  },
+  {
+    "name": "RMC Info Talk Sport ",
+    "logo": "https://rmc.bfmtv.com/android-icon-192x192.png",
+    "epg_id": "12e68964-5928-4623-b82e-4bf9a4963780",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://audio.bfmtv.com/rmcradio_128.mp3?aw_0_1st.playerId=RMC_audio_web&aggregator=RMC_audio_web"
+      }
+    ]
+  },
+  {
+    "name": "Made in 80",
+    "logo": "https://madein80.fr/wp-content/uploads/2020/12/Logo-Made-in-80-V2-blanc-400-ssslog.png",
+    "epg_id": "766f2be3-676f-40af-80e7-eab16f0da225",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://madein80.leswebradios.fr/"
+      }
+    ]
+  },
+  {
+    "name": "Skyrock Klassics",
+    "logo": "https://skyrock.fm/favicon.ico",
+    "epg_id": "ccf16787-7e0f-4b1a-9599-c318a8e0cf02",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast.skyrock.net/s/klassiks_aac_64k?tvr_name=radiofr&tvr_section1=64aac"
+      }
+    ]
+  },
+  {
+    "name": "OUI FM",
+    "logo": "https://bocir-prod-bucket.s3.amazonaws.com/radios/oui-fm/images/favicon.ico",
+    "epg_id": "958c558d-6b13-4829-92ff-49233f56de97",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ouifm.ice.infomaniak.ch/ouifm-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "BFM radio",
+    "logo": "https://www.radio.fr/images/broadcasts/76/27/105095/3/c300.png",
+    "epg_id": "3e6e3252-dd81-4b07-baba-b61bf96cd457",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://audio.bfmtv.com/bfmradio_128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RTL2",
+    "logo": "",
+    "epg_id": "0ee0fb71-e19d-475b-9135-b914d0d6e4cf",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.rtl2.fr/rtl2-1-44-128?listen=webCwsBCggNCQgLDQUGBAcGBg"
+      }
+    ]
+  },
+  {
+    "name": "Sud Radio",
+    "logo": "https://www.sudradio.fr/wp-content/uploads/2019/06/cropped-favicon-180x180.png",
+    "epg_id": "188c36ae-f1ef-4b5c-8587-f29c216bfaa2",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ice.creacast.com/sudradio"
+      }
+    ]
+  },
+  {
+    "name": "La Grosse Radio Reggae",
+    "logo": "https://www.lagrosseradio.com/favicon.ico",
+    "epg_id": "960ebcf5-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://hd.lagrosseradio.info/lagrosseradio-reggae-192.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Nostalgie France",
+    "logo": "",
+    "epg_id": "88496158-90c1-411f-9a3b-719397a8dcca",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming.nrjaudio.fm/oug7girb92oc?origine=tingfm"
+      }
+    ]
+  },
+  {
+    "name": "FIP Jazz",
+    "logo": "https://www.fip.fr/dist/favicons/logo-120.png",
+    "epg_id": "5b9ceedf-eb85-11e9-a96c-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.radiofrance.fr/fipjazz-hifi.aac"
+      }
+    ]
+  },
+  {
+    "name": "FG Classics",
+    "logo": "https://www.radiofg.com/favicon.ico",
+    "epg_id": "621be7ed-d1a1-48f6-8176-489e1406b4a3",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.rcs.revma.com/wknqhm4yuchvv?CAID=202605180046506038991434"
+      }
+    ]
+  },
+  {
+    "name": "Jazz Radio Classic Jazz",
+    "logo": "https://www.jazzradio.fr/apple-touch-icon-120x120.png",
+    "epg_id": "96136071-0601-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "France Info",
+    "logo": "https://www.francetvinfo.fr/assets/common/images/pwa/ios/120-0cfbd6d4.png",
+    "epg_id": "ab6a33e5-e8b5-4cf4-bfb7-ec0ae779cb7c",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.radiofrance.fr/franceinfo/franceinfo_hifi.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "France Musique",
+    "logo": "",
+    "epg_id": "81440088-0a76-11e8-ae97-52543be04c81",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://direct.francemusique.fr/live/francemusique-midfi.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Yumi Co. Radio",
+    "logo": "https://i.imgur.com/cVC439t.png",
+    "epg_id": "74884688-e3a7-41f8-8105-bc249a37963e",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://yumicoradio.net/stream"
+      }
+    ]
+  },
+  {
+    "name": "FIP (no pub)",
+    "logo": "https://www.radiofrance.fr/s3/cruiser-production/2023/03/3a1422a4-6f1f-4e17-874c-bad21e67f39b/300x300_sc_fip-avatar.jpg",
+    "epg_id": "55bdaccc-a91e-4440-9587-4832a8451745",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.radiofrance.fr/fip/fip_hifi.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "RFM POP-ROCK",
+    "logo": "http://cdn-rfm.lanmedia.fr/apple-touch-icon-120x120.png",
+    "epg_id": "dbdae111-2ceb-48e8-aa6b-cc544c57d043",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.rfm.fr/rfm-wr10.aac"
+      }
+    ]
+  },
+  {
+    "name": "📺 RFI Monde",
+    "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi076SvIq9FK1ila6iO0HpdpC6f6eMrCLPrNli3Y6WYe_7cVIM8GTSIKi5L2v3bmwD298Xc2jjmRlPX9nzJseyatmlnRhmrgL7QBGiUKBWhNDpmpSigoBKW-DQg-ytDeOF-iUaikzXDJef87-Or9eBq7fXL13kARxykDqVbhhIuT_e9niBlF0ZMztzw/s1600/Capture%20d%E2%80%99%C3%A9cran_2024-11-19_14-44-01.png",
+    "epg_id": "cbca0f46-ced9-4154-8157-c87039765207",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://rfiafrique64k.ice.infomaniak.ch/rfimonde-64.mp3"
+      }
+    ]
+  },
+  {
+    "name": "BFM Radio (128.mp3)",
+    "logo": "https://www.bfmtv.com/android-icon-192x192.png",
+    "epg_id": "2e5c08e4-ab83-4036-baf6-339aeffcb3b8",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://audio.bfmtv.com/bfmradio_128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Orient",
+    "logo": "https://cdn.instant.audio/images/logos/ecouterradioenligne-com/orient.png",
+    "epg_id": "e3ecb332-be77-4641-9b52-39cb4e79e042",
+    "country": "France",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.rcs.revma.com/7hnrkawf4p8uv.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Italia Solo Musica Italiana",
+    "logo": "https://www.radioitalia.it/images/logo-radioitalia.png",
+    "epg_id": "216ee092-939d-43b6-8562-c646f73ad89f",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radioitaliasmi.akamaized.net/hls/live/2093120/RISMI/stream01/streamPlaylist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Radio Kiss Kiss",
+    "logo": "https://kisskiss.it/wp-content/uploads/2022/07/cropped-favicon-new-kisskiss-180x180.png",
+    "epg_id": "961756e4-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wma07.fluidstream.net:4610/"
+      }
+    ]
+  },
+  {
+    "name": "Radio 24 il sole 24 ore",
+    "logo": "https://www.radio24.ilsole24ore.com/whitelabel/group-2420101401040528/img/apple-touch-icon.png",
+    "epg_id": "986c5985-41d7-11ea-a95e-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://shoutcast2.radio24.it:8000/;"
+      }
+    ]
+  },
+  {
+    "name": " 50s 60s RETRO HITS",
+    "logo": "https://static.wixstatic.com/media/f361b3_ea9b293c1b80488d97f24981e7c6c1d3~mv2.jpg",
+    "epg_id": "5532c4d9-616e-4d62-a49f-984a13e3189c",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.zeno.fm/pxzwykxbluitv"
+      }
+    ]
+  },
+  {
+    "name": "Radio Deejay",
+    "logo": "https://www.deejay.it/favicon.ico",
+    "epg_id": "999ff951-68eb-4f4a-bec9-ed972b99d258",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "RTL 102.5",
+    "logo": "https://cloud.rtl.it/assets/www.rtl.it/3.0.64/img/logo/favicon-96x96.png",
+    "epg_id": "675bd925-8b13-43fe-a1b9-43bb0f90fbbd",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_audio.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Rai Radio 1",
+    "logo": "",
+    "epg_id": "96185693-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icestreaming.rai.it/1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Virgin Radio Italia",
+    "logo": "http://www.virginradio.it/favicon_2.ico?v=1722509813651",
+    "epg_id": "9619eb8a-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.unitedradio.it/Virgin.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Ibiza",
+    "logo": "https://radioibiza.it/wp-content/uploads/2021/07/cropped-favicon-ibiza-180x180.png",
+    "epg_id": "962c02bc-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wma08.fluidstream.net:5010/;stream.aac"
+      }
+    ]
+  },
+  {
+    "name": "Radio 105 Network",
+    "logo": "https://upload.wikimedia.org/wikipedia/it/0/01/105.png",
+    "epg_id": "9619ea14-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.unitedradio.it/Radio105.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RMC Radio Monte Carlo",
+    "logo": "",
+    "epg_id": "961a5a75-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.unitedradio.it/RMC.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Rai Radio 1",
+    "logo": "https://www.raicom.rai.it/wp-content/uploads/2021/12/RADIO1-1024x1024.jpg",
+    "epg_id": "370437b8-878d-4efd-b4f5-17f060a49a6e",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icestreaming.rai.it/1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Rai Radio 3",
+    "logo": "",
+    "epg_id": "9608eb3e-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icestreaming.rai.it/3.mp3"
+      }
+    ]
+  },
+  {
+    "name": " # 100 NU-DISCO CENTRAL RADIO",
+    "logo": "https://static.wixstatic.com/media/f361b3_66f56cd8d2f44aed871cfd62bf70af65~mv2.jpg",
+    "epg_id": "68df3c3b-d0e5-4290-8a5e-364a33e2d334",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.zeno.fm/jqhhzffjynbuv"
+      }
+    ]
+  },
+  {
+    "name": "70 80 90",
+    "logo": "https://www.radio708090.it/wp-content/uploads/2021/10/708090-160-150x150.png",
+    "epg_id": "e81cf293-174e-4936-b3cb-db62decedacd",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://rblive.it:8170/radio.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio 80",
+    "logo": "https://upload.wikimedia.org/wikipedia/it/1/1b/Radio80.jpg",
+    "epg_id": "961f659a-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://str01.fluidstream.net:7020/;stream.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Deejay 80",
+    "logo": "https://www.deejay.it/favicon.ico",
+    "epg_id": "ae0354a3-a57c-477d-8dc9-8bd4464aedbd",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/deejay80/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Radio Armisa",
+    "logo": "https://armisa.it/assets/favicon/android-chrome-512x512.png",
+    "epg_id": "83dcfac4-b3c3-4731-afc1-a80dd271dffa",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://onair.armisa.it/listen/armisa/radio.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Kiss Kiss Italia",
+    "logo": "https://kisskissitalia.it/wp-content/uploads/2021/07/cropped-favicon-kisskissitalia-180x180.png",
+    "epg_id": "9626c78f-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wma06.fluidstream.net:3614/;listen.pls"
+      }
+    ]
+  },
+  {
+    "name": "RDS relax",
+    "logo": "https://rdsrelax.it/images/logo.png",
+    "epg_id": "e5a0255c-1a28-4e9c-8ece-466ed39be2af",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icstream.rds.radio/rdsrelax"
+      }
+    ]
+  },
+  {
+    "name": "RDS 100% Grandi Successi",
+    "logo": "",
+    "epg_id": "cf383460-c764-477e-a17b-33d1bff7a9aa",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.rds.radio/audio/rds.stream_aac64/chunklist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Rai Radio 2",
+    "logo": "",
+    "epg_id": "96181819-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icestreaming.rai.it/2.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Birikina",
+    "logo": "https://www.birikina.it/wp-content/uploads/2020/02/ico-fb-1.png",
+    "epg_id": "9628ca6e-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wma01.fluidstream.net/birikina"
+      }
+    ]
+  },
+  {
+    "name": "Radio M2O",
+    "logo": "",
+    "epg_id": "f8a910c3-fd87-4376-af20-1af5bfec6ab4",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/master_ma.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Rai News 24",
+    "logo": "https://www.rainews.it/dl/rainews/images/favicon.png",
+    "epg_id": "eb10fc32-63d3-47a1-9d1b-3040f3580dee",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streamcdnb3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_2400/chunklist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "RTL 102.5 Disco",
+    "logo": "https://cloud.rtl.it/assets/www.rtl.it/3.0.64/img/logo/favicon-96x96.png",
+    "epg_id": "3f49bd02-5f8b-468b-88b0-c7bcdfd8291a",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S51100361/Sz3kCA55PrRh/playlist_audio.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Radio Bruno - Made in Italy",
+    "logo": "https://www.radiobruno.it/wp-content/uploads/2019/11/made-in-italy.jpg",
+    "epg_id": "57c2fbb7-4f55-4857-8cb0-876f07809a38",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream2.xdevel.com/audio1s975355-54/stream/icecast.audio"
+      }
+    ]
+  },
+  {
+    "name": "R101 FM",
+    "logo": "http://www.r101.it/favicon_7.ico?v=1722509814243",
+    "epg_id": "960beb61-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.unitedradio.it/r101"
+      }
+    ]
+  },
+  {
+    "name": "\tRadio Capital",
+    "logo": "https://www.capital.it/wp-content/themes/network-capital/favicon.ico",
+    "epg_id": "044acc55-255b-4382-af22-ccf28445bb3e",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiocapital/radiocapital/master_ma.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "NATURE RADIO SLEEP",
+    "logo": "https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2025-03-01/fb714c8d8238b02673a9ee2b018528af.ico.png",
+    "epg_id": "77eaf32d-241f-4f25-b7d6-347783cd4471",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://az1.mediacp.eu/listen/natureradiosleep/radio.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Virgin Radio Italy",
+    "logo": "https://www.virginradio.it/wp-content/themes/virgin-radio-theme/public/images/VRG-symbol-footer.066739.png",
+    "epg_id": "6623c04a-8c8d-4ef7-aa6a-d14361fbb0be",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icy.unitedradio.it/Virgin.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Freccia",
+    "logo": "https://cloud.radiofreccia.it/assets/www.radiofreccia.it/1.0.43/img/logo/android-icon-192x192.png",
+    "epg_id": "b25710a3-fb1b-4aa7-ba81-142ee6f5bea9",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S3160845/0tuSetc8UFkF/playlist_audio.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Virgin Radio Classic Rock",
+    "logo": "",
+    "epg_id": "9619f126-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icy.unitedradio.it/VirginRockClassics.mp3"
+      }
+    ]
+  },
+  {
+    "name": "NEU RADIO",
+    "logo": "",
+    "epg_id": "4d712fdb-596c-495a-80eb-6c0cf2c3e649",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream"
+      }
+    ]
+  },
+  {
+    "name": "Radio Kiss Kiss Napoli",
+    "logo": "",
+    "epg_id": "962878f4-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wma08.fluidstream.net:3612/;listen.pls"
+      }
+    ]
+  },
+  {
+    "name": "Radio Sportiva ",
+    "logo": "https://www.radiosportiva.com/wp-content/uploads/2021/09/logo-radiosportiva-white.svg",
+    "epg_id": "9ff8c9b6-34d5-4457-befd-bdad9c218217",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://sportiva.inmystream.it/stream/sportiva"
+      }
+    ]
+  },
+  {
+    "name": "Radio Piterpan",
+    "logo": "http://www.piterpan.it/favicon.ico",
+    "epg_id": "9628cc2d-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://wma01.fluidstream.net/piterpan"
+      }
+    ]
+  },
+  {
+    "name": "Radio Capital W L'Italia",
+    "logo": "https://cdn.gelestatic.it/capital/sites/2/2016/11/webradio-vivalitalia-320x320.jpg",
+    "epg_id": "ccdd09af-a0dd-4277-88b6-0f3564d88d29",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalwitalia/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "RADIO DIMENSIONE RELAX",
+    "logo": "https://favicon-generator.org/favicon-generator/htdocs/favicons/2025-01-13/a46c8e118c24923aa862f46d62f93152.ico.png",
+    "epg_id": "d7a0a800-b461-44f0-a444-058e10f27e7c",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://az1.mediacp.eu/listen/radiodimensionerelax/radio.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Centrale - Montorio al Vomano",
+    "logo": "http://offline.radiocentrale.info/streaming/base_streaming.png",
+    "epg_id": "d48e1114-a33f-4dd9-a700-c7fc0545b805",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://s1.forstream.it:8070/radiocentrale.mp3"
+      }
+    ]
+  },
+  {
+    "name": "CLASSIC HITS RADIO Italia",
+    "logo": "",
+    "epg_id": "ae6a44a0-2ae6-421f-b66b-d2700c8f92e8",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://classichitsradio.streamingmedia.it/play"
+      }
+    ]
+  },
+  {
+    "name": "Funky Radio",
+    "logo": "https://funky.radio/wp-content/uploads/2024/05/funky.radio_logo_300x300.webp",
+    "epg_id": "737d604c-df80-4886-8883-538febcb4189",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://funkyradio.streamingmedia.it/play.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Lattemiele",
+    "logo": "https://www.lattemiele.com/wp-content/uploads/2020/07/cropped-logo-autore-lm-32x32.png",
+    "epg_id": "9536cb64-9345-4ddb-b84c-cc34f511a965",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://sr15.inmystream.it:8000/stream"
+      }
+    ]
+  },
+  {
+    "name": "Radio Dancefloor 90s",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s129888d.png",
+    "epg_id": "d829242c-3412-44ac-9026-a00128d935bc",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streaming.radiodancefloor.it:443/"
+      }
+    ]
+  },
+  {
+    "name": "Romantica Radio (RomanticaRadio Web)",
+    "logo": "https://romanticaradio.it/wp-content/uploads/2022/05/cropped-favicon_romantica-180x180.png",
+    "epg_id": "caf01ffe-e18a-4158-bf9e-e947aa50d2b9",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://vetrina.multi-radio.com/romanticaradio"
+      }
+    ]
+  },
+  {
+    "name": "RSD Radio Studio Delta",
+    "logo": "https://www.radiostudiodelta.it/wp-content/uploads/2014/08/favicon.jpg",
+    "epg_id": "fd2d63e1-da59-47f4-9fb9-b4c2aea1ac8a",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://rsd.streamingmedia.it/play.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Babboleo Suono",
+    "logo": "",
+    "epg_id": "b8d32318-b7fd-46ce-ba0c-1c1e8cf6f7db",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.rcs.revma.com/sv2hu8qqv6bwv"
+      }
+    ]
+  },
+  {
+    "name": "Radio 105 - Dance 90",
+    "logo": "",
+    "epg_id": "962841a9-0601-11e8-ae97-52543be04c81",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icy.unitedradio.it/105Dance90.mp3"
+      }
+    ]
+  },
+  {
+    "name": "m2o originals radio",
+    "logo": "https://static.wixstatic.com/media/b9d036_d21d18b1eff34d019064204ad012c786~mv2.png",
+    "epg_id": "85a40513-3456-4232-986d-1ed37146137d",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.laut.fm/m2o-originals-radio"
+      }
+    ]
+  },
+  {
+    "name": "Radio Volami nel Cuore",
+    "logo": "https://canaleitalia.it/wp-content/uploads/2021/07/radio-volami-nel-cuore-ascolta.jpg",
+    "epg_id": "c787b546-f486-4df6-8c5c-344c9bb8b9f5",
+    "country": "Italy",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://rci.canaleitalia.tv:8009/;"
+      }
+    ]
+  },
+  {
+    "name": "BBC World Service",
+    "logo": "http://cdn-profiles.tunein.com/s24948/images/logoq.jpg?t=1",
+    "epg_id": "98adecf7-2683-4408-9be7-02d3f9098eb8",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.live.vc.bbcmedia.co.uk/bbc_world_service"
+      }
+    ]
+  },
+  {
+    "name": "Heart 80s",
+    "logo": "https://www.heart.co.uk/assets_v4r/heart/img/favicon-196x196.png",
+    "epg_id": "c4077677-dc2f-11e9-a8ba-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/Heart80sMP3"
+      }
+    ]
+  },
+  {
+    "name": " CAPITAL - The UK's No.1 Hit Music Station",
+    "logo": "https://cdn-profiles.tunein.com/s241396/images/logod.jpg",
+    "epg_id": "4ad5bdc7-01e5-47c9-a1f9-751671b4707e",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/CapitalUK"
+      }
+    ]
+  },
+  {
+    "name": "BBC Radio 4 (128k)",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s25419q.png",
+    "epg_id": "98137c2d-ce68-4e33-8cb7-ddf3692ecc9d",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://as-hls-ww-live.akamaized.net/pool_55057080/live/ww/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio%3d128000.norewind.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "LBC UK",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s220687q.png",
+    "epg_id": "6efe216d-bf7e-11e9-8502-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://media-ice.musicradio.com/LBCUK"
+      }
+    ]
+  },
+  {
+    "name": "Classic FM UK",
+    "logo": "http://www.classicfm.com/assets_v4r/classic/img/favicon-196x196.png",
+    "epg_id": "96063f25-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://ice-the.musicradio.com/ClassicFMMP3"
+      }
+    ]
+  },
+  {
+    "name": "Gold",
+    "logo": "https://www.mygoldmusic.co.uk/assets_v4r/gold/img/favicon-196x196.png",
+    "epg_id": "0a1e0bb0-dc37-11e9-a8ba-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/GoldMP3"
+      }
+    ]
+  },
+  {
+    "name": "BBC Radio 1",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s24939q.png",
+    "epg_id": "fdbdc2b0-c184-437b-8643-9a5bfa45c253",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/ak/bbc_radio_one.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "BBC Radio 2 (128k)",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s24940q.png",
+    "epg_id": "3606ef8c-cd58-4440-8c47-dbf1e0cacdac",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://as-hls-ww-live.akamaized.net/pool_74208725/live/ww/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio%3d128000.norewind.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "talkSPORT",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAcdmwRcs4FcWk_OQqxq4EyZH5YA7ixM2dvQ&usqp=CAU",
+    "epg_id": "9f5d0645-ae1e-4e9f-9b2f-91fa63d5b1fa",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radio.talksport.com/stream"
+      }
+    ]
+  },
+  {
+    "name": "BBC Radio 5 Live (128k)",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s24943q.png",
+    "epg_id": "cae35448-1285-4f12-b3e0-2f4fdde00002",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://as-hls-ww-live.akamaized.net/pool_89021708/live/ww/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d128000.norewind.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Smooth Radio",
+    "logo": "http://www.smoothradio.com/assets_v4r/smooth/img/favicon-196x196.png",
+    "epg_id": "962b27a3-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://media-the.musicradio.com/SmoothEastMids"
+      }
+    ]
+  },
+  {
+    "name": "Heart 90s",
+    "logo": "https://www.heart.co.uk/assets_v4r/heart/img/favicon-196x196.png",
+    "epg_id": "52bb00fe-dc31-11e9-a8ba-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/Heart90sMP3"
+      }
+    ]
+  },
+  {
+    "name": "Heart London 106.2 [MP3]",
+    "logo": "https://cdn-profiles.tunein.com/s2846/images/logoq.jpg",
+    "epg_id": "9608ade8-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://ice-sov.musicradio.com/HeartLondonMP3"
+      }
+    ]
+  },
+  {
+    "name": "BBC Radio 6 Music",
+    "logo": "https://de8as167a043l.cloudfront.net/styles/images/logosplus/120x120xBBCR6.png",
+    "epg_id": "1c6dcd6f-88c6-4fd4-8191-078435168e85",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8"
+      }
+    ]
+  },
+  {
+    "name": " KISSTORY: Non-Stop Old Skool & Anthems",
+    "logo": "https://cdn-profiles.tunein.com/s77960/images/logod.png",
+    "epg_id": "53733e08-7728-40ee-b968-59e71f0281b6",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live-bauerkiss.sharp-stream.com/kisstory.aac?direct=true&aw_0_1st.playerid=BMUK_Airable&aw_0_1st.skey=6778249992"
+      }
+    ]
+  },
+  {
+    "name": "Times Radio",
+    "logo": "https://play-lh.googleusercontent.com/SSmTtYYV5SkMMJ6_ojBDxHkprncSfh_jrhfn8f7rj3tnDOUIaNA9Vf28FqVS1zrTvE9_",
+    "epg_id": "9a8f2d50-fca3-4d7c-99ee-c5e0e97f4d1b",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://timesradio.wireless.radio/stream"
+      }
+    ]
+  },
+  {
+    "name": "Heart Dance",
+    "logo": "https://www.heart.co.uk/assets_v4r/heart/img/favicon-196x196.png",
+    "epg_id": "fa76f16f-dc31-11e9-a8ba-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/HeartDanceMP3"
+      }
+    ]
+  },
+  {
+    "name": "Capital FM London",
+    "logo": "http://assets6.capitalfm.com/2016/11/capital-3d-network-logo-large-canvas-1458228638-herowidev4-0.jpg",
+    "epg_id": "96200095-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://media-ice.musicradio.com/CapitalMP3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Caroline",
+    "logo": "http://www.radiocaroline.co.uk/favicon.ico",
+    "epg_id": "9606ceae-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://78.129.202.200:8040/;"
+      }
+    ]
+  },
+  {
+    "name": "BBC Radio 6 Music (128k)",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s44491q.png",
+    "epg_id": "eec6dc9b-79de-4609-8c6d-88f2bfeb8110",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d128000.norewind.m3u8"
+      }
+    ]
+  },
+  {
+    "name": " BBC RADIO 1 - The biggest new pop and all-day vibes",
+    "logo": "https://cdn-profiles.tunein.com/s24939/images/logod.png",
+    "epg_id": "f7fd408e-02a5-49a1-8c03-078727e97e8f",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/cf/bbc_radio_one.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Smooth Chill",
+    "logo": "https://www.smoothradio.com/assets_v4r/smooth/img/favicon-196x196.png",
+    "epg_id": "478fd7f4-dc36-11e9-a8ba-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/ChillMP3"
+      }
+    ]
+  },
+  {
+    "name": " KISSTORY R&B: The Hottest R&B tracks from KISSTORY",
+    "logo": "https://cdn-profiles.tunein.com/s333201/images/logod.png",
+    "epg_id": "19b250fe-9027-4caf-b6ea-33022f0b6392",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live-bauerkiss.sharp-stream.com/kisstoryrb.aac?direct=true&aw_0_1st.playerid=BMUK_Airable&aw_0_1st.skey=6778249992"
+      }
+    ]
+  },
+  {
+    "name": " CAPITAL DANCE: The UK's Official Dance Station",
+    "logo": "https://cdn-profiles.tunein.com/s309497/images/logod.jpg",
+    "epg_id": "5d50b9af-852d-43eb-89dd-b9b934e3f551",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/CapitalDance"
+      }
+    ]
+  },
+  {
+    "name": "BBC Radio 3 (128k)",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s24941q.png",
+    "epg_id": "03e68f6d-1ca3-459f-891a-c55d84711646",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://as-hls-ww-live.akamaized.net/pool_23461179/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio%3d128000.norewind.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "BBC News HD (720P)",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/BBC_News_HD_Logo.svg/2560px-BBC_News_HD_Logo.svg.png",
+    "epg_id": "ea391ded-00f0-47e0-841c-d92663e11854",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Chillout Ibiza FM",
+    "logo": "http://www.chilloutibizafm.com/favicon.ico",
+    "epg_id": "d69fbc2c-530a-4d40-ac9f-56532356b248",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://edge3.peta.live365.net/b05055_128mp3"
+      }
+    ]
+  },
+  {
+    "name": "BBC Live News (128k)",
+    "logo": "https://static.files.bbci.co.uk/sounds/web/sounds-web/img/sounds-apple-touch-icon.ead169771d.png",
+    "epg_id": "59813592-9a30-4e5c-bfc6-665724728582",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://as-hls-ww-live.akamaized.net/pool_53367543/live/ww/bbc_sounds_news/bbc_sounds_news.isml/bbc_sounds_news-audio%3d128000.norewind.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Virgin Radio UK",
+    "logo": "https://www.celsoazevedo.com/files/2022/virgin-radio-uk.jpg",
+    "epg_id": "7d196930-5f3d-45e2-b11a-d261c4515161",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radio.virginradio.co.uk/stream"
+      }
+    ]
+  },
+  {
+    "name": "BBC World Service",
+    "logo": "https://rmp.files.bbci.co.uk/rmp-shared-assets/1.4.0/img/network-logos/national/bbc_world_service_colour.svg",
+    "epg_id": "598c4d0e-6b06-43fb-bff4-717c591213a9",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service"
+      }
+    ]
+  },
+  {
+    "name": "Intamixx 80s 90s Radio UK",
+    "logo": "https://80s.intamixx.uk/images/imc8090.jpg",
+    "epg_id": "8c45fcc8-a9fe-4e07-9a53-67b6a2a1fc76",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radio.intamixx.uk:8443/radio2"
+      }
+    ]
+  },
+  {
+    "name": "BBC Radio 4 Extra (128k)",
+    "logo": "https://cdn-radiotime-logos.tunein.com/s6839q.png",
+    "epg_id": "ccd9d009-b369-4451-9ebb-a2138bed734f",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://as-hls-ww-live.akamaized.net/pool_26173715/live/ww/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio%3d128000.norewind.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Heart 70s",
+    "logo": "",
+    "epg_id": "e7205cd4-dc30-11e9-a8ba-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/Heart70sMP3"
+      }
+    ]
+  },
+  {
+    "name": "NTS Radio 1",
+    "logo": "http://www.nts.live/favicon.ico",
+    "epg_id": "961e6cac-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream-relay-geo.ntslive.net/stream"
+      }
+    ]
+  },
+  {
+    "name": "Boot Boy Radio",
+    "logo": "https://bootboyradio.net/wp-content/uploads/2021/02/cropped-900logosquare-192x192.jpg",
+    "epg_id": "9bc64606-6eb1-40bd-901e-aed7c510baa0",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming04.liveboxstream.uk/proxy/dwain?mp=/stream"
+      }
+    ]
+  },
+  {
+    "name": "CNN UK",
+    "logo": "https://edition.cnn.com/favicon.ico",
+    "epg_id": "b0fcc9da-9958-4729-9e23-4f7cc15e98b9",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://tunein.cdnstream1.com/2868_96.mp3"
+      }
+    ]
+  },
+  {
+    "name": " PLANET ROCK: Where Rock Lives",
+    "logo": "https://cdn-profiles.tunein.com/s2377/images/logod.png",
+    "epg_id": "dec031e0-4419-45d2-9f3e-76e91d876c40",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-mz.hellorayo.co.uk/planetrock.aac?direct=true&aw_0_1st.playerid=BMUK_Airable&aw_0_1st.skey=6778249992"
+      }
+    ]
+  },
+  {
+    "name": "Classic FM (UK)",
+    "logo": "https://www.classicfm.com/assets_v4r/classic/img/favicon-196x196.png",
+    "epg_id": "f4da4a3a-e71f-4634-afce-4d3f8555f3b1",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://media-ice.musicradio.com/ClassicFMMP3"
+      }
+    ]
+  },
+  {
+    "name": "Smooth Country",
+    "logo": "https://www.smoothradio.com/assets_v4r/smooth/img/favicon-196x196.png",
+    "epg_id": "46f13c3e-823f-4f1e-ab82-5a7b145c337f",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ssl.musicradio.com/SmoothCountry"
+      }
+    ]
+  },
+  {
+    "name": " KISS - The Best Vibes & Energy",
+    "logo": "https://cdn-profiles.tunein.com/s6004/images/logod.png",
+    "epg_id": "0f1a8621-d35a-4073-83d3-7ee14207a9a9",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live-bauerkiss.sharp-stream.com/kissnational.aac?direct=true&aw_0_1st.skey=1602676850&rp_source=1&=&&___cb=60456375243858"
+      }
+    ]
+  },
+  {
+    "name": "Magic Radio UK",
+    "logo": "https://www.celsoazevedo.com/files/2025/magic.png",
+    "epg_id": "172d8c95-fecd-40b7-af6f-9cdf4e8829e4",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-mz.hellorayo.co.uk/magicnational.mp3?direct=true&aw_0_1st.playerid=BMUK_TuneIn&aw_0_1st.skey=7374499933&stationCode=mag"
+      }
+    ]
+  },
+  {
+    "name": "NTS Radio 2",
+    "logo": "http://www.nts.live/apple-touch-icon.png?v=47re43rrzb",
+    "epg_id": "9634ab94-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream-relay-geo.ntslive.net/stream2"
+      }
+    ]
+  },
+  {
+    "name": " KISS DANCE: The Biggest Dance Anthems 24/7",
+    "logo": "https://cdn-profiles.tunein.com/s321341/images/logod.png",
+    "epg_id": "9c8f6141-f8e8-4779-bfed-5a79e14ed4dd",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-kiss.hellorayo.co.uk/kissdance.aac?direct=true&aw_0_1st.skey=1602676850&rp_source=1&=&&___cb=60456375243858"
+      }
+    ]
+  },
+  {
+    "name": "GB News",
+    "logo": "http://cdn-profiles.tunein.com/s310252/images/logod.png",
+    "epg_id": "fec7847c-b936-4bb3-a4c0-610db9b66c93",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://listen-gbnews.sharp-stream.com/gbnews.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Greatest Hits Radio",
+    "logo": "https://assets.planetradio.co.uk/img/ConfigWebHeaderLogoSVGImageUrl/381.svg?ver=1545132394",
+    "epg_id": "1bfae443-4fa5-45ed-92a5-8aecd6a70756",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-mz.hellorayo.co.uk/net2westmidlands.aac?aw_0_1st.skey=1602676850&direct=true&rp_source=1"
+      }
+    ]
+  },
+  {
+    "name": "Classic FM Calm",
+    "logo": "",
+    "epg_id": "2babf29a-811c-4a51-93c3-9f3531ef2e97",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://media-ice.musicradio.com/ClassicFMCalmMP3"
+      }
+    ]
+  },
+  {
+    "name": "Classic FM HD",
+    "logo": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/bd/a7/bf/bda7bf4f-16e9-6b60-0d87-a39d432b505e/AppIcon-1x_U007emarketing-0-7-0-85-220.png/492x0w.webp",
+    "epg_id": "bd1c441c-132a-4d48-a3f3-bdb386f4b09a",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ice-sov.musicradio.com/ClassicFMHD?hdauth=:2000000000:a290d4b39a16153061d4c743008b9fe8d424a7e5ec6469d40acf51fdcd336e80"
+      }
+    ]
+  },
+  {
+    "name": "Radio X",
+    "logo": "http://www.radiox.co.uk/assets_v4r/xfm/img/favicon-196x196.png",
+    "epg_id": "9617bbd8-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://media-the.musicradio.com/RadioXUK"
+      }
+    ]
+  },
+  {
+    "name": "Different Drumz DnB Radio",
+    "logo": "http://www.differentdrumz.co.uk/wp-content/uploads/fbrfg/apple-touch-icon-114x114.png",
+    "epg_id": "961bd688-0601-11e8-ae97-52543be04c81",
+    "country": "The United Kingdom Of Great Britain And Northern Ireland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://andromeda.shoutca.st:8031/"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1 (Portugal)",
+    "logo": "https://www.celsoazevedo.com/files/2022/antena-1.png",
+    "epg_id": "dbc018ae-1848-4f26-a677-367011a1f4b2",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streaming-live-app.rtp.pt/liveradio/antena180a/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "TSF Rádio Notícias",
+    "logo": "https://www.celsoazevedo.com/files/2024/tsf.png",
+    "epg_id": "cc461784-3150-4a34-81c5-2116fe024740",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://directo.tsf.pt/tsfdirecto.mp3"
+      }
+    ]
+  },
+  {
+    "name": " M80 Rádio – 80s",
+    "logo": "http://webradiodirectory.com/wp-content/uploads/2021/01/cc9443f16e2af31ba205ac82214760c9.jpg",
+    "epg_id": "7bc1f66f-412d-484b-82eb-b7b1c4575faa",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/m8080.aac"
+      }
+    ]
+  },
+  {
+    "name": "RFM",
+    "logo": "https://rfmsite-images.azureedge.net/icons/touch-icon-iphone-retina.png",
+    "epg_id": "856155ee-f434-4a45-9225-391c0e618b8b",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://23603.live.streamtheworld.com/RFMAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Observador",
+    "logo": "https://observador.pt/wp-content/themes/observador-child/assets/build/img/favicon.ico",
+    "epg_id": "e822ed30-1b14-4a90-906f-a1267e3d761d",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://195.23.85.126:8455/stream"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Comercial",
+    "logo": "https://static2.mytuner.mobi/media/tvos_radios/drkZNBUn6W.png",
+    "epg_id": "2b501db4-e4b6-4106-9670-9875536f70f1",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1 (Portugal)",
+    "logo": "https://cdn-images.rtp.pt/play/images/apple-touch-icon.png-120x120.png",
+    "epg_id": "909735da-70e8-4527-b771-52793d9f0086",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming-live.rtp.pt/liveradio/antena180a/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "ORBITAL",
+    "logo": "",
+    "epg_id": "9618a87b-0601-11e8-ae97-52543be04c81",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://centova.radios.pt:8401/;listen.pls"
+      }
+    ]
+  },
+  {
+    "name": "Mega Hits",
+    "logo": "http://cdn-radiotime-logos.tunein.com/s6745q.png",
+    "epg_id": "9618e93b-0601-11e8-ae97-52543be04c81",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://25223.live.streamtheworld.com:3690/MEGA_HITS_SC"
+      }
+    ]
+  },
+  {
+    "name": "RFM Oceano Pacifico",
+    "logo": "https://rfmsite2023-images.azureedge.net/icons/favicon.ico",
+    "epg_id": "34760786-80a0-4057-99a1-85f2d8fd2338",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://23543.live.streamtheworld.com/OCEANPACIFICAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Radio Comercial Portugal",
+    "logo": "",
+    "epg_id": "44cb20dc-e9ac-41ef-a4fe-153d48fcdd96",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/comercial.mp3"
+      }
+    ]
+  },
+  {
+    "name": " M80 Rádio – 60s",
+    "logo": "http://webradiodirectory.com/wp-content/uploads/2021/01/fe90a6d0b5158acae63737fe4b9b204f.jpg",
+    "epg_id": "1ac20829-1ca7-4abe-bd7f-b8dcd835b29b",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/m8060.aac"
+      }
+    ]
+  },
+  {
+    "name": "Antena 3 (Portugal)",
+    "logo": "https://i.ibb.co/1rcQ9sr/1-143718101410.webp",
+    "epg_id": "ba4a59be-3ba1-4461-b9de-f489d605c7ac",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8?DVR"
+      }
+    ]
+  },
+  {
+    "name": "RDP Africa (Portugal)",
+    "logo": "https://www.celsoazevedo.com/files/2022/11/rdp-africa.jpg",
+    "epg_id": "264afd2f-8aa2-40c1-a5c5-b4ef1627e7be",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Cidade FM",
+    "logo": "https://cidade.fm/favicon.ico",
+    "epg_id": "d1c00267-9915-4854-8f28-3e486f1c0591",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/cidade.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RFM",
+    "logo": "https://rfmsite2023-images.azureedge.net/icons/touch-icon-iphone-retina.png",
+    "epg_id": "dfe3ebed-08cd-447a-9a58-efb8eebab9f8",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RFMAAC_SC"
+      }
+    ]
+  },
+  {
+    "name": "4Drive Jazz",
+    "logo": "https://www.wix.com/favicon.ico",
+    "epg_id": "f86c489e-7e21-11e9-aa30-52543be04c81",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radio.streemlion.com:1150/stream"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Amália",
+    "logo": "http://cdn-radiotime-logos.tunein.com/s113888q.png",
+    "epg_id": "96190e3e-0601-11e8-ae97-52543be04c81",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://centova.radio.com.pt:9496/;"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1 (Portugal)",
+    "logo": "https://www.celsoazevedo.com/files/2022/antena-1.png",
+    "epg_id": "8267a9f9-e776-4b59-90e5-1179dfe1ad40",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming-live.rtp.pt/liveradio/antena180a/playlist.m3u8?DVR"
+      }
+    ]
+  },
+  {
+    "name": "FUTURA - Rádio de Autor",
+    "logo": "http://www.radiofutura.pt/favicon.ico",
+    "epg_id": "49ba09e7-ffcf-4124-b556-e75bb5623c5a",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://s4.radio.co/s7e7b6c165/listen"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Renascença",
+    "logo": "https://rrsite-images.azureedge.net/favicon/apple-touch-icon.png",
+    "epg_id": "9618e7a0-0601-11e8-ae97-52543be04c81",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://28513.live.streamtheworld.com:3690/RADIO_RENASCENCA_SC"
+      }
+    ]
+  },
+  {
+    "name": "Rap/Hip Hop",
+    "logo": "",
+    "epg_id": "2a0fb11e-f91a-4553-bfff-3861a1de8fb9",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://185.32.188.17:8097/stream"
+      }
+    ]
+  },
+  {
+    "name": " M80 Rádio – Ballads",
+    "logo": "",
+    "epg_id": "a08d74ca-2172-447a-941a-b5c5c20afdd6",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/m80ballads.aac"
+      }
+    ]
+  },
+  {
+    "name": "RFM TOCA PORTUGAL",
+    "logo": "https://rfmsite2023-images.azureedge.net/icons/favicon.ico",
+    "epg_id": "40e31aa5-7f90-44be-b290-6ea6cb44f0e6",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://27793.live.streamtheworld.com/RFM_PORTUGALAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Smooth Jazz Portugal",
+    "logo": "https://bauermedia.pt/favicon.ico",
+    "epg_id": "ece826dd-3eba-4c89-ab1c-24e34bfc6407",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-hls.bauermedia.pt/smojazz.aac/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "M80 Rádio – Portugal",
+    "logo": "http://webradiodirectory.com/wp-content/uploads/2021/01/f506762ed247f010c6c41c494c279e57.jpg",
+    "epg_id": "ae8f651c-f768-4243-83a0-7d535a5d4d8b",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/m80nacional.aac"
+      }
+    ]
+  },
+  {
+    "name": "radio orbital ",
+    "logo": "https://www.orbital.pt/icon.png",
+    "epg_id": "cea4c68f-aa55-4760-b65c-530ee5b89bd7",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://centova.radio.com.pt/proxy/401?mp=/stream"
+      }
+    ]
+  },
+  {
+    "name": "M80 rádio",
+    "logo": "",
+    "epg_id": "c6ed0be5-21dd-4b03-aa18-0dbc9a0c3f87",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream-icy.bauermedia.pt/m80.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1 Fado",
+    "logo": "https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/1022-000919141305.png?q=10&v=3&w=120",
+    "epg_id": "bf4e9e0e-6b72-46c3-aafe-b57eb8fcfe23",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radiocast.rtp.pt/antena1fado80a.mp3"
+      }
+    ]
+  },
+  {
+    "name": "TOP 80 - Todos Os Exitos De 80 A 2000",
+    "logo": "https://www.top80.fm/wp-content/uploads/2023/03/cropped-ic_launcher_top80-180x180.png",
+    "epg_id": "89bd8b04-11c9-42bf-a374-e5eb3b7b8f22",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://live.top80.fm:8086/"
+      }
+    ]
+  },
+  {
+    "name": "CM Rádio",
+    "logo": "",
+    "epg_id": "a6e3c595-c275-4cc7-b15a-498321bc08ba",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://emdireto.cmradio.pt/audio2/output-stream_1.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Radio Comercial Rock",
+    "logo": "https://cdn.onlineradiobox.com/img/l/6/79496.v16.png",
+    "epg_id": "a1259280-4e93-47f9-b524-d491e9b622be",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/rcrock.aac"
+      }
+    ]
+  },
+  {
+    "name": "Antena 1 Açores (Portugal)",
+    "logo": "https://www.celsoazevedo.com/files/2022/11/antena-1-acores.png",
+    "epg_id": "326c6f7c-08d6-49da-9a4b-a6a634e77e3f",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Radio Commercial",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Logo_Radio_Comercial.jpg",
+    "epg_id": "ac843a5b-f7ef-4b89-9491-590bdaf20b4c",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/comercial.mp3"
+      }
+    ]
+  },
+  {
+    "name": " M80 Rádio – Dance",
+    "logo": "",
+    "epg_id": "06b3a0bc-3feb-474e-931a-719d30399af8",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/m80dance.aac"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Comercial Dance",
+    "logo": "",
+    "epg_id": "b0e33f48-ea02-4843-98b0-6729338bcccb",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/rcdance.aac"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Nova Era",
+    "logo": "http://www.radionovaera.pt/resources/img/favicon/apple-icon-120x120.png",
+    "epg_id": "9618739f-0601-11e8-ae97-52543be04c81",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://centova.radio.com.pt:9478/"
+      }
+    ]
+  },
+  {
+    "name": "Rádio NoAr",
+    "logo": "",
+    "epg_id": "4c3d781a-16b7-4b9f-ac61-66b54c97f23c",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radios.justweb.pt/8034/stream"
+      }
+    ]
+  },
+  {
+    "name": "Orbital FM",
+    "logo": "https://www.orbital.pt/icon.png",
+    "epg_id": "645c7030-4baa-4497-8f98-aeccc4c34160",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ec2.yesstreaming.net:3025/stream"
+      }
+    ]
+  },
+  {
+    "name": "Radio Renascença",
+    "logo": "https://rrsite-images.azureedge.net/favicon/apple-touch-icon.png",
+    "epg_id": "31691688-2a1a-4fea-b67c-ac94980c4c74",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://22593.live.streamtheworld.com/RADIO_RENASCENCAAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Posto Emissor do Funchal (PEF) - Canal 2 FM",
+    "logo": "https://www.celsoazevedo.com/files/2026/pef-fm.png",
+    "epg_id": "7ff5d7ae-29e3-4010-a6e4-35b14bdb79db",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://centova.radio.com.pt/proxy/426?mp=/stream;"
+      }
+    ]
+  },
+  {
+    "name": "Deep in Radio",
+    "logo": "",
+    "epg_id": "9619be25-0601-11e8-ae97-52543be04c81",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://s3.viastreaming.net:8525/"
+      }
+    ]
+  },
+  {
+    "name": "RÁDIO EU SOU GOIÁS",
+    "logo": "https://blogger.googleusercontent.com/img/a/AVvXsEiFjuZpvO8NObJg4xbuvohiOA9-9xz5Ts80exF8_r0kycPUt_vx8D36UCecT4c1hMpBmgz_g9FoUzhVocxpJmsgXxKjKXqe-s5P5c7o7lgIbHEpejbVPMlEYioBRwOKpokdJaeRQghKznhXO6T663om4hMiXPPPFRLMfFvKh7LGCin_Sc25Iq6iDdCfrQy7=s144",
+    "epg_id": "6f576e6c-7cc3-4c5e-a831-4587a2f8efc8",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live9.livemus.com.br:27374/stream"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Amor Portugal",
+    "logo": "",
+    "epg_id": "d47f4a27-d7a5-435c-882f-1f0a2d062b55",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.radioamorportugal.com:8443/rap.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Antena 2 (Portugal)",
+    "logo": "https://www.celsoazevedo.com/files/2024/antena-2.png",
+    "epg_id": "bf7a7180-2465-48d2-983c-3bc182ba0c83",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streaming-live.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+      }
+    ]
+  },
+  {
+    "name": "Nove3cinco",
+    "logo": "https://nove3cinco.pt/sv/wp-content/uploads/2015/05/Nove3Cinco-Menu-Logo.png",
+    "epg_id": "0aed61c5-962f-4999-8a68-653d37834e41",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://centova.radio.com.pt/proxy/522?mp=/stream&1715267171"
+      }
+    ]
+  },
+  {
+    "name": "00's RFM",
+    "logo": "https://rfmsite2023-images.azureedge.net/images/webrads/rfm-00s-radio-online_100x100.jpg",
+    "epg_id": "2921e1d9-a581-4799-a380-d2b8268044f5",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://27793.live.streamtheworld.com/LIVESTREAMAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "Rádio Clube da Feira",
+    "logo": "",
+    "epg_id": "96143c96-0601-11e8-ae97-52543be04c81",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://centova.radio.com.pt:9544/;"
+      }
+    ]
+  },
+  {
+    "name": "M80 Rádio (AAC)",
+    "logo": "",
+    "epg_id": "0602f873-4a47-4536-9039-bbbdee1ecc1d",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream-icy.bauermedia.pt/m80.aac"
+      }
+    ]
+  },
+  {
+    "name": "RCA - Rádio Clube de Armamar",
+    "logo": "https://static.mytuner.mobi/media/tvos_radios/287/rca-radio-clube-de-armamar.d8198e90.png",
+    "epg_id": "9d39e022-5955-451e-9cba-0bcb39c0bdd2",
+    "country": "Portugal",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radios2.justweb.pt/8054/stream"
+      }
+    ]
+  },
+  {
+    "name": "NPO Radio 1",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/NPO_Radio_1_logo_2014.svg/640px-NPO_Radio_1_logo_2014.svg.png",
+    "epg_id": "96126f56-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.omroep.nl/radio1-bb-mp3"
+      }
+    ]
+  },
+  {
+    "name": "Intense Radio - We love Dance 256K",
+    "logo": "https://www.intenseradio.net/wp-content/uploads/2023/09/intense-radio-vierkant-4d-2026.jpg",
+    "epg_id": "af6f51b1-0ca9-11ea-a87e-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://secure.live-streams.nl/main"
+      }
+    ]
+  },
+  {
+    "name": "Radio 538",
+    "logo": "https://www.538.nl/favicon.ico",
+    "epg_id": "fd059cc5-b538-41c1-ae76-b8778a84c3db",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3"
+      }
+    ]
+  },
+  {
+    "name": "\tArrow Classic Rock",
+    "logo": "https://www.arrow.nl/wp-content/uploads/2020/08/logo.png",
+    "epg_id": "db93a00f-9191-46ab-9e87-ec9b373b3eee",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.gal.io/arrow"
+      }
+    ]
+  },
+  {
+    "name": "NPO Radio 2",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/NPO_Radio_2_logo.svg/640px-NPO_Radio_2_logo.svg.png",
+    "epg_id": "96126e82-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.omroep.nl/radio2-bb-mp3"
+      }
+    ]
+  },
+  {
+    "name": "Intense Radio - We love Dance 256K",
+    "logo": "https://www.intenseradio.net/wp-content/uploads/2023/09/intense-radio-vierkant-4d-2026.jpg",
+    "epg_id": "963c00ab-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://secure.live-streams.nl/main"
+      }
+    ]
+  },
+  {
+    "name": "Sky Radio",
+    "logo": "https://www.skyradio.nl/favicon.ico",
+    "epg_id": "b20de429-e1b3-4624-a1ac-12e2bf0cadb0",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://www.mp3streams.nl/zender/skyradio/stream/8-mp3-128"
+      }
+    ]
+  },
+  {
+    "name": "NPO 2",
+    "logo": "https://www.nporadio2.nl/svg/npo_radio2_logo.svg",
+    "epg_id": "4e84e0ca-3f2b-4376-9448-16124ca2c732",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.omroep.nl/radio2-bb-mp3"
+      }
+    ]
+  },
+  {
+    "name": "JOE",
+    "logo": "https://static.mytuner.mobi/media/tvos_radios/pkhqkus8dmde.jpg",
+    "epg_id": "6add27d4-5573-47b4-ae27-1d05834a9a4a",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.joe.nl/joe/aachigh"
+      }
+    ]
+  },
+  {
+    "name": "NPO Radio 1",
+    "logo": "http://radio1.nl/apple-touch-icon.png",
+    "epg_id": "962894ff-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.omroep.nl/radio1-sb-aac"
+      }
+    ]
+  },
+  {
+    "name": "Qmusic",
+    "logo": "https://qmusic.nl/favicon.ico",
+    "epg_id": "003d3c6f-e183-11e9-a8ba-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live_96.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Q music Nederland",
+    "logo": "https://qmusic.nl/favicon.ico",
+    "epg_id": "5e45745b-7337-4299-bb93-6b99fafbc2b2",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.qmusic.nl/qmusic/aachigh"
+      }
+    ]
+  },
+  {
+    "name": "Radio 10",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScXQ3C4MdB2iKNRXVmQSy-fl3MBqAi-SX2JU3p-ZeLSiLCVbDw&s",
+    "epg_id": "d227990c-2385-4419-8159-1c73a33a58dd",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3"
+      }
+    ]
+  },
+  {
+    "name": "100% NL",
+    "logo": "",
+    "epg_id": "960f36b5-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.100p.nl/100pctnl.mp3"
+      }
+    ]
+  },
+  {
+    "name": "JOE",
+    "logo": "https://static.mytuner.mobi/media/tvos_radios/pkhqkus8dmde.jpg",
+    "epg_id": "07eb6945-5023-461e-9064-234075472cff",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.joe.nl/joe/aachigh"
+      }
+    ]
+  },
+  {
+    "name": "538 Radio",
+    "logo": "",
+    "epg_id": "f0ab0c5c-7125-476c-97a4-2eabc14f5f05",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3"
+      }
+    ]
+  },
+  {
+    "name": "KINK",
+    "logo": "https://kink.nl/static/apple-touch-icon.png",
+    "epg_id": "c19d0f8c-24a5-11e9-a80b-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/KINK.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Rijnmond",
+    "logo": "https://s.regiogroei.cloud/img/favicons/rijnmond/apple-touch-icon.png",
+    "epg_id": "dae1d092-9273-46fc-9014-43f61a6978bf",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://d2e9xgjjdd9cr5.cloudfront.net/icecast/rijnmond/radio-mp3"
+      }
+    ]
+  },
+  {
+    "name": "BNR Nieuwsradio",
+    "logo": "https://static.bnr.nl/assets/bnr-next/logo.png",
+    "epg_id": "da5d71d1-d8cc-4301-9f86-b6abaa1201bd",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.bnr.nl/bnr_mp3_128_20"
+      }
+    ]
+  },
+  {
+    "name": "SLAM!",
+    "logo": "https://www.slam.nl/favicon.ico",
+    "epg_id": "962e7e22-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.slam.nl/slam"
+      }
+    ]
+  },
+  {
+    "name": "Radio Veronica",
+    "logo": "",
+    "epg_id": "0e65ad7a-b179-4b5d-994b-d351349ee955",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICAAAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "NPO Radio 2",
+    "logo": "http://www.nporadio2.nl/apple-touch-icon.png",
+    "epg_id": "961e3b9a-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.omroep.nl/radio2-sb-aac"
+      }
+    ]
+  },
+  {
+    "name": "3FM",
+    "logo": "",
+    "epg_id": "81a4bb94-f26a-497c-ae03-771e97773686",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.omroep.nl/3fm-bb-mp3"
+      }
+    ]
+  },
+  {
+    "name": "NPO Radio 5",
+    "logo": "https://www.nporadio5.nl/apple-touch-icon.png",
+    "epg_id": "46e55863-cef7-4f50-954e-3fa7feede49f",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast.omroep.nl/radio5-bb-mp3"
+      }
+    ]
+  },
+  {
+    "name": "Arrow Classic Rock",
+    "logo": "https://player.arrow.nl/tmp/images/default.jpg",
+    "epg_id": "d58a82c3-b7f1-4c1c-83b1-9e45d42e1e19",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.player.arrow.nl/arrowcr"
+      }
+    ]
+  },
+  {
+    "name": "538 Non-Stop",
+    "logo": "https://raw.githubusercontent.com/wootje/radiotv/main/radio/logo/538nonstop.gif",
+    "epg_id": "4fd2f9ba-11c0-4022-a274-220f81283b98",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR09.mp3"
+      }
+    ]
+  },
+  {
+    "name": "538 TOP 50 ",
+    "logo": "https://www.538.nl/favicon.ico",
+    "epg_id": "c48b46f4-4a1c-430b-8827-ed158f791a8d",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR13AAC.aac"
+      }
+    ]
+  },
+  {
+    "name": "NPO Radio 2",
+    "logo": "http://www.nporadio2.nl/apple-touch-icon.png",
+    "epg_id": "005636e9-2142-497b-8f51-606d536fb18a",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast.omroep.nl/radio2-bb-aac"
+      }
+    ]
+  },
+  {
+    "name": "NPO Radio 1",
+    "logo": "https://www.nporadio1.nl/svg/npo_radio1_logo.svg",
+    "epg_id": "41537cc5-896b-4e5c-abf6-82449b6be5bd",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast.omroep.nl/radio1-sb-aac"
+      }
+    ]
+  },
+  {
+    "name": "Pure Lounge Radio FLAC",
+    "logo": "https://www.pureloungeradio.com/images/Pureloungeradio-achtergrond.jpg",
+    "epg_id": "3c5d6806-10bc-4c95-82a6-c04ad8870807",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://mscp4.live-streams.nl:8142/lounge.ogg"
+      }
+    ]
+  },
+  {
+    "name": "Tukker FM",
+    "logo": "",
+    "epg_id": "1f6cc2e1-fe65-4356-a5e2-cdd6cc083ee7",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.tukkerfm.nl/tukkerfm"
+      }
+    ]
+  },
+  {
+    "name": "jungletrain.net - 24/7 drum and bass",
+    "logo": "https://jungletrain.net/jth-inc/images/jtlogo.png",
+    "epg_id": "0adb24fb-a2fe-4a9b-97a4-bc82dfb1820c",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://chat.jungletrain.net/streamtest/;stream/1"
+      }
+    ]
+  },
+  {
+    "name": "Radio Veronica",
+    "logo": "https://cmde4gpbhib.b-cdn.net/w_320,h_320,q_85/4k3hucsw1kfn-radio-veronica-programma-thumbnail.jpg",
+    "epg_id": "01a9ba90-6601-490f-bc74-64b611b032d4",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA"
+      }
+    ]
+  },
+  {
+    "name": "Q-Music",
+    "logo": "https://qmusic.nl/favicon.ico",
+    "epg_id": "aaa01e21-7df4-4735-b1b3-ebcce5d22c2b",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live_high.aac?aw_0_1st.playerId=redirect"
+      }
+    ]
+  },
+  {
+    "name": "Omroep Brabant",
+    "logo": "http://www.omroepbrabant.nl/favicon.ico",
+    "epg_id": "961ef1bd-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streaming.omroepbrabant.nl/mp3hq"
+      }
+    ]
+  },
+  {
+    "name": "Radio 10",
+    "logo": "https://www.radio10.nl/favicon.ico",
+    "epg_id": "f4aea998-df4a-437b-ad2d-d160c821f91b",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3?dist=radio10_web&amp;ttag=talpa_consent:0&amp;gdpr=1&amp;gdpr_consent=CPR8CQMPR8CRCADABCNLB7CgAAAAAEJAAAAAAAAMEgKgAVAAuACAAGQARAAmgBPADEAH4AQAAjABXADvAIQARYAjgBOwCsgIpAXmAwQAsJAJAAqACAAGQARAAmABPAHeARwBeY6AWABUAEAAMgAiABMACeAGIAd4BFgCOALzHAAwALgCuAIQUgFgAVABAADIAIgATAAngBiAHeARYAjgC8ygAIAC4BOyQAEAC5KAMAEQAJgAYgB3gEcAXmQgCABMADEAO8AjgYACAK4VADACYARwBeYyAGAEwAjgC8w.YAAAAAAAA4AA"
+      }
+    ]
+  },
+  {
+    "name": "NPO Radio 5",
+    "logo": "https://www.nporadio5.nl/apple-touch-icon.png",
+    "epg_id": "5cb448f8-1f80-4d78-bc23-ef2394378708",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast.omroep.nl/radio5-sb-aac"
+      }
+    ]
+  },
+  {
+    "name": "Sky Radio 101 FM",
+    "logo": "http://www.skyradio.nl/favicon.ico",
+    "epg_id": "9650457a-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Veronica",
+    "logo": "null",
+    "epg_id": "416df3af-c4ed-44d2-a405-7417b17d2e0a",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://19993.live.streamtheworld.com/VERONICA_SC"
+      }
+    ]
+  },
+  {
+    "name": "SLAM",
+    "logo": "https://2ptqdc73ga5k.b-cdn.net/w_320,h_320,q_85/44u2e6owci2l-slam-default-header-mobile.png",
+    "epg_id": "2b552aa7-f396-4d0b-90ec-163e527270fe",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://streaming.slam.nl/slam_aac"
+      }
+    ]
+  },
+  {
+    "name": "After Hours – Melodic House & DnB",
+    "logo": "",
+    "epg_id": "27bc1246-af93-43ec-b315-f54986cd0ca5",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://r.bgp.rodeo/listen/after_hours/radio.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio10",
+    "logo": "https://www.radio10.nl/favicon.ico",
+    "epg_id": "c7fa07e3-6b96-4df1-af1c-c23a28ad339c",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Fantasy Italo Dance 90s radio",
+    "logo": "https://jplayer-generator.live-streams.nl/upload/96142657.jpg",
+    "epg_id": "a1189085-eed0-414c-b8d8-6652189767dd",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://mscp2.live-streams.nl:8152/italodance"
+      }
+    ]
+  },
+  {
+    "name": "80's Alive",
+    "logo": "https://static.mytuner.mobi/media/tvos_radios/211/80s-alive.f8d4a080.png",
+    "epg_id": "b5e70b7c-99d3-4892-b8e4-af493cdd03be",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.80sa.live/80s-alive.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Hardcore Power Radio",
+    "logo": "",
+    "epg_id": "6e06bb6b-c281-40e7-a459-2d7be467af6f",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://hardcorepower.beheerstream.nl/8012/stream"
+      }
+    ]
+  },
+  {
+    "name": "Sky Radio Christmas",
+    "logo": "http://www.skyradio.nl/favicon.ico",
+    "epg_id": "961f1bea-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR08.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Hardcore Radio",
+    "logo": "https://www.hardcoreradio.nl/wp-content/themes/hardcore-radio/static/images/favicon/apple-touch-icon.png",
+    "epg_id": "96244e9c-0601-11e8-ae97-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://shoutcast1.hardcoreradio.nl/"
+      }
+    ]
+  },
+  {
+    "name": "Kink 192k mp3",
+    "logo": "https://kinkfm.nl/static/apple-touch-icon.png",
+    "epg_id": "be24d794-23ca-11e9-a80b-52543be04c81",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://25233.live.streamtheworld.com:3690/KINK_SC"
+      }
+    ]
+  },
+  {
+    "name": "QMUSIC NEDERLAND",
+    "logo": "https://qmusic.nl/favicon.ico",
+    "epg_id": "9103990d-f203-410e-8764-0cd81b415e6d",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.qmusic.nl/qmusic/mp3"
+      }
+    ]
+  },
+  {
+    "name": "NPO Klassiek",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/NPO_Klassiek_logo.svg/1200px-NPO_Klassiek_logo.svg.png",
+    "epg_id": "428fecbf-d5e2-4c30-bcde-6dd98b125434",
+    "country": "The Netherlands",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast.omroep.nl/radio4-bb-mp3"
+      }
+    ]
+  },
+  {
+    "name": "JOE",
+    "logo": "https://cdn-profiles.tunein.com/s25741/images/logog.jpg?t=1",
+    "epg_id": "529b71b3-ac05-426c-bd8c-6ae981713900",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast-qmusicbe-cdp.triple-it.nl/joe.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Qmusic Belgium",
+    "logo": "https://qmusic.be/assets/favicon/default-67977c4f518d45d3a639958e1c6c072532dd2e05cbef9e42cb9f8ecde1964c97.ico",
+    "epg_id": "00dc2e9a-578c-430b-bdc2-244b71444dfc",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast-qmusicbe-cdp.triple-it.nl/qmusic.aac"
+      }
+    ]
+  },
+  {
+    "name": "VRT Radio 1",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/VRT_Radio_1_logo.svg",
+    "epg_id": "960ef35c-0601-11e8-ae97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/radio1-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Studio Brussel",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Studio_Brussel_logo_%282023-%29.svg",
+    "epg_id": "091f7820-4b25-4fb6-9739-7c112ef4ed48",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/stubru-mid.mp3"
+      }
+    ]
+  },
+  {
+    "name": "MNM",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/02/MNM_logo_2024.svg",
+    "epg_id": "961957e7-0601-11e8-ae97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/mnm-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "De Tijdloze",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/56/De_Tijdloze.png",
+    "epg_id": "40386f09-7c9b-470e-b6df-03b4a1f30f70",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/stubru_tijdloze-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Studio Brussel",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Studio_Brussel_logo_%282023-%29.svg",
+    "epg_id": "550f4b47-a545-4b1d-8c08-3b520c4db329",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/stubru-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Tomorrowland One World Radio",
+    "logo": "https://www.tomorrowland.com/home/apple-touch-icon.png",
+    "epg_id": "9e31c4e7-03b6-4a80-a4e2-5977b023d32c",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.aac"
+      }
+    ]
+  },
+  {
+    "name": "Nostalgie Vlaanderen",
+    "logo": "https://nl.nostalgie.be/icons/icon-144x144.png?v=f2b073e495322d52deec159c8bdcaf20",
+    "epg_id": "451491bd-624e-41e8-ab4c-71816f10611e",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/NOSTALGIEWHATAFEELING.mp3?dist=radiobrowser"
+      }
+    ]
+  },
+  {
+    "name": "StuBru",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/39/Studio_Brussel_logo.png",
+    "epg_id": "fd2b3609-d95a-4e6a-aa50-e040e9836cf6",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/stubru-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RTBF La Première",
+    "logo": "https://www.static.rtbf.be/rtbf/home/images/ico/favicon-info-32x32.png",
+    "epg_id": "961d37d6-0601-11e8-ae97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radios.rtbf.be/laprem1ere-64.aac"
+      }
+    ]
+  },
+  {
+    "name": "Classic21",
+    "logo": "https://www.static.rtbf.be/rtbf/home/images/ico/favicon-info-32x32.png",
+    "epg_id": "0af512c6-eae5-4875-a206-302dc6a12a64",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radios.rtbf.be/classic21-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Willy",
+    "logo": "https://cdn-profiles.tunein.com/s308770/images/logod.jpg",
+    "epg_id": "7bfe222c-6b98-4aec-8550-93c491bb2d1f",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streams.radio.dpgmedia.cloud/redirect/willy_be/aac"
+      }
+    ]
+  },
+  {
+    "name": "MNM Hits",
+    "logo": "https://www.vrt.be/content/dam/vrtvideo/branding/logos/mnm-hits/v3/color.svg",
+    "epg_id": "961bee6b-0601-11e8-ae97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/mnm_hits-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RTBF Classic 21",
+    "logo": "https://www.static.rtbf.be/rtbf/home/images/ico/favicon-info-32x32.png",
+    "epg_id": "ad3d3e30-76e8-11e9-8b97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radios.rtbf.be/classic21-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Joe 80's & 90's",
+    "logo": "https://static.mytuner.mobi/media/tvos_radios/x7fzbddfxjqy.jpg",
+    "epg_id": "cdf1baaf-ed22-41c5-8c9e-90b4133fda8f",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast-qmusicbe-cdp.triple-it.nl/joe_80s_90s.mp3"
+      }
+    ]
+  },
+  {
+    "name": "TOPradio Belgium",
+    "logo": "https://www.topradio.be/favicons/favicon-96x96.png",
+    "epg_id": "a2c199e5-cff2-11e8-a54a-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://str.topradio.be/topradio.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Tipik",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/07/Logo_Tipik.png",
+    "epg_id": "73b1c888-e135-49db-a5c5-09e104088c13",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radios.rtbf.be/pure-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Tomorrowland - Daybreak Sessions",
+    "logo": "https://www.tomorrowland.com/home/favicon.ico",
+    "epg_id": "19df8029-80c2-4ac1-a14b-1c7630f8d144",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/OWR_DAYBREAK_ADP.aac"
+      }
+    ]
+  },
+  {
+    "name": "Klara",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Klara_Logo_Black_Screen.jpg/150px-Klara_Logo_Black_Screen.jpg",
+    "epg_id": "960ef421-0601-11e8-ae97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/klara-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Nostalgie Belgique",
+    "logo": "https://www.nostalgie.be/build/images/favicon.png",
+    "epg_id": "364d5674-440e-4b2b-a2fb-a7688a8738a0",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.rcs.revma.com/5gd04cwptg0uv"
+      }
+    ]
+  },
+  {
+    "name": "One World Radio - Tomorrowland",
+    "logo": "https://www.tomorrowland.com/favicon.ico",
+    "epg_id": "e35dca60-057c-4524-862c-39161d796a5a",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.aac"
+      }
+    ]
+  },
+  {
+    "name": "Nostalgie 80's",
+    "logo": "",
+    "epg_id": "66617a79-5235-44d1-b59d-f996eae58a65",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/NOSTALGIEWAF80.mp3"
+      }
+    ]
+  },
+  {
+    "name": "VRT NWS",
+    "logo": "https://www.vrt.be/favicon.ico",
+    "epg_id": "39e4f088-3af2-4e7f-8276-9fdbb4ae63ca",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://progressive-audio.vrtcdn.be/content/fixed/11_11niws-snip_hi.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RTBF Classic 21",
+    "logo": "https://www.radio.fr/300/classic21.jpeg",
+    "epg_id": "8a9c2648-0a9a-4af2-9523-6f0ad7f9e4e1",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radios.rtbf.be/classic21-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "VRT Radio 2 Bene Bene",
+    "logo": "https://www.vrt.be/nl/favicon.ico",
+    "epg_id": "1c22e991-4134-45da-895b-b8326cb461ec",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/radio2_benebene-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Qmusic",
+    "logo": "https://cdn-profiles.tunein.com/s87683/images/logod.png",
+    "epg_id": "130f37a8-bcba-4d2d-a39d-a1881df1f185",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streams.radio.dpgmedia.cloud/redirect/qmusic_be/mp3"
+      }
+    ]
+  },
+  {
+    "name": "VRT Radio 2 West-Vlaanderen",
+    "logo": "",
+    "epg_id": "68bc31b9-80f1-11e8-aa66-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/ra2wvl-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Classic 21 80's New Wave",
+    "logo": "https://www.rtbf.be/favicon.ico",
+    "epg_id": "9d8e4e91-107a-4771-bf0f-e73786b5c2e6",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radio.rtbf.be/c21-80nw/mp3-128/me"
+      }
+    ]
+  },
+  {
+    "name": "Afrikana Radio – Live African",
+    "logo": "",
+    "epg_id": "13acd5a9-d83b-4689-9853-0351c905590f",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radio.afrikanabestsounds.com/listen/live_african/radio.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Q-Foute Radio",
+    "logo": "https://qmusic.be/favicon.ico",
+    "epg_id": "1b7d90db-1645-47a2-99fb-4810efbf4ff0",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streams.radio.dpgmedia.cloud/redirect/foute_radio_be/mp3"
+      }
+    ]
+  },
+  {
+    "name": "VRT Radio 2 Vlaams-Brabant",
+    "logo": "https://radio2.be/resources/favicon-radio2/apple-touch-icon-76x76.png",
+    "epg_id": "a859bf36-5288-4017-b49b-bced2ef0f90d",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/ra2vlb.aac"
+      }
+    ]
+  },
+  {
+    "name": "MyNoise Rainy Day",
+    "logo": "https://mynoise.net/apple-touch-icon.png",
+    "epg_id": "568c832b-671d-4397-b61b-b682b0d6baa7",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://rainyday.radio.mynoise.net/"
+      }
+    ]
+  },
+  {
+    "name": "joe easy",
+    "logo": "",
+    "epg_id": "109338aa-a5fb-4c1b-a0cc-78961a55324c",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://streams.radio.dpgmedia.cloud/redirect/joe_easy/mp3"
+      }
+    ]
+  },
+  {
+    "name": "Bel RTL",
+    "logo": "https://rtlmedias.rtl.be/GED/webradios/logo_belrtl.png",
+    "epg_id": "a220c9ad-aeec-4840-8f85-25d846bf8f6e",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://broadcast.infomaniak.ch/belrtl-mp3-192.mp3"
+      }
+    ]
+  },
+  {
+    "name": "MyNoise Pure Nature",
+    "logo": "https://mynoise.net/apple-touch-icon.png",
+    "epg_id": "4dad0ae3-720a-434e-b350-7186e4c5ea6f",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://purenature-mynoise.radioca.st/stream"
+      }
+    ]
+  },
+  {
+    "name": "Classic 21 Blues",
+    "logo": "http://www.rtbfradioplayer.be/favicon.ico",
+    "epg_id": "92724201-4843-4671-9e8f-0c354689766a",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radios.rtbf.be/wr-c21-blues-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "One World Radio",
+    "logo": "https://www.tomorrowland.com/home/apple-touch-icon.png",
+    "epg_id": "c69d5d10-7028-4713-ba7c-3172e2adba06",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.aac"
+      }
+    ]
+  },
+  {
+    "name": "NRJ België",
+    "logo": "",
+    "epg_id": "32f2eb10-b498-4c85-96aa-7d9c266d9910",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/NRJBELGIE.mp3?dist=radiobrowser"
+      }
+    ]
+  },
+  {
+    "name": "Fun Radio",
+    "logo": "http://www.funradio.be/wp-content/themes/rise/assets/img/fav/apple-touch-icon.png",
+    "epg_id": "960ee5c9-0601-11e8-ae97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://funradiobe.ice.infomaniak.ch/funradiobe-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Bel RTL",
+    "logo": "https://www.rtl.be/favicon.ico",
+    "epg_id": "9c9d2509-6724-11e9-af37-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://belrtl.ice.infomaniak.ch/belrtl-mp3-192.mp3"
+      }
+    ]
+  },
+  {
+    "name": "La Première - Bruxelles",
+    "logo": "https://www.static.rtbf.be/rtbf/home/images/ico/favicon-info-32x32.png",
+    "epg_id": "d0f270e4-4512-11ea-a860-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radios.rtbf.be/laprem1erebxl-128.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio 2 Antwerpen",
+    "logo": "http://www.radio2.be/resources/favicon-radio2/apple-touch-icon-76x76.png",
+    "epg_id": "960cf504-0601-11e8-ae97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/ra2ant-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio 2 Oost-Vlaanderen",
+    "logo": "http://www.radio2.be/resources/favicon-radio2/apple-touch-icon-76x76.png",
+    "epg_id": "9619dbe5-0601-11e8-ae97-52543be04c81",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/ra2ovl-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Studio Brussel - Vuurland",
+    "logo": "https://www.vrt.be/content/dam/vrtvideo/branding/logos/stubru-vuurland/v3/color.svg",
+    "epg_id": "74d0f536-d32d-4d76-88be-2fc0dff8c706",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/stubru_tgs.aac"
+      }
+    ]
+  },
+  {
+    "name": "JOE BE",
+    "logo": "https://cdn-profiles.tunein.com/s25741/images/logog.jpg?t=1",
+    "epg_id": "18755444-1a74-4b92-98ef-b7ad49d35a8c",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast-qmusicbe-cdp.triple-it.nl/joe.mp3"
+      }
+    ]
+  },
+  {
+    "name": "VRT - Radio 1",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/VRT_Radio_1_logo.svg",
+    "epg_id": "cdda243e-f714-4965-b48b-9afbfe62874a",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/radio1-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Qmusic BE",
+    "logo": "https://qmusic.be/assets/favicon/default-67977c4f518d45d3a639958e1c6c072532dd2e05cbef9e42cb9f8ecde1964c97.ico",
+    "epg_id": "bb5d1c8f-7be9-4f75-9e10-735a9ac776b3",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://icecast-qmusicbe-cdp.triple-it.nl/qmusic.aac"
+      }
+    ]
+  },
+  {
+    "name": "NRJ Belgique",
+    "logo": "https://www.nrj.be/build/images/favicon.ico",
+    "epg_id": "b32784aa-1df0-488a-aad3-52d10a7e16c8",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.rcs.revma.com/xh00fwuptg0uv"
+      }
+    ]
+  },
+  {
+    "name": "VRT Radio 1 Classics",
+    "logo": "https://www.vrt.be/content/dam/vrtvideo/branding/logos/radio-1-classics/v1/color.svg",
+    "epg_id": "67ea1af2-07a6-4de8-985e-b47947139793",
+    "country": "Belgium",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://icecast.vrtcdn.be/radio1_classics-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Jazz",
+    "logo": "",
+    "epg_id": "961ac56b-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/rsj/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Deep House Radio",
+    "logo": "",
+    "epg_id": "962a748b-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/deephouse_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Chillout Lounge Radio",
+    "logo": "",
+    "epg_id": "961fb4b2-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/chilloutlounge_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Amsterdam Trance Radio",
+    "logo": "",
+    "epg_id": "962a61bf-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/atr_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "SRF 3",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Radio_SRF_3.svg/200px-Radio_SRF_3.svg.png",
+    "epg_id": "961f1da4-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/drs3/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Deep Techno & Deep House",
+    "logo": "",
+    "epg_id": "0ac7f5db-6f86-428f-8bb2-66ecce89ad1a",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/deeptech_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Pop",
+    "logo": "http://www.radioswisspop.ch/favicon.ico",
+    "epg_id": "961ac635-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/rsp/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Classic",
+    "logo": "https://www.radioswissclassic.ch/favicon.ico",
+    "epg_id": "1c5674b0-2cfe-48e2-b859-2f3718c74598",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/rsc_it/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Classic German",
+    "logo": "",
+    "epg_id": "96077079-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/rsc_de/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "RTS La Première",
+    "logo": "https://www.rts.ch/hbv7/static/images/favicon/rts/152x152.png",
+    "epg_id": "9608efd5-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/la-1ere/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Classic Country Radio",
+    "logo": "",
+    "epg_id": "962a66fd-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/ccountry_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "SRF 4 News",
+    "logo": "http://www.srf.ch/var/storage/assets/webpack/favicons/srf-apple-touch-icon.png",
+    "epg_id": "960ed987-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/drs4news/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "Energy Zürich (NRJ)",
+    "logo": "https://energy.ch/ech-new/images/ech/apple-touch-icon.png",
+    "epg_id": "96069a5d-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://broadcast.infomaniak.ch/energyzuerich-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Ambient Psychill",
+    "logo": "",
+    "epg_id": "07064262-5ef9-44e1-900d-ed752b7433b8",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/ambientpsy_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Virgin Radio Switzerland",
+    "logo": "",
+    "epg_id": "c1d4b62b-cb16-43ca-ae3a-41c2eb31b6e7",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.streambase.ch/vrock/mp3-192/direct/"
+      }
+    ]
+  },
+  {
+    "name": "Radio SRF 3",
+    "logo": "https://www.srf.ch/var/storage/assets/webpack/favicons/srf-apple-touch-icon.png",
+    "epg_id": "890b3eb9-4018-4c41-95ea-146cc5201745",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.srg-ssr.ch/m/drs3/aacp_96"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Jazz",
+    "logo": "http://www.radioswissjazz.ch/favicon.ico",
+    "epg_id": "96466f91-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/rsj/aacp_96"
+      }
+    ]
+  },
+  {
+    "name": "Jazz | Radio Swiss",
+    "logo": "https://www.radioswissjazz.ch/social-media/rsj-web.png",
+    "epg_id": "2037c9d4-8d99-48f1-b5f1-eb60dc015773",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.srg-ssr.ch/m/rsj/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Absolute Country Hits Radio",
+    "logo": "",
+    "epg_id": "962a63f2-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/acountry_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Blues Radio",
+    "logo": "",
+    "epg_id": "9617ccb4-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/blues_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Otto's Baroque Music Radio",
+    "logo": "",
+    "epg_id": "96225a38-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/baroque_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "80s Forever - We Keep The 80s Alive",
+    "logo": "https://www.80sforever.radio/favicon.ico",
+    "epg_id": "32fed468-cfe3-11e9-a861-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://premium.shoutcastsolutions.com/radio/8050/256.mp3"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Ibiza Chill Tropical",
+    "logo": "",
+    "epg_id": "d5ef3de2-cdc3-478b-8582-e42bc1773864",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/ibizachill_mobile_mp3?aw_0_req.gdpr=true"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Classic Rock Replay Radio",
+    "logo": "",
+    "epg_id": "962a6637-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/crock_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Vintage Radio",
+    "logo": "",
+    "epg_id": "962af9b5-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://vintageradio.ice.infomaniak.ch/vintageradio-high.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio SRF 3",
+    "logo": "https://www.srf.ch/var/storage/assets/webpack/favicons/srf-apple-touch-icon.png",
+    "epg_id": "be0048b7-70c2-4cc1-85dc-e6d0e00bba83",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.srg-ssr.ch/m/drs3/aacp_32"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - BOM Psytrance Radio",
+    "logo": "",
+    "epg_id": "962a8356-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/psytrance_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Pilatus",
+    "logo": "https://ch.az-cdn.ch/static/4.10.3/radiopilatus/device-icons/192x192.png",
+    "epg_id": "7fa043b5-6a69-40ce-abaa-2274634484bc",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.streambase.ch/radiopilatus/mp3-192/chmedia/"
+      }
+    ]
+  },
+  {
+    "name": "Radio Zürisee",
+    "logo": "https://www.radiozuerisee.ch/assets/favicons/apple-icon-120x120.png",
+    "epg_id": "495a3710-7aae-4122-83b5-a49757c0a812",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://mp3.radio.ch/radiozuerisee256k"
+      }
+    ]
+  },
+  {
+    "name": "1.fm Otto's Baroque music",
+    "logo": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/6a/58/1366/2/c175.png",
+    "epg_id": "3ee72d17-bb42-4d15-b8b4-44f5697c7845",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/baroque_mobile_aac"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Bay Smooth Jazz Radio",
+    "logo": "",
+    "epg_id": "9625c394-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/smoothjazz_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Traxx FM - Ambient",
+    "logo": "",
+    "epg_id": "479d1fad-f328-11e9-a96c-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://traxx011.ice.infomaniak.ch/traxx011-low.mp3"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Alternative Rock X Hits Radio",
+    "logo": "",
+    "epg_id": "962a67c2-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/x_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "UZIC.CH :: TECHNO - MINIMAL :: best of electronic with techno minimal electro house and progressive",
+    "logo": "https://uzic.ch/wp-content/uploads/2025/06/logo_uzic-150x150.png",
+    "epg_id": "f0df6e39-68b5-4026-9d83-51af63ddfdc6",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://uzic.ice.infomaniak.ch/uzic-128.aac"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Pop",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Radio_Swiss_Pop_Logo_2018.svg/2048px-Radio_Swiss_Pop_Logo_2018.svg.png",
+    "epg_id": "cf430e7d-6fce-4931-8a53-5115acde3eb5",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/srgssr/rsp/aac/96"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Jazz (AAC 192)",
+    "logo": "https://www.radioswissjazz.ch/social-media/rsj-web.png",
+    "epg_id": "766a0b33-3936-458b-ab92-db8500dccaf9",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.srg-ssr.ch/srgssr/rsj/aac/192"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - ReggaeTrade Radio",
+    "logo": "",
+    "epg_id": "960f2d97-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/reggae_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Couleur3",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Couleur_3_logo.svg/1200px-Couleur_3_logo.svg.png",
+    "epg_id": "78ffd9e4-5ff7-11e8-b15b-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/couleur3/aacp_96"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Jazz",
+    "logo": "",
+    "epg_id": "d97faf80-324a-4a00-8e39-da5b473ab987",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/m/rsj/mp3_128"
+      }
+    ]
+  },
+  {
+    "name": "RADIO ARGOVIA",
+    "logo": "https://i.imgur.com/ccMg6qJ.png",
+    "epg_id": "3bb2d57f-f7a6-49e7-afb5-89daf251de9d",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.streambase.ch/argovia/mp3-192/direct/"
+      }
+    ]
+  },
+  {
+    "name": "RTS Espace 2",
+    "logo": "https://www.rts.ch/hbv7/static/images/favicon/rts/152x152.png",
+    "epg_id": "9607cf45-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/srgssr/espace-2/mp3/128"
+      }
+    ]
+  },
+  {
+    "name": "1.fm Otto's Classical music",
+    "logo": "",
+    "epg_id": "00c9219e-61be-4972-ba96-cfa083cc9ac2",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://strm112.1.fm/classical_mobile_aac"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Absolute Trance (Euro) Radio",
+    "logo": "",
+    "epg_id": "962a6279-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/trance_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Kontrafunk (AAC 64)",
+    "logo": "",
+    "epg_id": "cb81fe62-e665-4469-bd2b-92bfad063453",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://s5.radio.co/sca4082ebb/low"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Chillout Lounge Radio",
+    "logo": "",
+    "epg_id": "eba56c69-80c1-4f2b-8371-fd7f306f4e2c",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/chilloutlounge_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Kontrafunk",
+    "logo": "",
+    "epg_id": "35e8de69-3013-44f1-aafa-4dedf08f948e",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://s5.radio.co/sca4082ebb/listen"
+      }
+    ]
+  },
+  {
+    "name": "Radio Swiss Classic",
+    "logo": "https://www.radioswissclassic.ch/_nuxt/img/rsc-logo-claim-desktop.520c5d8.png",
+    "epg_id": "3603fb30-d023-4276-81d9-a12da5f16485",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.srg-ssr.ch/srgssr/rsc_de/aac/96"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Country One Radio",
+    "logo": "",
+    "epg_id": "962a7679-0601-11e8-ae97-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/country_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio24",
+    "logo": "https://ch.az-cdn.ch/static/4.14.2/radio24/device-icons/48x48.png",
+    "epg_id": "be9fa6d2-aace-46ea-bdbf-68092402066f",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.streambase.ch/radio24/mp3-192/direct/"
+      }
+    ]
+  },
+  {
+    "name": "1.FM - Bossa Nova Hits",
+    "logo": "",
+    "epg_id": "afc41622-5e7d-11e9-a622-52543be04c81",
+    "country": "Switzerland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://strm112.1.fm/bossanova_mobile_mp3"
+      }
+    ]
+  },
+  {
+    "name": "ORF Hitradio Ö3 | HQ",
+    "logo": "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/common/images/apple-icons/oe3.png",
+    "epg_id": "e723f7f8-0db1-4bc5-a64c-64d8377f9f9a",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/oe3-q2a"
+      }
+    ]
+  },
+  {
+    "name": "FM4 | ORF | HQ",
+    "logo": "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/fm4/images/touch-icon-iphone-retina.png",
+    "epg_id": "1e13ed4e-daa9-4728-8550-e08d89c1c8e7",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/fm4-q2a"
+      }
+    ]
+  },
+  {
+    "name": "ORF Hitradio Ö3",
+    "logo": "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/common/images/apple-icons/oe3.png",
+    "epg_id": "63bb901a-e09a-478b-9c5e-b7f6a1f9efc4",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ors-sn03.ors-shoutcast.at/oe3-q1a"
+      }
+    ]
+  },
+  {
+    "name": "ORF Hitradio Ö3",
+    "logo": "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/common/images/apple-icons/oe3.png",
+    "epg_id": "aac6a88d-ddf1-45f4-8377-3426337c6a6e",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/oe3-q2a"
+      }
+    ]
+  },
+  {
+    "name": "FM4 | ORF",
+    "logo": "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/fm4/images/touch-icon-iphone-retina.png",
+    "epg_id": "206f93c5-5f3c-4ba1-82c2-19a42582fcc2",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/fm4-q1a"
+      }
+    ]
+  },
+  {
+    "name": "Ö1 | ORF | HQ",
+    "logo": "https://oe1.orf.at/static/img/logo_oe1.png",
+    "epg_id": "657b7b0f-2ef9-45df-9915-4ca4f948c54f",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://orf-live.ors-shoutcast.at/oe1-q2a"
+      }
+    ]
+  },
+  {
+    "name": "radio 88.6",
+    "logo": "https://www.radio886.at/apple-touch-icon.png",
+    "epg_id": "af1d60c9-5e0d-11ea-be63-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radio886.at/streams/radio_88.6/mp3"
+      }
+    ]
+  },
+  {
+    "name": "88.6 Hard Rock",
+    "logo": "https://www.radio886.at/img/stream_logos_2024/886_STREAM_ICON_HARDROCK.png",
+    "epg_id": "d0d9c01c-5e0d-11ea-be63-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radio886.at/streams/88.6_Hard_Rock/mp3"
+      }
+    ]
+  },
+  {
+    "name": "KroneHit Digital",
+    "logo": "http://www.kronehit.at/static/base/img/apple-touch-icon.f5c3420c154b.png",
+    "epg_id": "96061367-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://onair-ha1.krone.at/kronehit1058.mp3"
+      }
+    ]
+  },
+  {
+    "name": "ORF Radio Wien",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/411/749/352/990/original/16c84635847ddad3.png",
+    "epg_id": "8a3685e2-711e-4764-9080-6fa143c33014",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://orf-live.ors-shoutcast.at/wie-q1a"
+      }
+    ]
+  },
+  {
+    "name": "Antenne Steiermark",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/63/Antenne_Logo.svg",
+    "epg_id": "9608a2aa-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://live.antenne.at/as"
+      }
+    ]
+  },
+  {
+    "name": "88.6 Classic Rock",
+    "logo": "https://www.radio886.at/img/stream_logos_2024/886_STREAM_ICON_CLASSICROCK.png",
+    "epg_id": "9645d9ca-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radio886.at/streams/88.6_Classic_Rock/mp3"
+      }
+    ]
+  },
+  {
+    "name": "Gamesboro Radio - Video Game Music 24/7",
+    "logo": "https://radio.gamesboro.org/static/uploads/browser_icon/original.1693066595.png",
+    "epg_id": "32f62475-8900-4364-9fee-d1909f06ae2d",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radio.gamesboro.org/listen/gamesboro_radio/radio.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio U1 Tirol",
+    "logo": "https://u1-radio.at/wp-content/uploads/2022/03/u1_favicon512x512-150x150.png",
+    "epg_id": "c64828ba-99b9-407b-bb7f-3f1c184447d2",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live.u1-radio.at/"
+      }
+    ]
+  },
+  {
+    "name": "Austrian Rock Radio",
+    "logo": "https://austrianrockradio.at/wp-content/uploads/2023/02/liferadio-150x150.png",
+    "epg_id": "96057c18-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://live.antenne.at/arr"
+      }
+    ]
+  },
+  {
+    "name": "ORF Radio Steiermark | HQ",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/531/169/177/709/original/1721e6944c64b1b3.png",
+    "epg_id": "f0787305-4e27-4494-b5ae-8f9082301f1a",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://orf-live.ors-shoutcast.at/stm-q2a"
+      }
+    ]
+  },
+  {
+    "name": "Lounge.FM - 100% Austria",
+    "logo": "https://www.lounge.fm/wp-content/uploads/2014/06/loungefm_logo_colour2-300x300.jpg",
+    "epg_id": "282facce-8ae7-46a5-9e24-a946abe9fc7d",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://s35.derstream.net/100austria.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Ö1 | ORF",
+    "logo": "https://oe1.orf.at/static/img/logo_oe1.png",
+    "epg_id": "cbd9a2cb-7e37-4362-9eb3-269ed743fc62",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://orf-live.ors-shoutcast.at/oe1-q1a"
+      }
+    ]
+  },
+  {
+    "name": "Radino - Mein Kinderradio Wien 103,2",
+    "logo": "https://www.meinkinderradio.at/wp-content/uploads/2021/07/favicon.png",
+    "epg_id": "9620cfc5-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream01.zogl.net:8906/stream"
+      }
+    ]
+  },
+  {
+    "name": "Kronehit",
+    "logo": "https://i.imgur.com/Z3rkNFc.png",
+    "epg_id": "7bf200d7-c1fd-4f0d-a33c-be799cd4dfb4",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://onair.krone.at/kronehit.mp3"
+      }
+    ]
+  },
+  {
+    "name": "ORF Radio Wien | HQ",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/411/749/352/990/original/16c84635847ddad3.png",
+    "epg_id": "154fc4d3-4584-4b59-b2ed-e8656e0420e8",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://orf-live.ors-shoutcast.at/wie-q2a"
+      }
+    ]
+  },
+  {
+    "name": "Radio Bollerwagen",
+    "logo": "",
+    "epg_id": "19a945e8-8ef0-4df5-a789-231b9203c1d3",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://player.ffn.de/radiobollerwagen.mp3"
+      }
+    ]
+  },
+  {
+    "name": "ORF Radio Oberösterreich | HQ",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/484/561/807/260/original/04efe58e0bc4d119.png",
+    "epg_id": "ed03bcf5-86d2-45f7-848d-90d67f89e001",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/ooe-q2a"
+      }
+    ]
+  },
+  {
+    "name": "Darksynth Radio",
+    "logo": "",
+    "epg_id": "54b85bd0-8b71-11e9-ad01-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.laut.fm/darksynthradio"
+      }
+    ]
+  },
+  {
+    "name": "ORF Radio Niederösterreich | HQ",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/434/334/698/982/original/aad9486c4d8e92f2.png",
+    "epg_id": "c4a15de4-ce45-401f-bfb1-f98f818a74f0",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://orf-live.ors-shoutcast.at/noe-q2a"
+      }
+    ]
+  },
+  {
+    "name": "Antenne Kärnten",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/63/Antenne_Logo.svg",
+    "epg_id": "9608b51d-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://live.antenne.at/ak"
+      }
+    ]
+  },
+  {
+    "name": "ORF Tirol HQ",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/561/229/082/482/original/57acca969ede8452.png",
+    "epg_id": "477d5e54-24b0-48dd-97f0-5cf4f047eb55",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://orf-live.ors-shoutcast.at/tir-q2a"
+      }
+    ]
+  },
+  {
+    "name": "ORF Radio Kärnten",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/600/349/621/738/original/38f30e28fae38639.png",
+    "epg_id": "f9bc912f-dbd7-4a75-b3af-1a77c2231098",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://ors-sn02.ors-shoutcast.at/ktn-q1a"
+      }
+    ]
+  },
+  {
+    "name": "Rock Antenne Österreich (AAC)",
+    "logo": "https://www.rockantenne.at/logos/rock-antenne-at/apple-touch-icon.png",
+    "epg_id": "d96aa077-7c46-408a-bdd4-563a8a7a175d",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://s3-webradio.rockantenne.at/rockantenne-oesterreich/stream/aacp"
+      }
+    ]
+  },
+  {
+    "name": "ORF Hitradio Ö3 (290k HLS)",
+    "logo": "https://tubestatic.orf.at/mojo/1_3/storyserver//tube/common/images/apple-icons/oe3.png",
+    "epg_id": "ee637e36-55c7-4049-b730-40c339d53721",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live-oe3.mdn.ors.at/out/u/oe3/q4a/manifest.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "Radio Grün Weiß",
+    "logo": "http://www.gruen-weiss.at/favicon.ico",
+    "epg_id": "960c5763-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://live.gruen-weiss.at/rgw.mp3"
+      }
+    ]
+  },
+  {
+    "name": "ORF Radio Kärnten HQ",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/600/349/621/738/original/38f30e28fae38639.png",
+    "epg_id": "0c761a3d-991b-4025-aa17-ba0336038f20",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/ktn-q2a"
+      }
+    ]
+  },
+  {
+    "name": "Energy NRJ Innsbruck",
+    "logo": "https://media.metacast.eu/pictures/10_2015/OdriLYWpbHJqKDAcGCMv-7384.png",
+    "epg_id": "96087c49-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream1.energy.at:8000/ibk"
+      }
+    ]
+  },
+  {
+    "name": "Radio Vorarlberg HQ",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/623/444/743/699/original/3022673107e835ba.png",
+    "epg_id": "5971be6a-df87-4e50-9972-df9c93a47dc6",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/vbg-q2a"
+      }
+    ]
+  },
+  {
+    "name": "Radio Vorarlberg",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/623/444/743/699/original/3022673107e835ba.png",
+    "epg_id": "0d37b24b-204c-47f9-84df-4dcbfa97ba33",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/vbg-q1a"
+      }
+    ]
+  },
+  {
+    "name": "KroneHit Radio",
+    "logo": "http://www.kronehit.at/static/base/img/apple-touch-icon.f5c3420c154b.png",
+    "epg_id": "9647d94c-0601-11e8-ae97-52543be04c81",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://onair-ha1.krone.at/kronehit64.aac"
+      }
+    ]
+  },
+  {
+    "name": "Antenne Vorarlberg Musica Italiana",
+    "logo": "https://www.antennevorarlberg.at/static/base/img/apple-touch-icon.168e05c8048c.png",
+    "epg_id": "ce81296c-e7ac-4290-a2d8-aa961ca4be5c",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://web.radio.antennevorarlberg.at/av-italiana"
+      }
+    ]
+  },
+  {
+    "name": "88.6 Metal",
+    "logo": "https://www.radio886.at/img/stream_logos_2024/886_STREAM_ICON_METAL.png",
+    "epg_id": "27d8066d-3745-4fea-8d9b-90bbe50a3be8",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radio886.at/streams/88.6_Metal/mp3"
+      }
+    ]
+  },
+  {
+    "name": " Life Radio Tirol - MUSIC ONLY",
+    "logo": "",
+    "epg_id": "a1224945-1856-465d-9d8e-baf81889df94",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.liferadio.tirol/MUONLY/mp3-192/link"
+      }
+    ]
+  },
+  {
+    "name": "Radio Klassik Stephansdom",
+    "logo": "",
+    "epg_id": "6b412050-90a4-4c40-9c21-be7395b3e300",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radioklassikstephansdom.ice.infomaniak.ch/radioklassikstephansdom.mp3"
+      }
+    ]
+  },
+  {
+    "name": "ORF Tirol",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/561/229/082/482/original/57acca969ede8452.png",
+    "epg_id": "bd78b9ee-a104-4501-99f7-a3f95ef43b11",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://orf-live.ors-shoutcast.at/tir-q1a"
+      }
+    ]
+  },
+  {
+    "name": "Life Radio Tirol",
+    "logo": "https://liferadio.konsole-labs.com/img/live.png",
+    "epg_id": "566a0eab-7cef-4d41-bfbe-f6c83b52eef8",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream.liferadio.tirol/live/aac-256/SHQ"
+      }
+    ]
+  },
+  {
+    "name": "88.6 On Air",
+    "logo": "",
+    "epg_id": "1ff60ce0-a974-44be-9476-3069effa8b77",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radio886.at/streams/radio_88.6/mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio GÖD",
+    "logo": "https://www.goed.at/favicon/apple-icon-72x72.png",
+    "epg_id": "4f1fb5fa-8a10-4d72-b247-21d831272373",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radiogoed.securestream.kapper.net/stream"
+      }
+    ]
+  },
+  {
+    "name": "Eurodance-X-Press",
+    "logo": "https://www.eurodance.at/images/logo.png",
+    "epg_id": "e58e609b-3712-4136-86cf-5ac872192918",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://secureonair.krone.at/eurodance.aac"
+      }
+    ]
+  },
+  {
+    "name": "Radio VM1",
+    "logo": "https://static.wixstatic.com/media/548694_ab538cd3682b46c6b81c924de1b94ee0~mv2.png/v1/fill/w_248,h_111,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Logo_vm1_edited.png",
+    "epg_id": "08ff5099-5c3b-4088-b655-8d9b8c637866",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radiovm1.fluidstream.eu/radiovm1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "ORF Radio Burgenland",
+    "logo": "https://orfodon.org/system/accounts/avatars/111/374/581/969/931/266/original/4e38a6ea240646e2.png",
+    "epg_id": "fa4463a4-cedf-490a-b941-3dc56b83d5b6",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://orf-live.ors-shoutcast.at/bgl-q1a"
+      }
+    ]
+  },
+  {
+    "name": "Antenne Kärnten 80er Pop",
+    "logo": "https://assets.radioplayer.org/040/04051/600/600/lopvbsjz.png",
+    "epg_id": "8cbc17a1-840f-4b80-adc3-2e4923a9253d",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://live.antenne.at/80s"
+      }
+    ]
+  },
+  {
+    "name": "Radio Rot Weiß Rot",
+    "logo": "https://www.rotweissrot.fan/favicon.ico",
+    "epg_id": "47eb5654-12b6-4e4a-9026-e026382202cb",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://secureonair.krone.at/rwr.aac"
+      }
+    ]
+  },
+  {
+    "name": "Flash90s",
+    "logo": "https://www.flash90s.at/images/logo.png",
+    "epg_id": "449774c7-e051-44ff-ab86-4901c61a365c",
+    "country": "Austria",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream.flash90s.at/flash90s/mp3-192/"
+      }
+    ]
+  },
+  {
+    "name": "RMF FM",
+    "logo": "https://www.rmf.fm/assets/images/favicon/apple-icon-120x120.png?3",
+    "epg_id": "399b7c2a-6680-11e8-b15b-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://195.150.20.242:8000/rmf_fm"
+      }
+    ]
+  },
+  {
+    "name": "Radio 357",
+    "logo": "https://radio357.pl/wp-content/uploads/2022/04/c5399c0d-1b8e-43d5-b23b-e5cef1857856.png",
+    "epg_id": "d377fdb9-9136-47de-a1f4-6b02a1bc7f72",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://n-11-21.dcs.redcdn.pl/sc/o2/radio357/live/radio357_pr.livx?preroll=0"
+      }
+    ]
+  },
+  {
+    "name": "Radio Zet",
+    "logo": "https://gfx.radiozet.pl/extension/radiozet/design/standard/images/favicon/apple-touch-icon.png",
+    "epg_id": "59e30dda-64bf-11ea-be63-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://zet-net-01.cdn.eurozet.pl:8400/"
+      }
+    ]
+  },
+  {
+    "name": "RMF FM",
+    "logo": "http://www.rmf.fm/assets/images/favicon/apple-icon-120x120.png?3",
+    "epg_id": "960d9241-0601-11e8-ae97-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://195.150.20.9/RMFFM48"
+      }
+    ]
+  },
+  {
+    "name": "Radio Republika",
+    "logo": "https://radiotvrepublika.pl/favicon-96x96.png",
+    "epg_id": "f837704e-40df-4302-b546-c8401348e51c",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ssl-1.radiotvrepublika.pl:12698/stream"
+      }
+    ]
+  },
+  {
+    "name": "ESKA ROCK",
+    "logo": "https://static.mytuner.mobi/media/tvos_radios/2LqeyZhdFq.png",
+    "epg_id": "bf487b2b-503c-42c3-b088-9b5d679fdf29",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ic2.smcdn.pl/5380-1.mp3#ESKA_ROCK"
+      }
+    ]
+  },
+  {
+    "name": "Polskie Radio 24",
+    "logo": "https://yt3.ggpht.com/a/AATXAJyFlzKJAEMeWhP6xmsC3EHQ9MkIldwATEmAQA=s900-c-k-c0xffffffff-no-rj-mo",
+    "epg_id": "75b823fc-f95f-4b88-a2e1-737750ac8ad9",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream3.polskieradio.pl:8080/;.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio RMF MAXXX",
+    "logo": "https://cdn.onlineradiobox.com/img/l/4/1294.v9.png",
+    "epg_id": "65cd1362-71ab-4829-8a4a-f530caf3a465",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://rs9-krk2-cyfronet.rmfstream.pl/RMFMAXXX48"
+      }
+    ]
+  },
+  {
+    "name": "Antyradio",
+    "logo": "https://gfx.antyradio.pl/design/antyradio/src/images/favicon/favicon_180x180.png",
+    "epg_id": "9617d67b-0601-11e8-ae97-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5"
+      }
+    ]
+  },
+  {
+    "name": "VOX FM",
+    "logo": "https://www.voxfm.pl/apple-touch-icon.png",
+    "epg_id": "c101cf0d-9385-452f-96f8-ad46425f89d3",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://ic2.smcdn.pl/3990-1.aac"
+      }
+    ]
+  },
+  {
+    "name": "VOX FM 128",
+    "logo": "http://voxfm.pl/apple-touch-icon.png",
+    "epg_id": "c62a050f-cfd4-4fc5-8c93-ebaf0bc84738",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ic2.smcdn.pl/3990-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Anty Radio",
+    "logo": "https://gfx-player.radiozet.pl/var/player/storage/images/player-antyradio/programy/antyradio-ekstra/936460-5-pol-PL/Antyradio-Ekstra_size-70x70.png",
+    "epg_id": "6bf03632-07d9-4112-8119-03588ec8f556",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://an.cdn.eurozet.pl/ant-web.mp3?t=1713710188361"
+      }
+    ]
+  },
+  {
+    "name": " Radio ZET Chilli ",
+    "logo": "",
+    "epg_id": "14b795df-4210-49e2-b491-189523b49f4d",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ch.cdn.eurozet.pl/chi-net.mp3"
+      }
+    ]
+  },
+  {
+    "name": "TokFM",
+    "logo": "https://static.im-g.pl/im/6/7455/m7455556.gif",
+    "epg_id": "0013eb82-2dea-41f7-9534-936d0b2721b7",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radiostream.pl/tuba10-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Nowy Świat",
+    "logo": "https://dl.memuplay.com/new_market/img/com.thehouseofcode.radio_nowy_swiat.icon.2021-03-20-18-25-39.png",
+    "epg_id": "d81fd5d3-4c24-4768-88b3-57954e77c0e7",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://go-audio.toya.net.pl/63214"
+      }
+    ]
+  },
+  {
+    "name": "ESKA - Gorąca 20",
+    "logo": "https://www.eska.pl/favicon.ico",
+    "epg_id": "f56fc0e0-8d6e-43df-9253-bfa03cb9a067",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://waw.ic.smcdn.pl/6130-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Polskie Radio Jedynka",
+    "logo": "",
+    "epg_id": "964558ba-0601-11e8-ae97-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://mp3.polskieradio.pl:8900/;.mp3"
+      }
+    ]
+  },
+  {
+    "name": "PR TRÓJKA ",
+    "logo": "https://firebasestorage.googleapis.com/v0/b/radiogalaxy-580f4.appspot.com/o/images%2FIMG_20250314_080616667.jpg?alt=media&token=4738543a-4391-4727-9d9d-89741871db70",
+    "epg_id": "dfceead0-dc99-4c3c-bce5-b53db7658626",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream13.polskieradio.pl/pr3/pr3.sdp/playlist.m3u8"
+      }
+    ]
+  },
+  {
+    "name": "ESKA GORĄCA 100 ",
+    "logo": "http://eska.pl/favicon.ico",
+    "epg_id": "592947b7-c949-4e9f-8797-1e93b2158a19",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://ic1.smcdn.pl/6120-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Rmf Fm",
+    "logo": "https://i.discogs.com/DnA_zyepthmbKMSlb7t0fb6af4AKVpGzY54bk1VVvaE/rs:fit/g:sm/q:90/h:250/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTcxNjgz/OS0xNDA2MTI5OTky/LTM4MzcuanBlZw.jpeg",
+    "epg_id": "2081e30b-0ae2-4194-8c86-46f0ca7c1321",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://195.150.20.7/rmf_fm"
+      }
+    ]
+  },
+  {
+    "name": "357",
+    "logo": "",
+    "epg_id": "fbbccfc2-a610-44ec-bd43-7a356a247b54",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://n-11-26.dcs.redcdn.pl/sc/o2/radio357/live/radio357_pr.livx?preroll=0"
+      }
+    ]
+  },
+  {
+    "name": "Radio Plus",
+    "logo": "https://www.radioplus.pl/favicon.ico",
+    "epg_id": "d6a5c066-62c8-4f88-bd72-2b9b03330f2a",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://pl02.cdn.eurozet.pl/plu-waw.mp3?redirected=02"
+      }
+    ]
+  },
+  {
+    "name": "Radio Pogoda",
+    "logo": "https://gfx.radiopogoda.pl/extension/radiopogoda/design/standard/images/favicon/apple-touch-icon.png",
+    "epg_id": "b6be7550-8e04-42c3-8641-126c08eab71c",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radiostream.pl/tuba140-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Party - Kanał Główny",
+    "logo": "https://radioparty.pl/assets/img/logo.png",
+    "epg_id": "68c4dc06-824c-4a00-9f76-a13e181c6f2d",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://s2.radioparty.pl:8015/stream?nocache=4171"
+      }
+    ]
+  },
+  {
+    "name": "Radio Eska Kraków",
+    "logo": "https://cdn-profiles.tunein.com/s87779/images/logod.png?t=637867737470000000",
+    "epg_id": "257d0088-3b8d-4b9c-9092-4507bef630fd",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://ic1.smcdn.pl/2070-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Złote Przeboje",
+    "logo": "https://gfx.zloteprzeboje.pl/extension/radiozet-header-2/design/zloteprzeboje/images/logo.svg",
+    "epg_id": "dc835e53-1d9f-4c0f-b6ee-ffea5c672ec0",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radiostream.pl/tuba8904-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radioparty.pl Dj Mixes Party",
+    "logo": "http://radioparty.pl//favicon.ico",
+    "epg_id": "96113f20-0601-11e8-ae97-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://djmixes.radioparty.pl:8035/"
+      }
+    ]
+  },
+  {
+    "name": "Radio Italo4you 256kbps",
+    "logo": "https://radioitalo4you.net/images/favicons/apple-touch-icon-120x120.png",
+    "epg_id": "d7bb11de-0f8d-4832-93e7-3061b1adfd33",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://s0.radiohost.pl:8018/stream"
+      }
+    ]
+  },
+  {
+    "name": "\tPolskie Radio Bialystok",
+    "logo": "http://www.radio.bialystok.pl/favicon.ico",
+    "epg_id": "98152a6d-9a3d-46d7-8019-c8c03f29be38",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream4.nadaje.com:15476/radiobialystok"
+      }
+    ]
+  },
+  {
+    "name": "Radia Zet ",
+    "logo": "https://gfx.radiozet.pl/extension/radiozet/design/standard/images/favicon/apple-touch-icon.png",
+    "epg_id": "aedcfbaa-e39b-4066-a1b3-9f22e4ad2197",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://zet-net-01.cdn.eurozet.pl:8400/"
+      }
+    ]
+  },
+  {
+    "name": "Chilli Zet",
+    "logo": "https://gfx.chillizet.pl/extension/chillizet/design/standard/images/favicon/apple-touch-icon.png",
+    "epg_id": "da0174e1-a1b0-447d-befb-087a6c88d6d4",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://ch.cdn.eurozet.pl/chi-net.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Wnet",
+    "logo": "https://wnet.fm/wp-content/uploads/2019/03/cropped-favikon-145x145.png",
+    "epg_id": "9610ee68-0601-11e8-ae97-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://audio.radiownet.pl:8000/stream"
+      }
+    ]
+  },
+  {
+    "name": "VOX DJ Mix",
+    "logo": "https://www.voxfm.pl/apple-touch-icon.png",
+    "epg_id": "912cadec-4484-4b09-8d71-9e3e45c8826b",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://waw.ic.smcdn.pl/6020-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio RMF MAXX",
+    "logo": "https://www.rmfmaxx.pl/assets-22/images/logo-pink.png",
+    "epg_id": "253a580c-5591-4ec4-9605-af2b5d7a145d",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://rs202-krk.rmfstream.pl/RMFMAXXX48"
+      }
+    ]
+  },
+  {
+    "name": "TOK FM",
+    "logo": "https://static.im-g.pl/im/6/7455/m7455556.gif",
+    "epg_id": "c7915f33-f401-4ab4-9f49-dcc1cce15ed6",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radiostream.pl/tuba10-1.mp3#TOK_FM"
+      }
+    ]
+  },
+  {
+    "name": "Polskie Radio Katowice",
+    "logo": "http://www.radio.katowice.pl/apple-touch-icon.png",
+    "epg_id": "961b32f7-0601-11e8-ae97-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream4.nadaje.com:9212/radiokatowice"
+      }
+    ]
+  },
+  {
+    "name": "Radio Złote Przeboje Wrocław",
+    "logo": "",
+    "epg_id": "6a2591f4-7286-4c65-a7bd-6c491b6e672b",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radiostream.pl/tuba9-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Nowy Świat 256k",
+    "logo": "",
+    "epg_id": "90877e51-c905-431d-aad2-cf7bea939a7b",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://go-audio.toya.net.pl/63214"
+      }
+    ]
+  },
+  {
+    "name": "RADIO SOLER",
+    "logo": "https://adwokacka.eu/favikon2.png",
+    "epg_id": "5ae60ffd-eacf-4f87-98aa-dd53c58fa2a1",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://ec1.yesstreaming.net:2380/stream"
+      }
+    ]
+  },
+  {
+    "name": "SmoothJazz.com.pl 320k MP3",
+    "logo": "http://bcast.vigormultimedia.com:7000/sjcompl_192_192_nie_kasowac.png",
+    "epg_id": "53241c38-4a74-4beb-9514-1033913d1ede",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://bcast.vigormultimedia.com:48888/sjcompl320mp3"
+      }
+    ]
+  },
+  {
+    "name": "RMF FM",
+    "logo": "https://www.rmf.fm/assets/images/favicon/apple-icon-120x120.png?3",
+    "epg_id": "47c5dd82-470a-11e9-aa55-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://31.192.216.8/rmf_fm"
+      }
+    ]
+  },
+  {
+    "name": "Radio Nowy Świat",
+    "logo": "https://dl.memuplay.com/new_market/img/com.thehouseofcode.radio_nowy_swiat.icon.2021-03-20-18-25-39.png",
+    "epg_id": "6dcc981e-4602-401c-b175-7649736e2f11",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://go-audio.toya.net.pl/63214"
+      }
+    ]
+  },
+  {
+    "name": "ESKA - Do Pracy",
+    "logo": "",
+    "epg_id": "14deca88-fa91-472e-852d-22878c8e7bde",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://waw.ic.smcdn.pl/6140-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Eska Warszawa",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Eska_1049_2.png",
+    "epg_id": "3d5ae3c4-6d05-415b-a0eb-d21ca56be0ea",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://waw.ic.smcdn.pl/2380-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "RADIO CLUB DJ",
+    "logo": "https://radioclubdj.prv.pl/rcd.png",
+    "epg_id": "f0ca8aff-861f-497c-a1d1-4a82bb4471ac",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://4stream.pl:18272/stream"
+      }
+    ]
+  },
+  {
+    "name": "TOK FM",
+    "logo": "https://media.user.com/uploads/lv0msl-tokfm/logo-tok-fm-192x192_12xTZoh.png",
+    "epg_id": "9b595c4c-73da-4609-a3d1-0e49c349a672",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://radiostream.pl/tuba10-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Muzyczne Radio",
+    "logo": "",
+    "epg_id": "45047af4-56c2-47fe-b322-af6f6b67c111",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://stream3.technologicznie.net/muzyczne_radio_192.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Złote Przeboje Poznań",
+    "logo": "http://static.fm.tuba.pl/stations/_img/zlote-przeboje_512.png",
+    "epg_id": "ad320b38-45a1-44a2-bba4-7fb7fb8cb41c",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://radiostream.pl/tuba8926-1.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Radio Maryja",
+    "logo": "",
+    "epg_id": "52768156-3f43-11e8-b74d-52543be04c81",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "http://198.50.238.178:5946/stream"
+      }
+    ]
+  },
+  {
+    "name": "Polskie Radio Trójka",
+    "logo": "https://static2.mytuner.mobi/media/tvos_radios/260/polskie-radio-program-iii-pr3-trojka.00c2edf5.png",
+    "epg_id": "7eb13e53-ddc3-46a6-8b42-fa71c84c5954",
+    "country": "Poland",
+    "options": [
+      {
+        "format": "mp3",
+        "url": "https://stream13.polskieradio.pl/pr3/pr3.sdp/chunklist_w476233979.m3u8"
+      }
+    ]
+  }
+]

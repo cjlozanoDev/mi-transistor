@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { Capacitor } from '@capacitor/core'
 import fallbackRadios from '../data/radios.json'
 import fallbackRadiosLatinoamerica from '../data/radios-latinoamerica.json'
+import fallbackRadiosEuropa from '../data/radios-europa.json'
 
 // tdtchannels.com no manda cabeceras CORS: en la app nativa CapacitorHttp se
 // salta esa restricción, pero en la versión web hace falta pasar por nuestra
@@ -26,6 +27,8 @@ const COUNTRIES_LATINOAMERICA = [
   'CR',
   'BR',
 ]
+// Europa sin España (España ya tiene su propio listado desde tdtchannels)
+const COUNTRIES_EUROPA = ['DE', 'FR', 'IT', 'GB', 'PT', 'NL', 'BE', 'CH', 'AT', 'PL']
 
 // Ámbitos de la API que son comunidades/ciudades autónomas (el resto son
 // categorías como "Populares", "Musicales", etc., que se ignoran para el filtro).
@@ -66,6 +69,48 @@ const COUNTRY_LABELS = {
   Peru: 'Perú',
   'Puerto Rico': 'Puerto Rico',
   Uruguay: 'Uruguay',
+  Germany: 'Alemania',
+  Austria: 'Austria',
+  Belgium: 'Bélgica',
+  France: 'Francia',
+  Italy: 'Italia',
+  'The Netherlands': 'Países Bajos',
+  Poland: 'Polonia',
+  Portugal: 'Portugal',
+  'The United Kingdom Of Great Britain And Northern Ireland': 'Reino Unido',
+  Switzerland: 'Suiza',
+}
+
+// Top 50 emisoras más escuchadas de cada país, pedidas en paralelo a radio-browser
+async function fetchRadioBrowserCountries(codes) {
+  const responses = await Promise.all(
+    codes.map((code) =>
+      fetch(
+        `https://de1.api.radio-browser.info/json/stations/bycountrycodeexact/${code}?limit=50&hidebroken=true&order=clickcount&reverse=true`,
+        { signal: AbortSignal.timeout(5000) },
+      ),
+    ),
+  )
+  const parsed = await Promise.all(responses.map((r) => r.json()))
+  return parsed.flat()
+}
+
+function parseRadioBrowserStations(data) {
+  return data.map((s) => ({
+    name: s.name,
+    logo: s.favicon,
+    id: normalizeIdPart(s.stationuuid),
+    epg_id: s.stationuuid,
+    country: s.country,
+    options: [{ format: 'mp3', url: s.url_resolved || s.url }],
+  }))
+}
+
+function countryOptions(list) {
+  const countries = new Set(list.map((s) => s.country).filter(Boolean))
+  return [...countries]
+    .map((c) => ({ label: COUNTRY_LABELS[c] ?? c, value: c }))
+    .sort((a, b) => a.label.localeCompare(b.label))
 }
 
 // Normaliza un valor para usarlo como parte de un id: quita acentos, espacios
@@ -86,8 +131,11 @@ export const useStationsStore = defineStore('stations', {
     stationsTimestamp: null,
     listStationsLatinoamerica: [],
     stationsLatinoamericaTimestamp: null,
+    listStationsEuropa: [],
+    stationsEuropaTimestamp: null,
     isLoading: false,
     isLoadingLatinoamerica: false,
+    isLoadingEuropa: false,
     favorites: [],
     recentStations: [],
   }),
@@ -114,17 +162,14 @@ export const useStationsStore = defineStore('stations', {
       this._syncFavoritesWith(this.listStations)
     },
     _parseStationsLatinoamerica(data) {
-      this.listStationsLatinoamerica = data.map((s) => ({
-        name: s.name,
-        logo: s.favicon,
-        id: normalizeIdPart(s.stationuuid),
-        epg_id: s.stationuuid,
-        country: s.country,
-        options: [{ format: 'mp3', url: s.url_resolved || s.url }],
-      }))
-
+      this.listStationsLatinoamerica = parseRadioBrowserStations(data)
       this.stationsLatinoamericaTimestamp = Date.now()
       this._syncFavoritesWith(this.listStationsLatinoamerica)
+    },
+    _parseStationsEuropa(data) {
+      this.listStationsEuropa = parseRadioBrowserStations(data)
+      this.stationsEuropaTimestamp = Date.now()
+      this._syncFavoritesWith(this.listStationsEuropa)
     },
     // Las favoritas guardan una copia de la emisora (con su URL) en el momento
     // de marcarla. Si la fuente actualiza esa URL, la copia guardada queda
@@ -147,8 +192,9 @@ export const useStationsStore = defineStore('stations', {
       return timestamp && list.length > 0 && Date.now() - timestamp < CACHE_DURATION
     },
     async loadStations() {
-      // Las latinoamericanas se cargan en segundo plano, sin bloquear el spinner
+      // Las latinoamericanas y europeas se cargan en segundo plano, sin bloquear el spinner
       this.loadStationsLatinoamerica()
+      this.loadStationsEuropa()
 
       if (this._isCacheValid(this.stationsTimestamp, this.listStations)) return
 
@@ -172,15 +218,7 @@ export const useStationsStore = defineStore('stations', {
 
       this.isLoadingLatinoamerica = true
       try {
-        const requests = COUNTRIES_LATINOAMERICA.map((code) =>
-          fetch(
-            `https://de1.api.radio-browser.info/json/stations/bycountrycodeexact/${code}?limit=50&hidebroken=true&order=clickcount&reverse=true`,
-            { signal: AbortSignal.timeout(5000) },
-          ),
-        )
-        const responses = await Promise.all(requests)
-        const parsed = await Promise.all(responses.map((r) => r.json()))
-        this._parseStationsLatinoamerica(parsed.flat())
+        this._parseStationsLatinoamerica(await fetchRadioBrowserCountries(COUNTRIES_LATINOAMERICA))
       } catch (e) {
         console.error('Error cargando emisoras de Latinoamérica, usando fallback:', e)
         // El fallback ya está en el formato de la app, no necesita parseo
@@ -190,6 +228,24 @@ export const useStationsStore = defineStore('stations', {
         this._syncFavoritesWith(this.listStationsLatinoamerica)
       } finally {
         this.isLoadingLatinoamerica = false
+      }
+    },
+    async loadStationsEuropa() {
+      if (this._isCacheValid(this.stationsEuropaTimestamp, this.listStationsEuropa)) return
+
+      this.isLoadingEuropa = true
+      try {
+        this._parseStationsEuropa(await fetchRadioBrowserCountries(COUNTRIES_EUROPA))
+      } catch (e) {
+        console.error('Error cargando emisoras de Europa, usando fallback:', e)
+        // El fallback ya está en el formato de la app, solo le falta el id
+        this.listStationsEuropa = fallbackRadiosEuropa
+          .flat()
+          .map((s) => ({ ...s, id: normalizeIdPart(s.epg_id) }))
+        this.stationsEuropaTimestamp = Date.now()
+        this._syncFavoritesWith(this.listStationsEuropa)
+      } finally {
+        this.isLoadingEuropa = false
       }
     },
     toggleFavorite(station) {
@@ -211,14 +267,8 @@ export const useStationsStore = defineStore('stations', {
       return (mp3 || station.options?.[0])?.url ?? null
     },
     isFavorite: (state) => (id) => state.favorites.some((favorite) => favorite.id === id),
-    latinoamericaCountries: (state) => {
-      const countries = new Set(
-        state.listStationsLatinoamerica.map((s) => s.country).filter(Boolean),
-      )
-      return [...countries]
-        .map((c) => ({ label: COUNTRY_LABELS[c] ?? c, value: c }))
-        .sort((a, b) => a.label.localeCompare(b.label))
-    },
+    latinoamericaCountries: (state) => countryOptions(state.listStationsLatinoamerica),
+    europaCountries: (state) => countryOptions(state.listStationsEuropa),
     comunidadesAutonomas: (state) => {
       const comunidades = new Set(
         state.listStations.map((s) => s.comunidadAutonoma).filter(Boolean),
@@ -234,17 +284,19 @@ export const useStationsStore = defineStore('stations', {
     // datos con formato antiguo NUNCA borra lo que el usuario ha guardado.
     {
       key: 'stations-favorites',
-      paths: ['favorites', 'recentStations'],
+      pick: ['favorites', 'recentStations'],
     },
     {
       // Subir la versión cuando cambie el formato de los datos cacheados,
       // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
       key: 'stations-v6',
-      paths: [
+      pick: [
         'listStations',
         'stationsTimestamp',
         'listStationsLatinoamerica',
         'stationsLatinoamericaTimestamp',
+        'listStationsEuropa',
+        'stationsEuropaTimestamp',
       ],
     },
   ],
