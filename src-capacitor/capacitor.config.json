@@ -9,5 +9,8 @@
     "CapacitorHttp": {
       "enabled": true
     }
+  },
+  "android": {
+    "allowMixedContent": true
   }
 }
