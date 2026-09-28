@@ -27,6 +27,26 @@ const COUNTRIES_LATINOAMERICA = [
   'CR',
   'BR',
 ]
+// Emisoras añadidas a mano (peticiones de usuarios) que la API no devuelve en
+// su top 50 o marca como caídas. Se muestran las primeras de su país, tanto con
+// datos de la API como con el fallback. `epg_id` es el stationuuid de radio-browser.
+const FEATURED_STATIONS_LATINOAMERICA = [
+  {
+    name: 'El Observador 107.9',
+    logo: 'https://elobservador1079.com.ar/wp-content/uploads/2025/05/cropped-LOGO-EL-OB-ICON-512-270x270.png',
+    epg_id: '00c34d7b-60c2-400c-86b3-dfc83c7651ab',
+    country: 'Argentina',
+    options: [{ format: 'mp3', url: 'https://redirector.dps.live/observador/aac/icecast.audio' }],
+  },
+  {
+    name: 'Continental 590 AM',
+    logo: 'https://static.mytuner.mobi/media/tvos_radios/464/continental.275b128d.png',
+    epg_id: 'cd7ab04a-64eb-42b8-b5fb-f3e23e0de103',
+    country: 'Argentina',
+    options: [{ format: 'mp3', url: 'https://frontend.radiohdvivo.com/continental/live' }],
+  },
+].map((s) => ({ ...s, id: normalizeIdPart(s.epg_id) }))
+
 // Europa sin España (España ya tiene su propio listado desde tdtchannels)
 const COUNTRIES_EUROPA = ['DE', 'FR', 'IT', 'GB', 'PT', 'NL', 'BE', 'CH', 'AT', 'PL']
 
@@ -106,6 +126,19 @@ function parseRadioBrowserStations(data) {
   }))
 }
 
+// Coloca cada emisora destacada justo antes de la primera de su país (o al
+// final si el país no aparece), quitando el duplicado si la API ya la trae.
+function withFeaturedStations(list, featured) {
+  const featuredIds = new Set(featured.map((s) => s.id))
+  const result = list.filter((s) => !featuredIds.has(s.id))
+  for (const country of new Set(featured.map((s) => s.country))) {
+    const idx = result.findIndex((s) => s.country === country)
+    const toInsert = featured.filter((s) => s.country === country)
+    result.splice(idx === -1 ? result.length : idx, 0, ...toInsert)
+  }
+  return result
+}
+
 function countryOptions(list) {
   const countries = new Set(list.map((s) => s.country).filter(Boolean))
   return [...countries]
@@ -162,7 +195,10 @@ export const useStationsStore = defineStore('stations', {
       this._syncFavoritesWith(this.listStations)
     },
     _parseStationsLatinoamerica(data) {
-      this.listStationsLatinoamerica = parseRadioBrowserStations(data)
+      this.listStationsLatinoamerica = withFeaturedStations(
+        parseRadioBrowserStations(data),
+        FEATURED_STATIONS_LATINOAMERICA,
+      )
       this.stationsLatinoamericaTimestamp = Date.now()
       this._syncFavoritesWith(this.listStationsLatinoamerica)
     },
@@ -221,9 +257,12 @@ export const useStationsStore = defineStore('stations', {
         this._parseStationsLatinoamerica(await fetchRadioBrowserCountries(COUNTRIES_LATINOAMERICA))
       } catch (e) {
         console.error('Error cargando emisoras de Latinoamérica, usando fallback:', e)
-        // El fallback ya está en el formato de la app, no necesita parseo
+        // El fallback ya está en el formato de la app, solo le falta el id
         // (.flat() por si el JSON viniera anidado, así nunca queda sin países)
-        this.listStationsLatinoamerica = fallbackRadiosLatinoamerica.flat()
+        this.listStationsLatinoamerica = withFeaturedStations(
+          fallbackRadiosLatinoamerica.flat().map((s) => ({ ...s, id: normalizeIdPart(s.epg_id) })),
+          FEATURED_STATIONS_LATINOAMERICA,
+        )
         this.stationsLatinoamericaTimestamp = Date.now()
         this._syncFavoritesWith(this.listStationsLatinoamerica)
       } finally {
@@ -289,7 +328,7 @@ export const useStationsStore = defineStore('stations', {
     {
       // Subir la versión cuando cambie el formato de los datos cacheados,
       // así la caché antigua (sin nuevos campos) se ignora y se recarga limpia.
-      key: 'stations-v6',
+      key: 'stations-v7',
       pick: [
         'listStations',
         'stationsTimestamp',
