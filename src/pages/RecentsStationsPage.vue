@@ -3,24 +3,24 @@ import { useStationsStore } from 'src/stores/useStationsStore'
 import { useRouter } from 'vue-router'
 import SubHeader from 'src/components/SubHeader.vue'
 import ListStations from 'src/components/ListStations.vue'
+import { useI18n } from 'vue-i18n'
 
 const stationsStore = useStationsStore()
 const router = useRouter()
+const { t } = useI18n()
 </script>
 
 <template>
   <q-page class="bg-dark-page">
-    <SubHeader title-route="Últimas Escuchadas" back-name-route="home" />
+    <SubHeader :title-route="t('recents.title')" back-name-route="home" />
 
     <!-- Sin recientes -->
     <div v-if="stationsStore.recentStations.length === 0" class="empty-state">
       <span class="empty-icon">🕐</span>
-      <div class="empty-title">Aún no has escuchado nada</div>
-      <div class="empty-message">
-        Aquí aparecerán las últimas 10 emisoras que escuches, para volver a encontrarlas fácilmente
-      </div>
+      <div class="empty-title">{{ t('recents.emptyTitle') }}</div>
+      <div class="empty-message">{{ t('recents.emptyMessage') }}</div>
       <q-btn
-        label="Ver todas las emisoras"
+        :label="t('stations.seeAll')"
         color="secondary"
         unelevated
         rounded
@@ -34,8 +34,7 @@ const router = useRouter()
     <template v-else>
       <div class="q-px-md q-pt-md q-pb-xs">
         <div style="font-size: 15px; color: rgba(200, 146, 42, 0.75)">
-          Tus últimas {{ stationsStore.recentStations.length }} emisoras escuchadas (se guardarán
-          las últimas 10)
+          {{ t('recents.summary', { count: stationsStore.recentStations.length }) }}
         </div>
         <q-separator dark class="q-mt-sm" />
       </div>

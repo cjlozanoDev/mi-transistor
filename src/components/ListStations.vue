@@ -2,6 +2,8 @@
 import { useStationsStore } from 'src/stores/useStationsStore'
 import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { countryLabel } from 'src/i18n/countries'
 
 const props = defineProps({
   stations: {
@@ -16,6 +18,7 @@ const props = defineProps({
 
 const stationsStore = useStationsStore()
 const playerStore = usePlayerStore()
+const { t, locale } = useI18n()
 
 const searchStation = ref('')
 const failedLogos = ref(new Set())
@@ -25,37 +28,39 @@ const selectedEuropaCountry = ref(null)
 const selectedComunidad = ref(null)
 const showFilterSheet = ref(false)
 
+// Claves = nombre del país tal cual lo da la API (en inglés)
 const COUNTRY_FLAGS = {
   Argentina: '🇦🇷',
-  Venezuela: '🇻🇪',
+  'Bolivarian Republic Of Venezuela': '🇻🇪',
   Bolivia: '🇧🇴',
-  Brasil: '🇧🇷',
+  Brazil: '🇧🇷',
   Chile: '🇨🇱',
   Colombia: '🇨🇴',
   'Costa Rica': '🇨🇷',
   Ecuador: '🇪🇨',
-  México: '🇲🇽',
+  Mexico: '🇲🇽',
   Paraguay: '🇵🇾',
-  Perú: '🇵🇪',
+  Peru: '🇵🇪',
   'Puerto Rico': '🇵🇷',
   Uruguay: '🇺🇾',
-  Alemania: '🇩🇪',
+  Germany: '🇩🇪',
   Austria: '🇦🇹',
-  Bélgica: '🇧🇪',
-  Francia: '🇫🇷',
-  Italia: '🇮🇹',
-  'Países Bajos': '🇳🇱',
-  Polonia: '🇵🇱',
+  Belgium: '🇧🇪',
+  France: '🇫🇷',
+  Italy: '🇮🇹',
+  'The Netherlands': '🇳🇱',
+  Poland: '🇵🇱',
   Portugal: '🇵🇹',
-  'Reino Unido': '🇬🇧',
-  Suiza: '🇨🇭',
+  'The United Kingdom Of Great Britain And Northern Ireland': '🇬🇧',
+  Switzerland: '🇨🇭',
 }
 
-const countryOptions = [
-  { label: 'España', value: 'España' },
-  { label: 'Latinoamérica', value: 'Latinoamérica' },
-  { label: 'Europa', value: 'Europa' },
-]
+// Los valores son internos (claves de REGIONS); solo se traduce la etiqueta
+const countryOptions = computed(() => [
+  { label: t('stations.spain'), value: 'España' },
+  { label: t('stations.latam'), value: 'Latinoamérica' },
+  { label: t('stations.europe'), value: 'Europa' },
+])
 
 // Regiones internacionales (radio-browser): lista de emisoras, países disponibles,
 // estado de carga y país seleccionado de cada una
@@ -85,21 +90,25 @@ const activeRegion = computed(() =>
 const filterOptions = computed(() => {
   if (activeRegion.value) {
     return [
-      { label: 'Todos los países', value: null, icon: activeRegion.value.allIcon },
-      ...activeRegion.value.countries().map((c) => ({
-        ...c,
-        icon: COUNTRY_FLAGS[c.label] ?? '🏳️',
-      })),
+      { label: t('stations.allCountries'), value: null, icon: activeRegion.value.allIcon },
+      ...activeRegion.value
+        .countries()
+        .map((c) => ({
+          label: countryLabel(c, locale.value),
+          value: c,
+          icon: COUNTRY_FLAGS[c] ?? '🏳️',
+        }))
+        .sort((a, b) => a.label.localeCompare(b.label, locale.value)),
     ]
   }
   return [
-    { label: 'Todas las comunidades', value: null, icon: '🇪🇸' },
+    { label: t('stations.allRegions'), value: null, icon: '🇪🇸' },
     ...stationsStore.comunidadesAutonomas.map((c) => ({ ...c, icon: '📍' })),
   ]
 })
 
 const sheetTitle = computed(() =>
-  activeRegion.value ? 'Selecciona un país' : 'Selecciona una comunidad',
+  activeRegion.value ? t('stations.selectCountry') : t('stations.selectRegion'),
 )
 
 // Valor del filtro activo (país de la región o comunidad) con get/set sobre el ref correspondiente
@@ -158,7 +167,7 @@ const onImgError = (station) => {
     <div class="q-px-md q-pt-md q-pb-sm">
       <q-input
         v-model="searchStation"
-        placeholder="Buscar emisora..."
+        :placeholder="t('stations.search')"
         filled
         rounded
         dark
@@ -255,7 +264,7 @@ const onImgError = (station) => {
     </template>
     <div v-if="filteredStations.length === 0" class="q-pa-xl text-center">
       <q-icon name="search_off" size="48px" color="secondary" class="q-mb-md" />
-      <div style="font-size: 18px; color: #f5ecd7">No se ha encontrado ninguna emisora</div>
+      <div style="font-size: 18px; color: #f5ecd7">{{ t('stations.notFound') }}</div>
     </div>
   </section>
 </template>

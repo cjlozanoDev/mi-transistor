@@ -74,33 +74,6 @@ const COMUNIDADES_AUTONOMAS = new Set([
   'R. de Murcia',
 ])
 
-// Nombres que devuelve la API (en inglés) -> etiqueta bonita en español
-const COUNTRY_LABELS = {
-  Argentina: 'Argentina',
-  'Bolivarian Republic Of Venezuela': 'Venezuela',
-  Bolivia: 'Bolivia',
-  Brazil: 'Brasil',
-  Chile: 'Chile',
-  Colombia: 'Colombia',
-  'Costa Rica': 'Costa Rica',
-  Ecuador: 'Ecuador',
-  Mexico: 'México',
-  Paraguay: 'Paraguay',
-  Peru: 'Perú',
-  'Puerto Rico': 'Puerto Rico',
-  Uruguay: 'Uruguay',
-  Germany: 'Alemania',
-  Austria: 'Austria',
-  Belgium: 'Bélgica',
-  France: 'Francia',
-  Italy: 'Italia',
-  'The Netherlands': 'Países Bajos',
-  Poland: 'Polonia',
-  Portugal: 'Portugal',
-  'The United Kingdom Of Great Britain And Northern Ireland': 'Reino Unido',
-  Switzerland: 'Suiza',
-}
-
 // Top 50 emisoras más escuchadas de cada país, pedidas en paralelo a radio-browser
 async function fetchRadioBrowserCountries(codes) {
   const responses = await Promise.all(
@@ -139,11 +112,10 @@ function withFeaturedStations(list, featured) {
   return result
 }
 
+// Países presentes en la lista, con el nombre tal cual lo da la API (en
+// inglés): ListStations los traduce y ordena según el idioma de la app.
 function countryOptions(list) {
-  const countries = new Set(list.map((s) => s.country).filter(Boolean))
-  return [...countries]
-    .map((c) => ({ label: COUNTRY_LABELS[c] ?? c, value: c }))
-    .sort((a, b) => a.label.localeCompare(b.label))
+  return [...new Set(list.map((s) => s.country).filter(Boolean))]
 }
 
 // Normaliza un valor para usarlo como parte de un id: quita acentos, espacios

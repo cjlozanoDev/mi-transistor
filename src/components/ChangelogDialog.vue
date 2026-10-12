@@ -1,9 +1,15 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
+
 defineProps({
   entry: { type: Object, required: true },
 })
 
 const model = defineModel({ type: Boolean, default: false })
+const { t, locale } = useI18n()
+
+// Cada novedad trae su texto en todos los idiomas; si faltara alguno, español
+const itemText = (item) => item.text[locale.value] ?? item.text.es
 </script>
 
 <template>
@@ -12,15 +18,15 @@ const model = defineModel({ type: Boolean, default: false })
       <div class="changelog-header">
         <span class="changelog-emoji">📻</span>
         <div>
-          <div class="changelog-title">{{ entry.title }}</div>
-          <div class="changelog-subtitle">Estas son las novedades en Mi Transistor</div>
+          <div class="changelog-title">{{ t('changelog.title') }}</div>
+          <div class="changelog-subtitle">{{ t('changelog.subtitle') }}</div>
         </div>
       </div>
 
       <q-card-section class="changelog-body">
         <div v-for="(item, i) in entry.items" :key="i" class="changelog-item">
           <span class="changelog-item-icon">{{ item.icon }}</span>
-          <span class="changelog-item-text">{{ item.text }}</span>
+          <span class="changelog-item-text">{{ itemText(item) }}</span>
         </div>
       </q-card-section>
 
@@ -28,7 +34,7 @@ const model = defineModel({ type: Boolean, default: false })
         <q-btn
           unelevated
           no-caps
-          label="Entendido"
+          :label="t('changelog.ok')"
           color="primary"
           class="changelog-ok-btn"
           @click="model = false"

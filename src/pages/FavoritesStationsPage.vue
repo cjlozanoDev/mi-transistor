@@ -3,24 +3,24 @@ import { useStationsStore } from 'src/stores/useStationsStore'
 import { useRouter } from 'vue-router'
 import SubHeader from 'src/components/SubHeader.vue'
 import ListStations from 'src/components/ListStations.vue'
+import { useI18n } from 'vue-i18n'
 
 const stationsStore = useStationsStore()
 const router = useRouter()
+const { t } = useI18n()
 </script>
 
 <template>
   <q-page class="bg-dark-page">
-    <SubHeader title-route="Mis Favoritas" back-name-route="home" />
+    <SubHeader :title-route="t('favorites.title')" back-name-route="home" />
 
     <!-- Sin favoritas -->
     <div v-if="stationsStore.favorites.length === 0" class="empty-state">
       <span class="empty-icon">📻</span>
-      <div class="empty-title">Aún no tienes favoritas</div>
-      <div class="empty-message">
-        Entra en todas las emisoras, escucha la que quieras y guárdala con el corazón ❤️
-      </div>
+      <div class="empty-title">{{ t('favorites.emptyTitle') }}</div>
+      <div class="empty-message">{{ t('favorites.emptyMessage') }}</div>
       <q-btn
-        label="Ver todas las emisoras"
+        :label="t('stations.seeAll')"
         color="secondary"
         unelevated
         rounded

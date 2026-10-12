@@ -4,6 +4,7 @@ import { registerPlugin } from '@capacitor/core'
 import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { useStationsStore } from 'src/stores/useStationsStore'
 import { useQuasar } from 'quasar'
+import { useI18n } from 'vue-i18n'
 
 const AudioPlayer = registerPlugin('AudioPlayer', {
   web: () => import('src/services/audioPlayerWeb').then((m) => new m.AudioPlayerWeb()),
@@ -12,6 +13,7 @@ const AudioPlayer = registerPlugin('AudioPlayer', {
 const playerStore = usePlayerStore()
 const stationStore = useStationsStore()
 const $q = useQuasar()
+const { t } = useI18n()
 
 const logoFailed = ref(false)
 const isActuallyPlaying = ref(false)
@@ -73,7 +75,7 @@ const callPlay = async () => {
     await AudioPlayer.play({
       url: playerStore.streamUrl,
       title: st.name ?? 'Mi Transistor',
-      artist: 'Radio en directo',
+      artist: t('player.liveRadio'),
       artwork: st.logo ?? '',
     })
   } catch {
@@ -98,7 +100,7 @@ const callUpdateMetadata = async () => {
   try {
     await AudioPlayer.updateMetadata({
       title: st.name ?? 'Mi Transistor',
-      artist: 'Radio en directo',
+      artist: t('player.liveRadio'),
       artwork: st.logo ?? '',
     })
   } catch {
@@ -190,7 +192,7 @@ const toggleFavorite = (station) => {
   stationStore.toggleFavorite(station)
   const added = stationStore.isFavorite(station.id)
   $q.notify({
-    message: added ? 'Emisora añadida a favoritas' : 'Emisora eliminada de favoritas',
+    message: added ? t('player.favoriteAdded') : t('player.favoriteRemoved'),
     color: added ? 'positive' : 'grey-7',
     position: 'bottom',
     timeout: 2000,
@@ -212,23 +214,23 @@ const toggleFavorite = (station) => {
     </div>
 
     <div class="player-info">
-      <div class="player-name">{{ playerStore.currentStation?.name ?? 'Sin emisora' }}</div>
+      <div class="player-name">{{ playerStore.currentStation?.name ?? t('player.noStation') }}</div>
 
       <div v-if="showReconnecting" class="player-status">
         <q-spinner-dots color="secondary" size="16px" />
-        <span class="status-text">Reconectando...</span>
+        <span class="status-text">{{ t('player.reconnecting') }}</span>
       </div>
 
       <div v-else-if="isConnecting" class="player-status">
         <q-spinner-dots color="secondary" size="16px" />
-        <span class="status-text">Conectando...</span>
+        <span class="status-text">{{ t('player.connecting') }}</span>
       </div>
       <div v-else-if="isActuallyPlaying" class="player-status">
         <span class="live-dot" />
-        <span class="status-text">En antena</span>
+        <span class="status-text">{{ t('player.live') }}</span>
       </div>
       <div v-else-if="playerStore.stoppedByUser" class="player-status">
-        <span class="status-text">Parada</span>
+        <span class="status-text">{{ t('player.stopped') }}</span>
       </div>
     </div>
 

@@ -1,5 +1,8 @@
 <script setup>
 import SubHeader from 'src/components/SubHeader.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const email = 'cjlozanodev@gmail.com'
 
@@ -19,7 +22,7 @@ const openMail = () => {
           <q-icon name="radio" size="56px" />
         </q-avatar>
         <div class="app-name">Mi Transistor</div>
-        <div class="app-tagline">La radio de siempre, en tu bolsillo</div>
+        <div class="app-tagline">{{ t('about.tagline') }}</div>
       </div>
 
       <!-- Valores -->
@@ -29,8 +32,8 @@ const openMail = () => {
             <q-icon name="block" size="26px" />
           </q-avatar>
           <div class="value-text">
-            <div class="value-title">Sin publicidad</div>
-            <div class="value-desc">Ningún anuncio. Nunca. Solo tu emisora.</div>
+            <div class="value-title">{{ t('about.noAds') }}</div>
+            <div class="value-desc">{{ t('about.noAdsDesc') }}</div>
           </div>
         </div>
 
@@ -41,10 +44,8 @@ const openMail = () => {
             <q-icon name="accessibility_new" size="26px" />
           </q-avatar>
           <div class="value-text">
-            <div class="value-title">Para todos</div>
-            <div class="value-desc">
-              Diseñada para que cualquier persona pueda usarla con facilidad.
-            </div>
+            <div class="value-title">{{ t('about.forAll') }}</div>
+            <div class="value-desc">{{ t('about.forAllDesc') }}</div>
           </div>
         </div>
 
@@ -55,8 +56,8 @@ const openMail = () => {
             <q-icon name="touch_app" size="26px" />
           </q-avatar>
           <div class="value-text">
-            <div class="value-title">Simple de usar</div>
-            <div class="value-desc">Abre la app, toca tu emisora y escucha. Sin más pasos.</div>
+            <div class="value-title">{{ t('about.simple') }}</div>
+            <div class="value-desc">{{ t('about.simpleDesc') }}</div>
           </div>
         </div>
 
@@ -67,18 +68,16 @@ const openMail = () => {
             <q-icon name="no_accounts" size="26px" />
           </q-avatar>
           <div class="value-text">
-            <div class="value-title">Sin registro</div>
-            <div class="value-desc">No hace falta crear ninguna cuenta ni dar ningún dato.</div>
+            <div class="value-title">{{ t('about.noSignup') }}</div>
+            <div class="value-desc">{{ t('about.noSignupDesc') }}</div>
           </div>
         </div>
       </div>
 
       <!-- Contacto -->
       <div class="contact-section">
-        <div class="contact-title">¿Tienes alguna sugerencia?</div>
-        <div class="contact-desc">
-          Peticiones, comentarios o lo que necesites. Escríbenos y leemos todos los mensajes.
-        </div>
+        <div class="contact-title">{{ t('about.suggestionTitle') }}</div>
+        <div class="contact-desc">{{ t('about.suggestionDesc') }}</div>
 
         <q-btn
           unelevated
@@ -94,7 +93,7 @@ const openMail = () => {
       </div>
 
       <!-- Footer -->
-      <div class="app-footer">Hecho con ❤️ para que la radio llegue a todos</div>
+      <div class="app-footer">{{ t('about.footer') }}</div>
     </div>
   </q-page>
 </template>
