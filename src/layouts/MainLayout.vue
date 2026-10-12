@@ -1,16 +1,17 @@
 <script setup>
 import { ref } from 'vue'
 import { useQuasar } from 'quasar'
+import { useI18n } from 'vue-i18n'
 import { Capacitor } from '@capacitor/core'
 import { Share } from '@capacitor/share'
 import PlayerStation from 'src/components/PlayerStation.vue'
 
 const $q = useQuasar()
+const { t } = useI18n()
 
 const rightDrawerOpen = ref(false)
 
 const APP_URL = 'https://play.google.com/store/apps/details?id=com.mitransistor.app'
-const SHARE_TEXT = 'Escucha la radio fácil y sin anuncios con Mi Transistor'
 
 async function shareApp() {
   try {
@@ -18,24 +19,24 @@ async function shareApp() {
     if (Capacitor.isNativePlatform()) {
       await Share.share({
         title: 'Mi Transistor',
-        text: SHARE_TEXT,
+        text: t('app.shareText'),
         url: APP_URL,
-        dialogTitle: 'Compartir Mi Transistor',
+        dialogTitle: t('app.share'),
       })
       return
     }
     // En navegador usamos la Web Share API si está disponible
     if (navigator.share) {
-      await navigator.share({ title: 'Mi Transistor', text: SHARE_TEXT, url: APP_URL })
+      await navigator.share({ title: 'Mi Transistor', text: t('app.shareText'), url: APP_URL })
       return
     }
     // Último recurso: copiar el enlace al portapapeles
     await navigator.clipboard.writeText(APP_URL)
-    $q.notify({ message: 'Enlace copiado', color: 'positive', position: 'top' })
+    $q.notify({ message: t('app.linkCopied'), color: 'positive', position: 'top' })
   } catch (err) {
     // El usuario canceló el diálogo de compartir: no mostramos error
     if (err?.name === 'AbortError' || err?.message?.includes('cancel')) return
-    $q.notify({ message: 'No se pudo compartir', color: 'negative', position: 'top' })
+    $q.notify({ message: t('app.shareError'), color: 'negative', position: 'top' })
   }
 }
 </script>
@@ -53,14 +54,42 @@ async function shareApp() {
             icon="share"
             size="md"
             color="white"
-            aria-label="Compartir Mi Transistor"
+            :aria-label="t('app.share')"
             @click="shareApp"
+          />
+          <q-btn
+            flat
+            round
+            icon="menu"
+            size="md"
+            color="white"
+            :aria-label="t('menu.open')"
+            @click="rightDrawerOpen = !rightDrawerOpen"
           />
         </q-toolbar>
       </q-header>
 
-      <q-drawer v-model="rightDrawerOpen" side="right" bordered>
-        <!-- drawer content -->
+      <q-drawer
+        v-model="rightDrawerOpen"
+        side="right"
+        behavior="mobile"
+        :width="280"
+        class="bg-dark"
+      >
+        <q-list padding dark class="drawer-safe">
+          <q-item
+            clickable
+            v-ripple
+            :to="{ name: 'settings' }"
+            class="drawer-item"
+            @click="rightDrawerOpen = false"
+          >
+            <q-item-section avatar>
+              <q-icon name="settings" color="secondary" size="28px" />
+            </q-item-section>
+            <q-item-section class="drawer-item__label">{{ t('menu.settings') }}</q-item-section>
+          </q-item>
+        </q-list>
       </q-drawer>
 
       <q-page-container>
@@ -78,6 +107,16 @@ async function shareApp() {
 <style>
 .header-safe {
   padding-top: env(safe-area-inset-top);
+}
+.drawer-safe {
+  padding-top: calc(env(safe-area-inset-top) + 8px);
+}
+.drawer-item {
+  min-height: 56px;
+  color: #f5ecd7;
+}
+.drawer-item__label {
+  font-size: 18px;
 }
 .footer-inset-spacer {
   height: env(safe-area-inset-bottom);

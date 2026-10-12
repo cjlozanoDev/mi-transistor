@@ -8,11 +8,13 @@ import { StatusBar, Style } from '@capacitor/status-bar'
 import { Capacitor, registerPlugin } from '@capacitor/core'
 import { AppUpdate } from '@capawesome/capacitor-app-update'
 import { useQuasar } from 'quasar'
+import { useI18n } from 'vue-i18n'
 
 const store = useStationsStore()
 const reviewPromptStore = useReviewPromptStore()
 const installPromptStore = useInstallPromptStore()
 const $q = useQuasar()
+const { t } = useI18n()
 
 const showInstallPrompt = ref(false)
 let deferredInstallEvent = null
@@ -84,19 +86,17 @@ function maybeShowReviewPrompt() {
   if (!reviewPromptStore.shouldShowPrompt()) return
 
   $q.dialog({
-    title: '📻 ¿Te gusta Mi Transistor?',
-    message:
-      'Si estás disfrutando de la app, nos ayudaría muchísimo que dejaras una reseña en Google Play. ' +
-      'Solo te llevará un momento. ¡Gracias! 🙏',
+    title: t('review.title'),
+    message: t('review.message'),
     html: true,
     persistent: true,
     ok: {
-      label: 'Dejar reseña',
+      label: t('review.ok'),
       color: 'primary',
       unelevated: true,
     },
     cancel: {
-      label: 'Quizás más tarde',
+      label: t('review.cancel'),
       flat: true,
       color: 'grey-7',
     },

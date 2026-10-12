@@ -1,0 +1,110 @@
+export default {
+  app: {
+    share: 'Share Mi Transistor',
+    shareText: 'Listen to the radio easily and ad-free with Mi Transistor',
+    linkCopied: 'Link copied',
+    shareError: "Couldn't share",
+  },
+  menu: {
+    open: 'Open menu',
+    settings: 'Settings',
+  },
+  settings: {
+    title: 'Settings',
+    language: 'Language',
+  },
+  home: {
+    question: 'What would you like to listen to today?',
+    favoritesTitle: 'My Favourites',
+    favoritesSubtitle: 'Your saved stations',
+    stationsTitle: 'All stations',
+    stationsSubtitle: 'Explore stations',
+    recentTitle: 'Recently played',
+    recentSubtitle: 'Your recent history',
+    aboutSubtitle: 'About the app',
+    headlines: "Today's headlines",
+    noHeadlines: 'No headlines available right now',
+  },
+  update: {
+    title: '📻 New version available',
+    message:
+      'A newer version of Mi Transistor is available.<br><br>' +
+      'Tap <b>Update</b> and <b>Google Play</b> will open. ' +
+      'There, just tap the <b>Update</b> button to get the latest version.',
+    ok: 'Update',
+    cancel: 'Not now',
+  },
+  review: {
+    title: '📻 Enjoying Mi Transistor?',
+    message:
+      'If you are enjoying the app, it would help us a lot if you left a review on Google Play. ' +
+      'It only takes a moment. Thank you! 🙏',
+    ok: 'Leave a review',
+    cancel: 'Maybe later',
+  },
+  install: {
+    title: 'Install Mi Transistor',
+    subtitle: 'Keep it handy on your computer',
+    body: 'You can install Mi Transistor on your computer and open it like an app, without having to look for it in the browser every time.',
+    later: 'Later',
+    ok: 'Install',
+  },
+  changelog: {
+    title: "What's new",
+    subtitle: "Here's what's new in Mi Transistor",
+    ok: 'Got it',
+  },
+  player: {
+    noStation: 'No station',
+    reconnecting: 'Reconnecting...',
+    connecting: 'Connecting...',
+    live: 'On air',
+    stopped: 'Stopped',
+    liveRadio: 'Live radio',
+    favoriteAdded: 'Station added to favourites',
+    favoriteRemoved: 'Station removed from favourites',
+  },
+  stations: {
+    title: 'All stations',
+    search: 'Search for a station...',
+    spain: 'Spain',
+    latam: 'Latin America',
+    europe: 'Europe',
+    allCountries: 'All countries',
+    allRegions: 'All regions',
+    selectCountry: 'Choose a country',
+    selectRegion: 'Choose a region',
+    notFound: 'No stations found',
+    seeAll: 'See all stations',
+  },
+  favorites: {
+    title: 'My Favourites',
+    emptyTitle: "You don't have any favourites yet",
+    emptyMessage: 'Go to all stations, listen to the one you like and save it with the heart ❤️',
+  },
+  recents: {
+    title: 'Recently played',
+    emptyTitle: "You haven't listened to anything yet",
+    emptyMessage:
+      'The last 10 stations you listen to will appear here, so you can find them again easily',
+    summary: 'Your last {count} stations played (the last 10 are kept)',
+  },
+  about: {
+    tagline: 'The radio you love, in your pocket',
+    noAds: 'No ads',
+    noAdsDesc: 'No ads. Ever. Just your station.',
+    forAll: 'For everyone',
+    forAllDesc: 'Designed so that anyone can use it easily.',
+    simple: 'Easy to use',
+    simpleDesc: 'Open the app, tap your station and listen. No extra steps.',
+    noSignup: 'No sign-up',
+    noSignupDesc: 'No need to create an account or share any personal data.',
+    suggestionTitle: 'Any suggestions?',
+    suggestionDesc: 'Requests, comments or anything you need. Write to us: we read every message.',
+    footer: 'Made with ❤️ so that radio reaches everyone',
+  },
+  notFound: {
+    message: 'Oops. Nothing here...',
+    goHome: 'Go home',
+  },
+}

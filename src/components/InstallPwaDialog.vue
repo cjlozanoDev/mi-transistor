@@ -1,7 +1,10 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
+
 defineEmits(['install', 'dismiss'])
 
 const model = defineModel({ type: Boolean, default: false })
+const { t } = useI18n()
 </script>
 
 <template>
@@ -10,21 +13,20 @@ const model = defineModel({ type: Boolean, default: false })
       <div class="install-header">
         <span class="install-emoji">💻</span>
         <div>
-          <div class="install-title">Instala Mi Transistor</div>
-          <div class="install-subtitle">Tenla siempre a mano en tu ordenador</div>
+          <div class="install-title">{{ t('install.title') }}</div>
+          <div class="install-subtitle">{{ t('install.subtitle') }}</div>
         </div>
       </div>
 
       <q-card-section class="install-body">
-        Puedes instalar Mi Transistor en tu ordenador para abrirla como una app, sin buscarla en el navegador cada
-        vez.
+        {{ t('install.body') }}
       </q-card-section>
 
       <q-card-actions class="install-actions">
         <q-btn
           flat
           no-caps
-          label="Más tarde"
+          :label="t('install.later')"
           color="grey-5"
           class="install-later-btn"
           @click="$emit('dismiss')"
@@ -32,7 +34,7 @@ const model = defineModel({ type: Boolean, default: false })
         <q-btn
           unelevated
           no-caps
-          label="Instalar"
+          :label="t('install.ok')"
           color="primary"
           class="install-ok-btn"
           @click="$emit('install')"

@@ -4,6 +4,7 @@ import ChangelogDialog from 'src/components/ChangelogDialog.vue'
 import { useRouter } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useQuasar } from 'quasar'
+import { useI18n } from 'vue-i18n'
 import { Capacitor, registerPlugin } from '@capacitor/core'
 import { AppUpdate, AppUpdateAvailability } from '@capawesome/capacitor-app-update'
 import { useChangelogStore } from 'src/stores/useChangelogStore'
@@ -11,6 +12,7 @@ import { CHANGELOG } from 'src/data/changelog'
 
 const router = useRouter()
 const $q = useQuasar()
+const { t } = useI18n()
 const changelogStore = useChangelogStore()
 
 const showChangelog = ref(false)
@@ -52,20 +54,17 @@ async function checkForUpdate() {
     if (info.updateAvailability !== AppUpdateAvailability.UPDATE_AVAILABLE) return
 
     $q.dialog({
-      title: '📻 Nueva versión disponible',
-      message:
-        'Hay una versión más reciente de Mi Transistor.<br><br>' +
-        'Pulse <b>Actualizar</b> y se abrirá <b>Google Play</b>. ' +
-        'Allí solo tiene que pulsar el botón <b>Actualizar</b> para tener la última versión.',
+      title: t('update.title'),
+      message: t('update.message'),
       html: true,
       persistent: true,
       ok: {
-        label: 'Actualizar',
+        label: t('update.ok'),
         color: 'primary',
         unelevated: true,
       },
       cancel: {
-        label: 'Ahora no',
+        label: t('update.cancel'),
         flat: true,
         color: 'grey-7',
       },
@@ -181,14 +180,14 @@ onUnmounted(() => {
 <template>
   <q-page class="page-home">
     <div class="home-header q-px-lg q-pt-xl q-pb-md">
-      <div class="question-text">¿Qué quieres escuchar hoy?</div>
+      <div class="question-text">{{ t('home.question') }}</div>
     </div>
 
     <div class="cards-grid">
       <CardMiTransistor
         variant="favorites"
-        title="Mis Favoritas"
-        subtitle="Tus emisoras guardadas"
+        :title="t('home.favoritesTitle')"
+        :subtitle="t('home.favoritesSubtitle')"
         @click="router.push({ name: 'favorites-stations' })"
       >
         <template #icon><span style="font-size: 28px">❤️</span></template>
@@ -196,8 +195,8 @@ onUnmounted(() => {
 
       <CardMiTransistor
         variant="stations"
-        title="Todas las emisoras"
-        subtitle="Explora emisoras"
+        :title="t('home.stationsTitle')"
+        :subtitle="t('home.stationsSubtitle')"
         @click="router.push({ name: 'stations-list' })"
       >
         <template #icon><span style="font-size: 28px">📡</span></template>
@@ -205,8 +204,8 @@ onUnmounted(() => {
 
       <CardMiTransistor
         variant="recent"
-        title="Últimas Escuchadas"
-        subtitle="Tu historial reciente"
+        :title="t('home.recentTitle')"
+        :subtitle="t('home.recentSubtitle')"
         @click="router.push({ name: 'recents-stations' })"
       >
         <template #icon><span style="font-size: 28px">🕐</span></template>
@@ -215,7 +214,7 @@ onUnmounted(() => {
       <CardMiTransistor
         variant="about"
         title="Mi Transistor"
-        subtitle="Acerca de la app"
+        :subtitle="t('home.aboutSubtitle')"
         @click="router.push({ name: 'about-app' })"
       >
         <template #icon><span style="font-size: 28px">📻</span></template>
@@ -225,12 +224,12 @@ onUnmounted(() => {
     <div class="news-section q-px-lg q-py-md">
       <div class="news-label">
         <q-icon name="newspaper" size="14px" class="q-mr-xs" />
-        Titulares de hoy
+        {{ t('home.headlines') }}
       </div>
 
       <div v-if="fetchError" class="news-error">
         <q-icon name="info_outline" size="16px" class="q-mr-xs" />
-        No hay titulares disponibles en este momento
+        {{ t('home.noHeadlines') }}
       </div>
 
       <template v-else-if="headlines.length">
