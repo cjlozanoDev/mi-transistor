@@ -226,11 +226,17 @@ const stop = () => {
   background: #1a1420;
   border: 1px solid rgba(212, 168, 67, 0.3);
   border-bottom: none;
-  overflow: hidden;
+  /* Con letra grande del sistema el contenido no cabe: se desplaza en vez de cortarse */
+  max-height: 92vh;
+  max-height: 92dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .timer-header {
   display: flex;
+  min-width: 0;
   align-items: center;
   gap: 12px;
   padding: 20px 20px 16px;
@@ -248,6 +254,7 @@ const stop = () => {
   font-weight: 700;
   color: #f5ecd7;
   line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .timer-subtitle {
@@ -255,6 +262,7 @@ const stop = () => {
   color: rgba(245, 236, 215, 0.75);
   margin-top: 4px;
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 .timer-body {
@@ -272,7 +280,8 @@ const stop = () => {
 
 .timer-presets {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* En em para que pasen a 2 columnas cuando la letra crece */
+  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
   gap: 8px;
 }
 
@@ -293,7 +302,7 @@ const stop = () => {
 
 .timer-pickers {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -302,7 +311,8 @@ const stop = () => {
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  padding: 10px 0;
+  min-width: 0;
+  padding: 10px 4px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
 }
@@ -310,6 +320,9 @@ const stop = () => {
 .timer-col-label {
   font-size: 14px;
   color: rgba(245, 236, 215, 0.7);
+  text-align: center;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .timer-col-value {
@@ -317,6 +330,7 @@ const stop = () => {
   font-weight: 700;
   color: #f5ecd7;
   font-variant-numeric: tabular-nums;
+  line-height: 1.1;
 }
 
 .timer-step-btn {
@@ -331,13 +345,16 @@ const stop = () => {
   font-weight: 600;
   text-align: center;
   color: #f5ecd7;
+  overflow-wrap: anywhere;
 }
 
 .timer-countdown {
   font-size: 48px;
   font-weight: 700;
+  line-height: 1.1;
   text-align: center;
   color: #4caf82;
+  overflow-wrap: anywhere;
   font-variant-numeric: tabular-nums;
 }
 
@@ -346,6 +363,10 @@ const stop = () => {
   flex-direction: column;
   gap: 8px;
   padding: 8px 20px 20px;
+  /* Los botones siguen visibles aunque haya que desplazar el contenido */
+  position: sticky;
+  bottom: 0;
+  background: #1a1420;
 }
 
 .timer-actions > .q-btn {
@@ -358,6 +379,7 @@ const stop = () => {
   border-radius: 12px;
   font-size: 17px;
   font-weight: 600;
+  white-space: normal;
 }
 
 .timer-secondary-btn {
@@ -365,5 +387,6 @@ const stop = () => {
   min-height: 48px;
   font-size: 16px;
   color: rgba(245, 236, 215, 0.8);
+  white-space: normal;
 }
 </style>
