@@ -64,6 +64,26 @@ export default {
     favoriteAdded: 'Emissora afegida a preferides',
     favoriteRemoved: 'Emissora eliminada de preferides',
   },
+  sleepTimer: {
+    button: "Temporitzador d'apagada",
+    title: "Temporitzador d'apagada",
+    description:
+      "Et vas a dormir escoltant la ràdio? Tria d'aquí a quant de temps vols que s'apagui i l'emissora s'aturarà sola.",
+    hours: 'Hores',
+    minutes: 'Minuts',
+    seconds: 'Segons',
+    presets: 'Tria ràpid',
+    summary: "S'apagarà d'aquí a {time}",
+    apply: 'Aplicar temporitzador',
+    activeTitle: 'Temporitzador actiu',
+    activeDescription:
+      "Hi ha un temporitzador en marxa. Quan acabi el compte enrere, la ràdio s'apagarà sola.",
+    remaining: 'Temps que queda',
+    stop: 'Aturar temporitzador',
+    close: 'Tancar',
+    applied: "La ràdio s'apagarà d'aquí a {time}",
+    stopped: 'Temporitzador aturat',
+  },
   stations: {
     title: 'Totes les ràdios',
     search: 'Cerca una emissora...',

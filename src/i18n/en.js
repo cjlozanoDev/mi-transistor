@@ -64,6 +64,26 @@ export default {
     favoriteAdded: 'Station added to favourites',
     favoriteRemoved: 'Station removed from favourites',
   },
+  sleepTimer: {
+    button: 'Sleep timer',
+    title: 'Sleep timer',
+    description:
+      'Going to sleep with the radio on? Choose how long until it turns off and the station will stop on its own.',
+    hours: 'Hours',
+    minutes: 'Minutes',
+    seconds: 'Seconds',
+    presets: 'Quick choice',
+    summary: 'It will turn off in {time}',
+    apply: 'Set timer',
+    activeTitle: 'Timer active',
+    activeDescription:
+      'A timer is running. When the countdown ends, the radio will turn off on its own.',
+    remaining: 'Time left',
+    stop: 'Stop timer',
+    close: 'Close',
+    applied: 'The radio will turn off in {time}',
+    stopped: 'Timer stopped',
+  },
   stations: {
     title: 'All stations',
     search: 'Search for a station...',
