@@ -8,6 +8,21 @@
 // si falta alguno se muestra en español.
 export const CHANGELOG = [
   {
+    version: '5',
+    items: [
+      {
+        icon: '🌙⏱️',
+        text: {
+          es: 'Nuevo temporizador de apagado: pulsa el reloj ⏱️ junto al botón de reproducir, elige dentro de cuánto tiempo quieres que se apague la radio y podrás dormirte escuchándola sin preocuparte.',
+          ca: "Nou temporitzador d'apagada: prem el rellotge ⏱️ al costat del botó de reproduir, tria d'aquí a quant de temps vols que s'apagui la ràdio i podràs adormir-te escoltant-la sense preocupar-te.",
+          eu: 'Itzaltzeko tenporizadore berria: sakatu ⏱️ erlojua erreproduzitzeko botoiaren ondoan, aukeratu noiz itzali nahi duzun irratia, eta lasai lo egin ahal izango duzu entzuten.',
+          gl: 'Novo temporizador de apagado: preme o reloxo ⏱️ xunto ao botón de reproducir, escolle dentro de canto tempo queres que se apague a radio e poderás durmir escoitándoa sen preocuparte.',
+          en: 'New sleep timer: tap the clock ⏱️ next to the play button, choose how long until the radio turns off, and fall asleep listening without worrying.',
+        },
+      },
+    ],
+  },
+  {
     version: '4',
     items: [
       {

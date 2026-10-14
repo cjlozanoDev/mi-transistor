@@ -64,6 +64,26 @@ export default {
     favoriteAdded: 'Irratia gogokoetara gehitu da',
     favoriteRemoved: 'Irratia gogokoetatik kendu da',
   },
+  sleepTimer: {
+    button: 'Itzaltzeko tenporizadorea',
+    title: 'Itzaltzeko tenporizadorea',
+    description:
+      'Irratia entzuten lo egin nahi duzu? Aukeratu noiz itzali nahi duzun, eta irratia bere kasa geldituko da.',
+    hours: 'Orduak',
+    minutes: 'Minutuak',
+    seconds: 'Segundoak',
+    presets: 'Aukera azkarrak',
+    summary: '{time} barru itzaliko da',
+    apply: 'Tenporizadorea ezarri',
+    activeTitle: 'Tenporizadorea aktibo',
+    activeDescription:
+      'Tenporizadore bat martxan dago. Atzerako kontaketa amaitzean, irratia bere kasa itzaliko da.',
+    remaining: 'Geratzen den denbora',
+    stop: 'Tenporizadorea gelditu',
+    close: 'Itxi',
+    applied: 'Irratia {time} barru itzaliko da',
+    stopped: 'Tenporizadorea geldituta',
+  },
   stations: {
     title: 'Irrati guztiak',
     search: 'Bilatu irratia...',

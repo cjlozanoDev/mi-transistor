@@ -3,6 +3,8 @@ import { ref, watch, computed, onMounted, onUnmounted } from 'vue'
 import { registerPlugin } from '@capacitor/core'
 import { usePlayerStore } from 'src/stores/usePlayerStore'
 import { useStationsStore } from 'src/stores/useStationsStore'
+import { useSleepTimerStore } from 'src/stores/useSleepTimerStore'
+import SleepTimerDialog from 'src/components/SleepTimerDialog.vue'
 import { useQuasar } from 'quasar'
 import { useI18n } from 'vue-i18n'
 
@@ -12,6 +14,7 @@ const AudioPlayer = registerPlugin('AudioPlayer', {
 
 const playerStore = usePlayerStore()
 const stationStore = useStationsStore()
+const sleepTimer = useSleepTimerStore()
 const $q = useQuasar()
 const { t } = useI18n()
 
@@ -19,11 +22,13 @@ const logoFailed = ref(false)
 const isActuallyPlaying = ref(false)
 const hasPlayedOnce = ref(false)
 const isReconnecting = ref(false)
+const showSleepTimer = ref(false)
 
 const RECONNECT_DELAY_MS = 3000
 let reconnectTimer = null
 let stateHandle = null
 let errorHandle = null
+let sleepTimerHandle = null
 
 const cancelReconnect = () => {
   if (reconnectTimer) {
@@ -147,6 +152,20 @@ watch(
   { flush: 'sync' },
 )
 
+// El apagado real en Android lo hace el plugin nativo: el JS de la WebView se
+// congela con la pantalla bloqueada y su setTimeout no saltaría a tiempo.
+watch(
+  () => sleepTimer.endAt,
+  async (endAt) => {
+    try {
+      if (endAt) await AudioPlayer.setSleepTimer({ ms: Math.max(0, endAt - Date.now()) })
+      else await AudioPlayer.cancelSleepTimer()
+    } catch {
+      /* no-op on web */
+    }
+  },
+)
+
 onMounted(async () => {
   try {
     stateHandle = await AudioPlayer.addListener('state', (s) => {
@@ -162,12 +181,17 @@ onMounted(async () => {
     errorHandle = await AudioPlayer.addListener('error', () => {
       if (playerStore.isPlaying) scheduleReconnect()
     })
+    sleepTimerHandle = await AudioPlayer.addListener('sleepTimerFired', () => {
+      sleepTimer.expire()
+    })
 
     const s = await AudioPlayer.getState()
     const buffering = !!s.isBuffering
     isActuallyPlaying.value = !!s.isPlaying && !buffering
     if (isActuallyPlaying.value) hasPlayedOnce.value = true
     reconcilePlaying(!!s.isPlaying)
+
+    if (sleepTimer.endAt && sleepTimer.endAt <= Date.now()) sleepTimer.expire()
   } catch {
     /* no-op on web */
   }
@@ -177,6 +201,7 @@ onUnmounted(() => {
   cancelReconnect()
   if (stateHandle) stateHandle.remove()
   if (errorHandle) errorHandle.remove()
+  if (sleepTimerHandle) sleepTimerHandle.remove()
 })
 
 const togglePlay = () => {
@@ -234,27 +259,41 @@ const toggleFavorite = (station) => {
       </div>
     </div>
 
-    <q-btn
-      flat
-      round
-      :icon="isStationFavorite ? 'favorite' : 'favorite_border'"
-      :disable="!playerStore.currentStation"
-      @click="toggleFavorite(playerStore.currentStation)"
-      :color="isStationFavorite ? 'red' : 'warm-white'"
-      size="15px"
-      class="player-btn"
-    />
+    <div class="player-actions">
+      <q-btn
+        flat
+        round
+        :icon="isStationFavorite ? 'favorite' : 'favorite_border'"
+        :disable="!playerStore.currentStation"
+        @click="toggleFavorite(playerStore.currentStation)"
+        :color="isStationFavorite ? 'red' : 'warm-white'"
+        size="15px"
+        class="player-btn"
+      />
 
-    <q-btn
-      flat
-      round
-      :disable="!playerStore.currentStation"
-      :icon="playerStore.isPlaying ? 'stop' : 'play_arrow'"
-      size="18px"
-      class="player-btn player-btn--main"
-      @click="togglePlay"
-    />
+      <q-btn
+        flat
+        round
+        icon="timer"
+        :aria-label="t('sleepTimer.button')"
+        :color="sleepTimer.isActive ? 'positive' : 'warm-white'"
+        size="15px"
+        :class="['player-btn', { 'player-btn--timer-active': sleepTimer.isActive }]"
+        @click="showSleepTimer = true"
+      />
 
+      <q-btn
+        flat
+        round
+        :disable="!playerStore.currentStation"
+        :icon="playerStore.isPlaying ? 'stop' : 'play_arrow'"
+        size="18px"
+        class="player-btn player-btn--main"
+        @click="togglePlay"
+      />
+    </div>
+
+    <SleepTimerDialog v-model="showSleepTimer" />
   </div>
 </template>
 
@@ -338,9 +377,20 @@ const toggleFavorite = (station) => {
   }
 }
 
+.player-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
 .player-btn {
   flex-shrink: 0;
   color: #f5ecd7;
+}
+
+.player-btn--timer-active {
+  background: rgba(76, 175, 130, 0.18);
 }
 
 .player-btn--main {

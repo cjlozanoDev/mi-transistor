@@ -96,7 +96,8 @@ export class AudioPlayerWeb extends WebPlugin {
         // peticiones condicionales/Range que el navegador añade al revalidar
         // caché (devuelven gzip mal calculado sobre un rango parcial, lo que
         // Chrome no puede decodificar). 'no-store' evita esa revalidación.
-        fetchSetup: (context, initParams) => new Request(context.url, { ...initParams, cache: 'no-store' }),
+        fetchSetup: (context, initParams) =>
+          new Request(context.url, { ...initParams, cache: 'no-store' }),
       })
       this.hls.on(Hls.Events.ERROR, (_event, data) => {
         if (!data.fatal) return
@@ -130,6 +131,12 @@ export class AudioPlayerWeb extends WebPlugin {
     }
     this.notifyListeners('state', { isPlaying: false, isBuffering: false })
   }
+
+  // En la web el temporizador de apagado lo gestiona useSleepTimerStore con un
+  // setTimeout normal; aquí solo mantenemos el contrato del plugin nativo.
+  async setSleepTimer() {}
+
+  async cancelSleepTimer() {}
 
   async updateMetadata({ title, artist, artwork }) {
     this.setMediaSessionMetadata({ title, artist, artwork })

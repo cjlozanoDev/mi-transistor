@@ -64,6 +64,26 @@ export default {
     favoriteAdded: 'Emisora añadida a favoritas',
     favoriteRemoved: 'Emisora eliminada de favoritas',
   },
+  sleepTimer: {
+    button: 'Temporizador de apagado',
+    title: 'Temporizador de apagado',
+    description:
+      '¿Te vas a dormir escuchando la radio? Elige dentro de cuánto tiempo quieres que se apague y la emisora se detendrá sola.',
+    hours: 'Horas',
+    minutes: 'Minutos',
+    seconds: 'Segundos',
+    presets: 'Elige rápido',
+    summary: 'Se apagará dentro de {time}',
+    apply: 'Aplicar temporizador',
+    activeTitle: 'Temporizador activo',
+    activeDescription:
+      'Hay un temporizador en marcha. Cuando termine la cuenta atrás, la radio se apagará sola.',
+    remaining: 'Tiempo que queda',
+    stop: 'Detener temporizador',
+    close: 'Cerrar',
+    applied: 'La radio se apagará dentro de {time}',
+    stopped: 'Temporizador detenido',
+  },
   stations: {
     title: 'Todas las Radios',
     search: 'Buscar emisora...',
