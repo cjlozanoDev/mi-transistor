@@ -11,15 +11,12 @@ export const useReviewPromptStore = defineStore('reviewPrompt', {
     dismissedForever: false,
   }),
   actions: {
-    // Se llama una vez al arrancar la app. Decide si el usuario es "nuevo"
-    // (localStorage vacío, sin ninguna otra key de la app) o si ya tenía la
-    // app instalada de antes (hay alguna key ajena a esta, sea cual sea su
-    // versión), sin depender del formato ni la versión de ningún otro store.
+    // La decisión usuario nuevo/antiguo se toma en boot/pinia.js
+    // (seedReviewPrompt), antes de que ningún store escriba en localStorage.
+    // Esto es solo una red de seguridad: ante la duda, se trata como nuevo.
     initIfNeeded() {
       if (this.nextPromptAt !== null) return
-
-      const hasExistingAppData = Object.keys(localStorage).some((key) => key !== STORAGE_KEY)
-      this.nextPromptAt = hasExistingAppData ? Date.now() : Date.now() + TWO_WEEKS
+      this.nextPromptAt = Date.now() + TWO_WEEKS
     },
     shouldShowPrompt() {
       return !this.dismissedForever && this.nextPromptAt !== null && Date.now() >= this.nextPromptAt
