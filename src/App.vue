@@ -1,20 +1,15 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useStationsStore } from './stores/useStationsStore'
-import { useReviewPromptStore } from './stores/useReviewPromptStore'
 import { useInstallPromptStore } from './stores/useInstallPromptStore'
 import InstallPwaDialog from './components/InstallPwaDialog.vue'
 import { StatusBar, Style } from '@capacitor/status-bar'
-import { Capacitor, registerPlugin } from '@capacitor/core'
-import { AppUpdate } from '@capawesome/capacitor-app-update'
+import { Capacitor } from '@capacitor/core'
 import { useQuasar } from 'quasar'
-import { useI18n } from 'vue-i18n'
 
 const store = useStationsStore()
-const reviewPromptStore = useReviewPromptStore()
 const installPromptStore = useInstallPromptStore()
 const $q = useQuasar()
-const { t } = useI18n()
 
 const showInstallPrompt = ref(false)
 let deferredInstallEvent = null
@@ -26,7 +21,8 @@ function isInstallPromptEligible() {
   if (Capacitor.isNativePlatform()) return false
   if ($q.platform.is.mobile) return false
   const isStandalone =
-    window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true
+    window.matchMedia?.('(display-mode: standalone)').matches ||
+    window.navigator.standalone === true
   return !isStandalone
 }
 
@@ -71,56 +67,20 @@ onUnmounted(() => {
   window.removeEventListener('appinstalled', onAppInstalled)
 })
 
-// Plugin nativo propio: abre Google Play directamente, sin selector de apps
-const StoreOpener = registerPlugin('StoreOpener')
-const PACKAGE_NAME = 'com.mitransistor.app'
-
-function openPlayStore() {
-  StoreOpener.openPlayStore({ packageName: PACKAGE_NAME }).catch(() => {
-    AppUpdate.openAppStore()
-  })
-}
-
-function maybeShowReviewPrompt() {
-  reviewPromptStore.initIfNeeded()
-  if (!reviewPromptStore.shouldShowPrompt()) return
-
-  $q.dialog({
-    title: t('review.title'),
-    message: t('review.message'),
-    html: true,
-    persistent: true,
-    ok: {
-      label: t('review.ok'),
-      color: 'primary',
-      unelevated: true,
-    },
-    cancel: {
-      label: t('review.cancel'),
-      flat: true,
-      color: 'grey-7',
-    },
-  })
-    .onOk(() => {
-      reviewPromptStore.markReviewed()
-      openPlayStore()
-    })
-    .onCancel(() => {
-      reviewPromptStore.postponePrompt()
-    })
-}
-
 onMounted(async () => {
   store.loadStations()
 
   if (Capacitor.isNativePlatform()) {
     await StatusBar.setStyle({ style: Style.Dark })
-    maybeShowReviewPrompt()
   }
 })
 </script>
 
 <template>
   <router-view />
-  <InstallPwaDialog v-model="showInstallPrompt" @install="installApp" @dismiss="dismissInstallPrompt" />
+  <InstallPwaDialog
+    v-model="showInstallPrompt"
+    @install="installApp"
+    @dismiss="dismissInstallPrompt"
+  />
 </template>

@@ -3,6 +3,14 @@
   publish = "dist/pwa"
   functions = "netlify/functions"
 
+# Ruta neutra para los mensajes programados: la app nativa la llama con URL
+# absoluta, así que si se cambia de plataforma basta con servir /api/messages
+# en el mismo dominio y los APK ya instalados siguen funcionando.
+[[redirects]]
+  from = "/api/messages"
+  to = "/.netlify/functions/messages"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
