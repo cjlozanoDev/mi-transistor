@@ -1,22 +1,41 @@
+<script>
+// A nivel de módulo (no dentro de <script setup>, que es por instancia): los
+// popups de arranque solo se deciden una vez por sesión aunque HomePage se
+// vuelva a montar al navegar entre páginas.
+let launchDialogChecked = false
+</script>
+
 <script setup>
 import CardMiTransistor from 'src/components/CardMiTransistor.vue'
 import ChangelogDialog from 'src/components/ChangelogDialog.vue'
 import { useRouter } from 'vue-router'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useQuasar } from 'quasar'
 import { useI18n } from 'vue-i18n'
-import { Capacitor, registerPlugin } from '@capacitor/core'
+import { Capacitor } from '@capacitor/core'
 import { AppUpdate, AppUpdateAvailability } from '@capawesome/capacitor-app-update'
 import { useChangelogStore } from 'src/stores/useChangelogStore'
+import { useMessagesStore } from 'src/stores/useMessagesStore'
 import { CHANGELOG } from 'src/data/changelog'
+import { fetchActiveMessages } from 'src/services/messages'
+import { openPlayStore, useReviewPrompt } from 'src/composables/useReviewPrompt'
 
 const router = useRouter()
 const $q = useQuasar()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const changelogStore = useChangelogStore()
+const messagesStore = useMessagesStore()
+const { maybeShowReviewPrompt } = useReviewPrompt()
 
 const showChangelog = ref(false)
 const latestChangelogEntry = CHANGELOG[0]
+
+const showMessage = ref(false)
+const currentMessage = ref(null)
+const currentMessageTitle = computed(() => {
+  const title = currentMessage.value?.title
+  return title ? (title[locale.value] ?? title.es ?? null) : null
+})
 
 function checkChangelog() {
   const latestVersion = latestChangelogEntry.version
@@ -26,54 +45,81 @@ function checkChangelog() {
   // no vivió ninguna novedad anterior, así que no se le muestra nada.
   if (changelogStore.lastSeenVersion === null) {
     changelogStore.markSeen(latestVersion)
-    return
+    return false
   }
 
   if (changelogStore.hasUnseenVersion(latestVersion)) {
     showChangelog.value = true
     changelogStore.markSeen(latestVersion)
+    return true
+  }
+  return false
+}
+
+function showPendingMessage(messages) {
+  const message = messages.find((msg) => !messagesStore.isShown(msg.id))
+  if (!message) return false
+
+  currentMessage.value = message
+  showMessage.value = true
+  messagesStore.markShown(message.id)
+  return true
+}
+
+// Solo comprueba si hay actualización; el popup lo muestra showUpdateDialog()
+async function isUpdateAvailable() {
+  // La comprobación solo funciona en el dispositivo (Android/iOS), no en el navegador
+  if (!Capacitor.isNativePlatform()) return false
+  try {
+    const info = await AppUpdate.getAppUpdateInfo()
+    return info.updateAvailability === AppUpdateAvailability.UPDATE_AVAILABLE
+  } catch {
+    // Si la comprobación falla (sin conexión, no instalada desde Play, etc.) no molestamos al usuario
+    return false
   }
 }
 
-// Plugin nativo propio: abre Google Play directamente, sin selector de apps
-const StoreOpener = registerPlugin('StoreOpener')
-const PACKAGE_NAME = 'com.mitransistor.app'
-
-function openPlayStore() {
-  // Forzamos Google Play con nuestro plugin; si fallara, usamos el del sistema
-  StoreOpener.openPlayStore({ packageName: PACKAGE_NAME }).catch(() => {
-    AppUpdate.openAppStore()
+function showUpdateDialog() {
+  $q.dialog({
+    title: t('update.title'),
+    message: t('update.message'),
+    html: true,
+    persistent: true,
+    ok: {
+      label: t('update.ok'),
+      color: 'primary',
+      unelevated: true,
+    },
+    cancel: {
+      label: t('update.cancel'),
+      flat: true,
+      color: 'grey-7',
+    },
+  }).onOk(() => {
+    openPlayStore()
   })
 }
 
-async function checkForUpdate() {
-  // La comprobación solo funciona en el dispositivo (Android/iOS), no en el navegador
-  if (!Capacitor.isNativePlatform()) return
-  try {
-    const info = await AppUpdate.getAppUpdateInfo()
-    if (info.updateAvailability !== AppUpdateAvailability.UPDATE_AVAILABLE) return
+// Popups de arranque: como mucho UNO por sesión, para no encadenar varios
+// seguidos. Prioridad: actualización > mensaje programado (caduca) >
+// novedades (si se aplazan salen en el siguiente arranque, porque solo se
+// marcan como vistas al mostrarse) > reseña (ya tiene su propio aplazamiento).
+async function showLaunchDialog() {
+  if (launchDialogChecked) return
+  launchDialogChecked = true
 
-    $q.dialog({
-      title: t('update.title'),
-      message: t('update.message'),
-      html: true,
-      persistent: true,
-      ok: {
-        label: t('update.ok'),
-        color: 'primary',
-        unelevated: true,
-      },
-      cancel: {
-        label: t('update.cancel'),
-        flat: true,
-        color: 'grey-7',
-      },
-    }).onOk(() => {
-      openPlayStore()
-    })
-  } catch {
-    // Si la comprobación falla (sin conexión, no instalada desde Play, etc.) no molestamos al usuario
+  const [updateAvailable, messages] = await Promise.all([
+    isUpdateAvailable(),
+    fetchActiveMessages(),
+  ])
+
+  if (updateAvailable) {
+    showUpdateDialog()
+    return
   }
+  if (showPendingMessage(messages)) return
+  if (checkChangelog()) return
+  if (Capacitor.isNativePlatform()) maybeShowReviewPrompt()
 }
 
 const headlines = ref([])
@@ -84,7 +130,9 @@ const fetchError = ref(false)
 // 20minutos no manda cabeceras CORS: en la app nativa CapacitorHttp se salta
 // esa restricción, pero en la versión web hace falta pasar por nuestra propia
 // función de Netlify que hace la petición desde el servidor (ver netlify/functions/news.js).
-const RSS_URL = Capacitor.isNativePlatform() ? 'https://www.20minutos.es/rss/' : '/.netlify/functions/news'
+const RSS_URL = Capacitor.isNativePlatform()
+  ? 'https://www.20minutos.es/rss/'
+  : '/.netlify/functions/news'
 
 async function fetchHeadlines() {
   try {
@@ -158,8 +206,7 @@ function onTouchEnd(e) {
 }
 
 onMounted(() => {
-  checkForUpdate()
-  checkChangelog()
+  showLaunchDialog()
   fetchHeadlines().then(() => {
     if (headlines.value.length) startRotation()
   })
@@ -272,6 +319,12 @@ onUnmounted(() => {
     </div>
 
     <ChangelogDialog v-model="showChangelog" :entry="latestChangelogEntry" />
+    <ChangelogDialog
+      v-if="currentMessage"
+      v-model="showMessage"
+      :entry="currentMessage"
+      :title="currentMessageTitle"
+    />
   </q-page>
 </template>
 

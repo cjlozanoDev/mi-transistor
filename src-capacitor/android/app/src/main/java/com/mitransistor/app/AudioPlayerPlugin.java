@@ -1,10 +1,12 @@
 package com.mitransistor.app;
 
 import android.content.ComponentName;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.PowerManager;
 import androidx.annotation.NonNull;
 import androidx.media3.common.MediaItem;
 import androidx.media3.common.MediaMetadata;
@@ -28,14 +30,20 @@ public class AudioPlayerPlugin extends Plugin {
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
 
     // Temporizador de apagado. Vive en nativo porque el JS de la WebView se
-    // congela con la pantalla bloqueada; ExoPlayer mantiene el wake lock
-    // mientras suena, así que el Handler se ejecuta a su hora.
+    // congela con la pantalla bloqueada. Handler.postDelayed cuenta con
+    // uptimeMillis, que no avanza en deep sleep (y con la pantalla apagada la
+    // CPU duerme entre escrituras de audio), así que mientras el temporizador
+    // está activo mantenemos un wake lock propio para que salte a su hora.
+    private PowerManager.WakeLock sleepWakeLock;
+    private static final long SLEEP_WAKE_LOCK_MARGIN_MS = 60_000L;
+
     private final Runnable sleepRunnable = () -> {
         if (controller != null) {
             controller.stop();
             controller.clearMediaItems();
         }
         notifyListeners("sleepTimerFired", new JSObject(), true);
+        releaseSleepWakeLock();
     };
 
     private final Player.Listener playerListener = new Player.Listener() {
@@ -128,13 +136,17 @@ public class AudioPlayerPlugin extends Plugin {
 
     @PluginMethod
     public void setSleepTimer(PluginCall call) {
-        Long ms = call.getLong("ms");
-        if (ms == null || ms < 0) {
+        // No usar call.getLong: Capacitor solo devuelve el valor si ya es Long,
+        // y un número de JS como 1800000 llega como Integer → null.
+        Object raw = call.getData().opt("ms");
+        if (!(raw instanceof Number) || ((Number) raw).longValue() < 0) {
             call.reject("ms required");
             return;
         }
+        long ms = ((Number) raw).longValue();
         mainHandler.post(() -> {
             mainHandler.removeCallbacks(sleepRunnable);
+            acquireSleepWakeLock(ms + SLEEP_WAKE_LOCK_MARGIN_MS);
             mainHandler.postDelayed(sleepRunnable, ms);
             call.resolve();
         });
@@ -144,8 +156,24 @@ public class AudioPlayerPlugin extends Plugin {
     public void cancelSleepTimer(PluginCall call) {
         mainHandler.post(() -> {
             mainHandler.removeCallbacks(sleepRunnable);
+            releaseSleepWakeLock();
             call.resolve();
         });
+    }
+
+    private void acquireSleepWakeLock(long timeoutMs) {
+        if (sleepWakeLock == null) {
+            PowerManager pm = (PowerManager) getContext().getSystemService(Context.POWER_SERVICE);
+            sleepWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MiTransistor::SleepTimer");
+            sleepWakeLock.setReferenceCounted(false);
+        }
+        sleepWakeLock.acquire(timeoutMs);
+    }
+
+    private void releaseSleepWakeLock() {
+        if (sleepWakeLock != null && sleepWakeLock.isHeld()) {
+            sleepWakeLock.release();
+        }
     }
 
     @PluginMethod
@@ -208,6 +236,7 @@ public class AudioPlayerPlugin extends Plugin {
     protected void handleOnDestroy() {
         super.handleOnDestroy();
         mainHandler.removeCallbacks(sleepRunnable);
+        releaseSleepWakeLock();
         if (controller != null) {
             controller.removeListener(playerListener);
             controller.release();

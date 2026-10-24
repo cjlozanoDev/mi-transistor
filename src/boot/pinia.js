@@ -51,9 +51,25 @@ function seedChangelogForExistingInstalls() {
   }
 }
 
+// Igual que el changelog: el popup de reseña no debe salir en una instalación
+// nueva (se espera a TWO_WEEKS de uso), pero sí a quien ya tenía la app. Antes
+// se decidía en useReviewPromptStore.initIfNeeded(), pero para entonces los
+// demás stores ya habían escrito sus keys y una instalación nueva parecía
+// antigua, así que el popup salía nada más instalar.
+function seedReviewPrompt() {
+  const KEY = 'review-prompt-v1'
+  const TWO_WEEKS = 14 * 24 * 60 * 60 * 1000
+  if (localStorage.getItem(KEY)) return
+
+  const hasExistingAppData = Object.keys(localStorage).some((key) => key !== KEY)
+  const nextPromptAt = hasExistingAppData ? Date.now() : Date.now() + TWO_WEEKS
+  localStorage.setItem(KEY, JSON.stringify({ nextPromptAt, dismissedForever: false }))
+}
+
 // "async" is optional;
 // more info on params: https://v2.quasar.dev/quasar-cli/boot-files
 export default boot(async ({ app } /* { app, router, ... } */) => {
+  seedReviewPrompt()
   seedChangelogForExistingInstalls()
   migrateFavoritesToStableKey()
 

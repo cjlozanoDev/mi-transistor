@@ -2,6 +2,35 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file
 
 import { defineConfig } from '#q-app/wrappers'
+import { existsSync } from 'node:fs'
+import { fileURLToPath, pathToFileURL } from 'node:url'
+
+// Solo en "quasar dev": sirve /api/messages ejecutando en local la misma
+// función de Netlify que en producción (netlify/functions/messages.js), para
+// poder probar los mensajes programados sin desplegar. El token se lee de
+// .env.local (ignorado por git): GITHUB_MESSAGES_TOKEN=github_pat_...
+// Sin token la función devuelve [] y la app sigue funcionando sin mensajes.
+function localApiMessages() {
+  const functionPath = fileURLToPath(new URL('./netlify/functions/messages.js', import.meta.url))
+  const envPath = fileURLToPath(new URL('./.env.local', import.meta.url))
+
+  return {
+    name: 'local-api-messages',
+    apply: 'serve',
+    configureServer(server) {
+      if (existsSync(envPath)) process.loadEnvFile(envPath)
+
+      server.middlewares.use('/api/messages', async (req, res) => {
+        // ?t= para recargar la función si se edita sin reiniciar el servidor
+        const { default: handler } = await import(`${pathToFileURL(functionPath).href}?t=${Date.now()}`)
+        const response = await handler()
+        res.statusCode = response.status
+        response.headers.forEach((value, key) => res.setHeader(key, value))
+        res.end(await response.text())
+      })
+    },
+  }
+}
 
 export default defineConfig((/* ctx */) => {
   return {
@@ -53,7 +82,9 @@ export default defineConfig((/* ctx */) => {
       // polyfillModulePreload: true,
       // distDir
 
-      // extendViteConf (viteConf) {},
+      extendViteConf(viteConf) {
+        viteConf.plugins.push(localApiMessages())
+      },
       // viteVuePluginOptions: {},
 
       vitePlugins: [

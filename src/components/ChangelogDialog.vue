@@ -1,15 +1,19 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 
-defineProps({
+// title/subtitle son opcionales: si no vienen se usan los del changelog.
+// Los mensajes programados reutilizan este diálogo pasando su propio título.
+const props = defineProps({
   entry: { type: Object, required: true },
+  title: { type: String, default: null },
+  subtitle: { type: String, default: null },
 })
 
 const model = defineModel({ type: Boolean, default: false })
 const { t, locale } = useI18n()
 
 // Cada novedad trae su texto en todos los idiomas; si faltara alguno, español
-const itemText = (item) => item.text[locale.value] ?? item.text.es
+const itemText = (item) => item.text?.[locale.value] ?? item.text?.es ?? ''
 </script>
 
 <template>
@@ -18,8 +22,10 @@ const itemText = (item) => item.text[locale.value] ?? item.text.es
       <div class="changelog-header">
         <span class="changelog-emoji">📻</span>
         <div>
-          <div class="changelog-title">{{ t('changelog.title') }}</div>
-          <div class="changelog-subtitle">{{ t('changelog.subtitle') }}</div>
+          <div class="changelog-title">{{ props.title ?? t('changelog.title') }}</div>
+          <div v-if="!props.title || props.subtitle" class="changelog-subtitle">
+            {{ props.subtitle ?? t('changelog.subtitle') }}
+          </div>
         </div>
       </div>
 
